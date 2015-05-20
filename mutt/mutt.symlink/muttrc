@@ -30,7 +30,8 @@ set mail_check = 120    # seconds
 set timeout = 0
 
 # fix for sending via smtp on yosemite
-set smtp_authenticators = 'gssapi:login'
+# NB: not in use since moving to external msmtp for sending mail
+#set smtp_authenticators = 'gssapi:login'
 
 # basic config
 set move = no           # don't move read messages
