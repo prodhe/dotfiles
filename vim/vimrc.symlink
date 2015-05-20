@@ -1,0 +1,95 @@
+"   ~/.vimrc
+"
+"   prodhe
+"
+
+" Global stuff
+set nocompatible        " vim - and not vi - settings
+let mapleader = ","     " <leader> binds to ,
+set history=100         " cmdline history
+set autoread            " automatically load changes outside vim
+set hidden              " allow buffers to hide without saved changes
+set encoding=utf-8      " encoding displayed
+set fileencodings=utf-8,ucs-bom,default,latin1
+set modelines=0         " never use it anyway...
+set ttyfast             " faster redraw
+set clipboard=unnamed   " set clipboard to OS X global
+nmap <silent> <leader>q :silent :q<CR>   " quicker close
+
+" Swap, backup and undo
+set backup
+set backupdir=~/.vimbackup/
+set directory=~/.vimbackup/
+set writebackup         " writes a temporary backup if overwriting file
+
+" Recognize markdown
+au BufRead,BufNewFile *.md set filetype=markdown
+
+" Visual
+colorscheme sahara      " as in ~/.vimrc/colors
+set number              " line numbers to the left
+set ruler               " line and column at the bottom right
+set laststatus=2        " always show a status line
+set showcmd             " show writing the cmd at bottom
+set showmode            " show mode at bottom
+set visualbell          " blink instead of beep
+set nowrap              " don't wrap
+set textwidth=80
+"set colorcolumn=+1      " make sure ColorColumn color is not too bad
+set formatoptions=rqn1  " see :help fo-table
+
+" GUI vim (gvim, macvim)
+set guifont=Inconsolata:h18
+
+" Highlight, indent and tabbing
+filetype plugin indent on
+syntax on               " syntax and override current colors
+set autoindent
+set smartindent
+set tabstop=4           " columns to print if reading a tab
+set softtabstop=4       " columns to insert if <TAB>
+set shiftwidth=4        " column to shift when >> or <<
+set expandtab           " explicitly tab expand
+set shiftround          " round indent to nearest shiftwidth
+
+" Editor tabs
+set showtabline=1       " always show tab line
+nmap <silent> <leader>t :silent :tabnew<CR>    " create new tab
+
+" Search and moving around
+set incsearch           " show search as we type
+set hlsearch            " highlight search words, turn off with :nohlsearch
+set ignorecase          " case insensitive
+set smartcase           " unless it's a capital char used
+set gdefault            " use global search per line as default
+nmap <silent> <leader><space> :silent :nohlsearch<CR>
+nnoremap <tab> %
+vnoremap <tab> %
+
+" Tabbing cmd alternatives
+set wildchar=<Tab> wildmenu wildmode=list:longest,full
+
+" Scrolling
+"set scrolloff=8         " scroll horizontally when there is X lines left
+"set sidescrolloff=15    " vertically
+set sidescroll=1
+
+" Show whitespace characters
+nnoremap <leader>l :set list!<CR>
+set listchars=tab:▸\ ,eol:¬,trail:·
+
+" Switch back and forth from HEX mode
+nnoremap <F8> :%!xxd<CR>
+nnoremap <F7> :%!xxd -r<CR>
+
+" Open up scratch pad (plugin/scratch)
+nmap <silent> <leader><tab> :silent :Sscratch<CR>
+
+" Use ASCII-armored files instead of binary (plugin/gnupg)
+let g:GPGPreferArmor=1
+
+" Discreteley highlight 81 column overlength
+highlight OverLength term=NONE cterm=NONE ctermfg=NONE ctermbg=52 gui=NONE guifg=NONE guibg=#5f0000
+match OverLength /\%81v./
+
+" EOF

@@ -1,0 +1,60 @@
+# ~/.tmux.conf
+# by prodhe
+
+# rebind prefix key
+set -g prefix C-j
+unbind C-b
+bind C-j send-prefix
+
+# declare type of terminal
+set -g default-terminal "screen-256color"
+
+# set history
+set -g history-limit 10000
+
+# use vi-mode
+set-window-option -g mode-keys vi
+bind Escape copy-mode
+unbind p
+bind p paste-buffer
+bind -t vi-copy 'v' begin-selection
+bind -t vi-copy 'y' copy-selection
+bind -t vi-copy 'Space' halfpage-down
+bind -t vi-copy 'BSpace' halfpage-up
+
+# vi moving around
+bind h select-pane -L
+bind j select-pane -D
+bind k select-pane -U
+bind l select-pane -R
+bind C-h select-window -p
+bind C-l select-window -n
+
+# activate mouse
+set -g mode-mouse on
+set -g mouse-resize-pane on
+set -g mouse-select-pane on
+set -g mouse-select-window on
+
+# remap splitting commands
+unbind %
+unbind '"'
+bind | split-window -h
+bind - split-window -v
+
+# status bar style
+set -g status-utf8 on
+set -g status-bg black
+set -g status-fg white
+set-window-option -g window-status-current-bg red
+set -g status-left-length 100
+set -g status-left "#[fg=green][#h]"
+set -g status-right-length 100
+set -g status-right "#(cmus-remote -Q | egrep 'tag artist|title' | cut -d ' ' -f3- | awk '{printf $0 \" - \"; getline; print $0}') | "
+set -ag status-right "#(date -j +'%b %d, %H:%M')"
+
+# update interval for status bar
+set -g status-interval 5
+
+
+# EOF

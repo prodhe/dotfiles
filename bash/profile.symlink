@@ -1,0 +1,32 @@
+#
+# .profile
+#
+
+# prompt
+PS1="\w \[\e[0;36m\]\$ \[\e[0;m\]"
+#PS1="\w \$ "
+
+# editor
+export EDITOR="/usr/bin/vim"
+
+# for gnupg.vim plugin
+export GPG_TTY=`tty`
+
+# add /usr/local/bin + sbin (Homebrew path) as first choice
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+
+# ...and cabal as even more first.
+export PATH="$HOME/.cabal/bin:$PATH"
+
+# use mdfind instead of locate
+alias locate="mdfind -name"
+
+# show command prompt in ed
+alias ed="ed -p:"
+
+# alias
+alias ls="ls -GFh"
+alias ll="ls -l"
+alias update="brew update && cabal update && brew upgrade --all"
+
+# EOF
