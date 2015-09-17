@@ -1,17 +1,12 @@
-# Folder hooks
-#folder-hook 'account.gmail.petter.rodhelind' 'source ~/.mutt/gmail.petter.rodhelind'
-
 # Default account
 source ~/.mutt/account.gmail.petter.rodhelind
 
-# Keybindings for gmail folders
+# Keybindings for folders
 bind editor <space> noop
-macro index gi "<change-folder>=INBOX<enter>" "Go to inbox"
-macro index ga "<change-folder>=[Gmail]/All Mail<enter>" "Go to all mail"
-macro index gs "<change-folder>=[Gmail]/Sent Mail<enter>" "Go to sent mail"
-macro index ,d "<save-message>=[Gmail]/Bin<enter>" "Move to bin"
-macro index ,a "<save-message>=[Gmail]/All Mail<enter>" "Move to all mail"
-bind index ,f imap-fetch-mail
+macro index gi "<change-folder>=petter.rodhelind-gmail.com/INBOX<enter>" "Go to inbox"
+macro index ga "<change-folder>=petter.rodhelind-gmail.com/archive<enter>" "Go to all mail"
+macro index gs "<change-folder>=petter.rodhelind-gmail.com/sent<enter>" "Go to sent mail"
+macro index ,a "<save-message>=petter.rodhelind-gmail.com/archive<enter>" "Move to all mail"
 
 # get colors
 #source ~/.mutt/colors/gotbletu
@@ -31,10 +26,8 @@ set send_charset = "utf-8"
 # check for new mail
 set mail_check = 0    # seconds
 set timeout = 3
-
-# fix for sending via smtp on yosemite
-# NB: not in use since moving to external msmtp for sending mail
-#set smtp_authenticators = 'gssapi:login'
+macro index O "<shell-escape>offlineimap<enter>"           "run offlineimap to sync all mail"
+macro index o "<shell-escape>offlineimap -qf INBOX<enter>" "run offlineimap to sync inbox"
 
 # basic config
 set move = no           # don't move read messages
@@ -45,9 +38,6 @@ set delete = yes        # don't ask for purging msgs marked for deletion
 set confirmappend = no  # don't ask when appending msgs to existing mailboxes
 set mark_old = no       # just use read/new and skip the "old new" mark
 set sleep_time = 0      # speed up folder switch
-
-# change folder
-macro index y "<change-folder>?" "change into a folder in the list"
 
 # saner copy/move dialogs
 macro index C "<copy-message>?" "copy a message to a mailbox"
@@ -128,4 +118,3 @@ set sidebar_width = 30
 bind index,pager <up> sidebar-prev
 bind index,pager <down> sidebar-next
 bind index,pager <right> sidebar-open
-#set imap_check_subscribed           # list all imap folders
