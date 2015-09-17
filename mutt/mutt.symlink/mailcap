@@ -1,8 +1,14 @@
 # parse html via links
-text/html;          links -codepage utf-8 -dump %s; copiousoutput;
+#text/html;          links -codepage %{charset} %s;
+text/html;          links -dump -codepage utf-8 %s; nametemplate=%s.html; copiousoutput;
+#; nametemplate=%s.html; copiousoutput;
 
 # open files using Mac OS X "open" and default program
-application/pdf;    open %s; nametemplate=%s.pdf; copiousoutput;
-image/jpeg;         open %s; nametemplate=%s.jpeg; copiousoutput;
-image/png;          open %s; nametemplate=%s.png; copiousoutput;
-image/gif;          open %s; nametemplate=%s.gif; copiousoutput;
+application/pdf;    open %s; \
+                    nametemplate=%s.pdf;
+image/jpeg;         open %s; \
+                    nametemplate=%s.jpeg;
+image/png;          open %s; \
+                    nametemplate=%s.png;
+image/gif;          open %s; \
+                    nametemplate=%s.gif;

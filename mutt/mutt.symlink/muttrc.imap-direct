@@ -29,8 +29,8 @@ set assumed_charset = "utf-8"
 set send_charset = "utf-8"
 
 # check for new mail
-set mail_check = 0    # seconds
-set timeout = 3
+set mail_check = 120    # seconds
+set timeout = 0
 
 # fix for sending via smtp on yosemite
 # NB: not in use since moving to external msmtp for sending mail
@@ -125,7 +125,7 @@ set forward_quote                    # include message in forwards
 set sidebar_delim = '  | '
 set sidebar_visible = yes
 set sidebar_width = 30
-bind index,pager <up> sidebar-prev
-bind index,pager <down> sidebar-next
-bind index,pager <right> sidebar-open
-#set imap_check_subscribed           # list all imap folders
+bind index,pager \CP sidebar-prev
+bind index,pager \CN sidebar-next
+bind index,pager \CI sidebar-open
+set imap_check_subscribed           # list all imap folders

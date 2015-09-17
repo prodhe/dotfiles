@@ -1,20 +1,31 @@
 # Mutt gmail
-set imap_user = "petter.rodhelind@gmail.com"
-set imap_pass = `security find-internet-password -a petter.rodhelind -s imap.gmail.com -w`
-set imap_keepalive = 240
+#set imap_user = "petter.rodhelind@gmail.com"
+#set imap_pass = `security find-internet-password -a petter.rodhelind -s imap.gmail.com -w`
+#set imap_keepalive = 240
 
 set from = "petter.rodhelind@gmail.com"
 set realname = "Petter Rodhelind"
 set sendmail = "/usr/local/bin/msmtp -a petter.rodhelind"
 set sendmail_wait = 0
 
-set folder = "imaps://imap.gmail.com:993"
-set spoolfile = "+INBOX"
+#set folder = "imaps://imap.gmail.com:993"
+set mbox_type = Maildir
+set folder = "~/.mail"
+set spoolfile = "+petter.rodhelind-gmail.com/INBOX"
 set record = "" # using gmail smtp server takes care of saving
                 # sent messages
-set postponed = "+[Gmail]/Drafts"
-set mbox = "+[Gmail]/All Mail"
-set trash = "+[Gmail]/Bin"  # needs the trash patch
+set postponed = "+petter.rodhelind-gmail.com/drafts"
+set mbox = "+petter.rodhelind-gmail.com/archive"
+set trash = "+petter.rodhelind-gmail.com/trash"  # needs the trash patch
 set header_cache = ~/.mutt/gmail.petter.rodhelind/cache/headers
 set message_cachedir = ~/.mutt/gmail.petter.rodhelind/cache/bodies
 set certificate_file = ~/.mutt/gmail.petter.rodhelind/certificates
+
+# sidebar mailboxes
+mailboxes +petter.rodhelind-gmail.com/INBOX \
+          +petter.rodhelind-gmail.com/archive \
+          +petter.rodhelind-gmail.com/sent \
+          +petter.rodhelind-gmail.com/drafts \
+          +petter.rodhelind-gmail.com/trash \
+          "---" \
+          +petter.rodhelind-gmail.com/Ordrar
