@@ -18,6 +18,7 @@ localfolders = ~/.mail/petter.rodhelind-gmail.com
 nametrans = lambda folder: {'drafts': '[Gmail]/Drafts',
                             'sent': '[Gmail]/Sent Mail',
                             'trash': '[Gmail]/Bin',
+                            'flagged': '[Gmail]/Starred',
                             'archive': '[Gmail]/All Mail'
                             }.get(folder, folder)
 
@@ -31,5 +32,6 @@ realdelete = no
 nametrans = lambda folder: {'[Gmail]/Drafts': 'drafts',
                             '[Gmail]/Sent Mail': 'sent',
                             '[Gmail]/Bin': 'trash',
+                            '[Gmail]/Starred': 'flagged',
                             '[Gmail]/All Mail': 'archive'
                             }.get(folder, folder)

@@ -6,7 +6,7 @@ bind editor <space> noop
 macro index gi "<change-folder>=petter.rodhelind-gmail.com/INBOX<enter>" "Go to inbox"
 macro index ga "<change-folder>=petter.rodhelind-gmail.com/archive<enter>" "Go to all mail"
 macro index gs "<change-folder>=petter.rodhelind-gmail.com/sent<enter>" "Go to sent mail"
-macro index ,a "<save-message>=petter.rodhelind-gmail.com/archive<enter>" "Move to all mail"
+macro index,pager A "<save-message>=petter.rodhelind-gmail.com/archive<enter>" "Move to all mail"
 
 # get colors
 #source ~/.mutt/colors/gotbletu
@@ -24,7 +24,7 @@ set assumed_charset = "utf-8"
 set send_charset = "utf-8"
 
 # check for new mail
-set mail_check = 0    # seconds
+set mail_check = 60    # seconds
 set timeout = 3
 macro index O "<shell-escape>offlineimap<enter>"           "run offlineimap to sync all mail"
 macro index o "<shell-escape>offlineimap -qf INBOX<enter>" "run offlineimap to sync inbox"
