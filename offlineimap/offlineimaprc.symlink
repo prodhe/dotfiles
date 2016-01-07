@@ -23,6 +23,7 @@ nametrans = lambda folder: {'drafts': '[Gmail]/Drafts',
                             }.get(folder, folder)
 
 [Repository prodhe-Remote]
+auth_mechanisms = LOGIN
 maxconnections = 1
 type = Gmail
 sslcacertfile = ~/.mutt/Equifax_Secure_CA.cert
