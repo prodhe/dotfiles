@@ -91,6 +91,9 @@ bind pager <Return> exit
 # view html attachments externally
 macro attach 'V' "<pipe-entry>cat > /tmp/mutt_mail.html && open /tmp/mutt_mail.html 
 
+# decode attached file names correctly
+set rfc2047_parameters = yes
+
 # autoview
 auto_view text/html
 
