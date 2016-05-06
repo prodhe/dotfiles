@@ -14,7 +14,7 @@ set fileencodings=utf-8,ucs-bom,default,latin1
 set modelines=0         " never use it anyway...
 set ttyfast             " faster redraw
 set clipboard=unnamed   " set clipboard to OS X global
-nmap <silent> <leader>q :silent :q<CR>   " quicker close
+nmap <silent> <leader>q :silent :bd<CR>   " quicker close (buffer delete)
 
 " Swap, backup and undo
 set backup
