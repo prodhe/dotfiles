@@ -18,6 +18,9 @@ export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 # ...and cabal as even more first.
 export PATH="$HOME/.cabal/bin:$PATH"
 
+# always open multiple vim files in tabs
+alias vim="vim -p"
+
 # use mdfind instead of locate
 alias locate="mdfind -name"
 
