@@ -1,10 +1,4 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =8
-let g:netrw_dirhist_1='/Users/petter'
-let g:netrw_dirhist_2='/Users/petter/.mutt'
-let g:netrw_dirhist_3='/Users/petter'
-let g:netrw_dirhist_4='/Users/petter/Cloud'
-let g:netrw_dirhist_5='/Users/petter/Cloud/code'
-let g:netrw_dirhist_6='/Users/petter/Cloud/code/c'
-let g:netrw_dirhist_7='/Users/petter/Cloud/code/c/knr2'
-let g:netrw_dirhist_8='/Users/petter/Cloud/code/c/knr2/chapter02'
+let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_1='/Users/petter/Cloud/code/c/sdl-foobar/src'
+let g:netrw_dirhist_2='/Users/petter/Cloud/code/c/sdl-foobar'

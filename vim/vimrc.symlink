@@ -5,8 +5,11 @@
 
 " Global stuff
 set nocompatible        " vim - and not vi - settings
+filetype plugin on      " read plugins based on filetype
+set noesckeys           " de-activate esc keys in insert mode
+"set timeout timeoutlen=1000 ttimeoutlen=100
 let mapleader = ","     " <leader> binds to ,
-set history=100         " cmdline history
+set history=1000        " cmdline history
 set autoread            " automatically load changes outside vim
 set hidden              " allow buffers to hide without saved changes
 set encoding=utf-8      " encoding displayed
@@ -14,7 +17,12 @@ set fileencodings=utf-8,ucs-bom,default,latin1
 set modelines=0         " never use it anyway...
 set ttyfast             " faster redraw
 set clipboard=unnamed   " set clipboard to OS X global
-nmap <silent> <leader>q :silent :bd<CR>   " quicker close (buffer delete)
+" sudo save a file with :w!! after it's already opened
+cmap w!! w !sudo tee % >/dev/null
+" autoload changes to .vimrc
+nnoremap <silent> <F12> :source $MYVIMRC<CR>
+"autocmd BufWritePost .vimrc source $MYVIMRC
+
 
 " Swap, backup and undo
 set backup
@@ -22,49 +30,65 @@ set backupdir=~/.vimbackup/
 set directory=~/.vimbackup/
 set writebackup         " writes a temporary backup if overwriting file
 
-" Recognize markdown
+" Recognize certain file types
 au BufRead,BufNewFile *.md set filetype=markdown
+
+" Tags
+set tags+=~/.vim/tags/sdl.tags
 
 " Visual
 colorscheme sahara      " as in ~/.vimrc/colors
 set number              " line numbers to the left
+"set relativenumber      " show relative line number
 set ruler               " line and column at the bottom right
 set laststatus=2        " always show a status line
 set showcmd             " show writing the cmd at bottom
 set showmode            " show mode at bottom
 set visualbell          " blink instead of beep
-set nowrap              " don't wrap
-set textwidth=80
 "set colorcolumn=+1      " make sure ColorColumn color is not too bad
-set formatoptions=rqn1  " see :help fo-table
+"""
+""" statusline
+"set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\
+"    \ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L] 
+"""
 
 " GUI vim (gvim, macvim)
 set guifont=Inconsolata:h18
 
-" Highlight, indent and tabbing
-filetype plugin indent on
+" Windows
+set splitbelow    " more sane splits
+set splitright    " more sane splits
+
+" Tabs
+set showtabline=1       " always show tab line
+
+" Highlight, indent, format and tabbing
+set t_Co=256
 syntax on               " syntax and override current colors
+""" discreteley highlight 81 column overlength
+highlight OverLength term=NONE cterm=NONE ctermfg=NONE ctermbg=52 gui=NONE guifg=NONE guibg=#5f0000
+match OverLength /\%81v./
+"""
+"set cursorline          " highlight current working line
+filetype indent on
 set autoindent
-set smartindent
+set cindent
+"set smartindent
+set nowrap              " don't wrap
+set textwidth=80
+set formatoptions=tcrqn1j  " see :help fo-table
 set tabstop=4           " columns to print if reading a tab
 set softtabstop=4       " columns to insert if <TAB>
 set shiftwidth=4        " column to shift when >> or <<
 set expandtab           " explicitly tab expand
 set shiftround          " round indent to nearest shiftwidth
 
-" Editor tabs
-set showtabline=1       " always show tab line
-nmap <silent> <leader>t :silent :tabnew<CR>    " create new tab
-
-" Search and moving around
+" Searches
 set incsearch           " show search as we type
 set hlsearch            " highlight search words, turn off with :nohlsearch
 set ignorecase          " case insensitive
 set smartcase           " unless it's a capital char used
 set gdefault            " use global search per line as default
-nmap <silent> <leader><space> :silent :nohlsearch<CR>
-nnoremap <tab> %
-vnoremap <tab> %
 
 " Tabbing cmd alternatives
 set wildchar=<Tab> wildmenu wildmode=list:longest,full
@@ -74,22 +98,113 @@ set wildchar=<Tab> wildmenu wildmode=list:longest,full
 "set sidescrolloff=15    " vertically
 set sidescroll=1
 
-" Show whitespace characters
-nnoremap <leader>l :set list!<CR>
-set listchars=tab:▸\ ,eol:¬,trail:·
+
+"""
+""" Omni completion
+"""
+
+set omnifunc=syntaxcomplete#Complete  " omnicompletion based on syntax files
+set completeopt=menuone,menu,longest
+
+" Use Ctrl+k for completion in insert mode and scrolling through list
+inoremap <expr> <C-k> pumvisible() ? "\<C-n>" : "\<C-x><C-o>"
+
+" Remap keys for less ctrl-bashing while popped up
+inoremap <expr> <Esc> pumvisible() ? "\<C-e>" : "\<Esc>"   "exit
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"     "choose
+inoremap <expr> <Down> pumvisible() ? "\<C-n>" : "\<Down>" "down
+inoremap <expr> <Up> pumvisible() ? "\<C-p>" : "\<Up>"     "up
+
+
+"""
+""" SHORTCUTS
+"""
+
+" remap tag jumping to ctrl+k (easier on swedish mac kbd)
+nnoremap <C-k> <C-]>
+
+" make j and k act on display lines instead of file lines
+nnoremap j gj
+nnoremap k gk
+
+" Remap the recording (q) to Q
+nnoremap Q q
+nnoremap q <Nop>
+
+" Buffers
+nnoremap <silent> <leader>b :ls<CR>:b<SPACE>
+
+" Window and tab management
+nnoremap <silent> <leader>t :tabnew<CR>
+nnoremap <silent> <leader>s <C-w>v
+nmap <silent> <leader>c <C-w>c
+nmap <silent> <leader>l <C-w>w
+
+" File explorer (Netrw)
+nnoremap <silent> <leader>e :Explore<CR>
 
 " Switch back and forth from HEX mode
 nnoremap <F8> :%!xxd<CR>
 nnoremap <F7> :%!xxd -r<CR>
 
-" Open up scratch pad (plugin/scratch)
-nmap <silent> <leader><tab> :silent :Sscratch<CR>
+" Remove search highlights
+nmap <silent> <leader><space> :nohlsearch<CR>
+
+" Select the recently pasted text
+nnoremap <leader>v V`]
+
+" show whitespace characters
+nnoremap <silent> <leader>m :set list!<CR>
+set listchars=tab:▸\ ,eol:¬,trail:·
+
+" Open calendar (plugin)
+nnoremap <silent> <leader>C :tabnew<CR>:Calendar<CR>
+
+" Use DiffOrig (see below)
+nnoremap <silent> <leader>d :DiffOrig<CR>
+
+" Run :Make and catch errors in quickfix (using vim-dispatch plugin)
+map <silent> <F4> :Make<CR>
+
+" Run "make run" in a separate tmux (vim-dispatch)
+map <silent> <F5> :Start make run<CR>
+
+" Manually recreate a tags file in working dir (vim-dispatch)
+map <silent> <F6> :Start! ctags -R --sort=yes
+    \ --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+
+
+"""
+""" PLUGINS AND SNIPPETS
+"""
+
+" activate pathogen
+execute pathogen#infect()
 
 " Use ASCII-armored files instead of binary (plugin/gnupg)
 let g:GPGPreferArmor=1
 
-" Discreteley highlight 81 column overlength
-highlight OverLength term=NONE cterm=NONE ctermfg=NONE ctermbg=52 gui=NONE guifg=NONE guibg=#5f0000
-match OverLength /\%81v./
+" :DiffOrig - see changes made to the buffer since last open/save (and close
+" with same command if it's already open
+if !exists(":DiffOrig")
+    command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
+                \ | wincmd p | diffthis | normal H
+endif
+
+" vimwiki.vim
+let g:vimwiki_list = [{'path':'~/Cloud/vimwiki','path_html':'~/Sites/vimwiki/',
+            \ 'syntax':'markdown', 'ext':'.md',
+            \ 'custom_wiki2html':'~/Cloud/scripts/vimwiki-md2html.sh',
+            \ 'css_name':'markdown.css'}]
+let g:vimwiki_dir_link = "index"
+let g:vimwiki_use_calendar = 1
+
+" calendar.vim start on monday
+let g:calendar_first_day = "monday"
+
+" Sort-of a scratchpad
+"nnoremap <silent> <leader>§ :new<CR>:setlocal buftype=nofile<CR>
+"            \:setlocal bufhidden=hide<CR>
+"            \:setlocal noswapfile<CR>:file scratchpad<CR>
 
 " EOF
