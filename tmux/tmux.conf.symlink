@@ -44,15 +44,15 @@ bind | split-window -h
 bind - split-window -v
 
 # status bar style
-set -g status-utf8 on
 set -g status-bg black
 set -g status-fg white
 set-window-option -g window-status-current-bg red
 set -g status-left-length 100
-set -g status-left "#[fg=green][#h]"
+set -g status-left "#[fg=blue][#h] "
 set -g status-right-length 100
-set -g status-right "#(cmus-remote -Q | egrep 'tag artist|title' | cut -d ' ' -f3- | awk '{printf $0 \" - \"; getline; print $0}') | "
-set -ag status-right "#(date -j +'%b %d, %H:%M')"
+#set -g status-right "#(cmus-remote -Q | egrep 'tag artist|title' | cut -d ' ' -f3- | awk '{printf $0 \" - \"; getline; print $0}') | "
+set -g status-right "#{pane_current_path}"
+set -ag status-right " | #(date -j +'%b %d, %H:%M')"
 
 # update interval for status bar
 set -g status-interval 5
