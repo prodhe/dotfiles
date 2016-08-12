@@ -2,8 +2,12 @@
 # .profile
 #
 
+# get git completion and status prompt
+source /usr/local/etc/bash_completion.d/git-completion.bash
+source /usr/local/etc/bash_completion.d/git-prompt.sh
+
 # prompt
-PS1="\W \[\e[0;36m\]\$ \[\e[0;m\]"
+PS1='\W $(__git_ps1 "[%s] ")\[\e[0;36m\]> \[\e[0;m\]'
 #PS1="\w \$ "
 
 # editor
@@ -31,5 +35,6 @@ alias update="brew update && cabal update && brew upgrade --all"
 alias checksum="~/Cloud/scripts/checksum.sh"
 alias mmv="~/Cloud/scripts/mmv.sh"
 alias newsbeuter="LANG=en_GB newsbeuter"
+
 
 # EOF
