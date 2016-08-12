@@ -3,6 +3,9 @@
 "   prodhe
 "
 
+" activate pathogen
+execute pathogen#infect()
+
 " Global stuff
 set nocompatible        " vim - and not vi - settings
 filetype plugin on      " read plugins based on filetype
@@ -37,20 +40,25 @@ au BufRead,BufNewFile *.md set filetype=markdown
 set tags+=~/.vim/tags/sdl.tags
 
 " Visual
-colorscheme sahara      " as in ~/.vimrc/colors
+set background=dark
+colorscheme solarized
+"colorscheme sahara      " as in ~/.vimrc/colors
 set number              " line numbers to the left
-"set relativenumber      " show relative line number
+set relativenumber      " show relative line number
 set ruler               " line and column at the bottom right
 set laststatus=2        " always show a status line
 set showcmd             " show writing the cmd at bottom
 set showmode            " show mode at bottom
 set visualbell          " blink instead of beep
-"set colorcolumn=+1      " make sure ColorColumn color is not too bad
-"""
-""" statusline
-"set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\
-"    \ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L] 
-"""
+
+" statusline
+set statusline=
+set statusline+=\ [%n]\ %t\ %m%r%h%w
+set statusline+=%=
+set statusline+=%c%V,
+set statusline+=%l/%L
+set statusline+=\ %y
+set statusline+=\ %{fugitive#statusline()}
 
 " GUI vim (gvim, macvim)
 set guifont=Inconsolata:h18
@@ -63,21 +71,23 @@ set splitright    " more sane splits
 set showtabline=1       " always show tab line
 
 " Highlight, indent, format and tabbing
-set t_Co=256
-syntax on               " syntax and override current colors
-""" discreteley highlight 81 column overlength
-highlight OverLength term=NONE cterm=NONE ctermfg=NONE ctermbg=52 gui=NONE guifg=NONE guibg=#5f0000
+"set t_Co=256
+syntax enable               " syntax and override current colors
+
+" discreteley highlight 81 column overlength
+highlight OverLength term=NONE cterm=NONE ctermfg=NONE  
+    \ ctermbg=52 gui=NONE guifg=NONE guibg=#5f0000      
 match OverLength /\%81v./
-"""
-"set cursorline          " highlight current working line
+
+set cursorline          " highlight current working line
 filetype indent on
 set autoindent
 set cindent
 "set smartindent
 set nowrap              " don't wrap
 set textwidth=80
-set formatoptions=tcrqn1j  " see :help fo-table
-set fo-=o
+set formatoptions=tcrqn1  " see :help fo-table
+set formatoptions-=o
 set tabstop=4           " columns to print if reading a tab
 set softtabstop=4       " columns to insert if <TAB>
 set shiftwidth=4        " column to shift when >> or <<
@@ -178,9 +188,6 @@ map <silent> <F6> :Start! make tags<CR>
 """ PLUGINS AND SNIPPETS
 """
 
-" activate pathogen
-execute pathogen#infect()
-
 " Use ASCII-armored files instead of binary (plugin/gnupg)
 let g:GPGPreferArmor=1
 
@@ -201,6 +208,9 @@ let g:vimwiki_use_calendar = 1
 
 " calendar.vim start on monday
 let g:calendar_first_day = "monday"
+
+" add git branch to statusline (vim-fugitive)
+set statusline += "%{fugitive#statusline()}"
 
 " Sort-of a scratchpad
 "nnoremap <silent> <leader>§ :new<CR>:setlocal buftype=nofile<CR>
