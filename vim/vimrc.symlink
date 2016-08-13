@@ -155,7 +155,7 @@ nnoremap <silent> <leader>b :ls<CR>:b<SPACE>
 nnoremap <silent> <leader>t :tabnew<CR>
 nnoremap <silent> <leader>s <C-w>v
 nmap <silent> <leader>c <C-w>c
-nmap <silent> <leader>l <C-w>w
+nmap <silent> <leader>w <C-w>w
 
 " File explorer (Netrw)
 nnoremap <silent> <leader>e :Explore<CR>
