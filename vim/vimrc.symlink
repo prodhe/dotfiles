@@ -10,6 +10,7 @@ execute pathogen#infect()
 set nocompatible        " vim - and not vi - settings
 filetype plugin on      " read plugins based on filetype
 set noesckeys           " de-activate esc keys in insert mode
+                        " gets rid of the o/O delay
 "set timeout timeoutlen=1000 ttimeoutlen=100
 let mapleader = ","     " <leader> binds to ,
 set history=1000        " cmdline history
@@ -20,23 +21,22 @@ set fileencodings=utf-8,ucs-bom,default,latin1
 set modelines=0         " never use it anyway...
 set ttyfast             " faster redraw
 set clipboard=unnamed   " set clipboard to OS X global
+set shortmess+=I        " skip intro text when starting
+
 " sudo save a file with :w!! after it's already opened
 cmap w!! w !sudo tee % >/dev/null
-" autoload changes to .vimrc
-nnoremap <silent> <F12> :source $MYVIMRC<CR>
-"autocmd BufWritePost .vimrc source $MYVIMRC
-
 
 " Swap, backup and undo
 set backup
-set backupdir=~/.vimbackup/
-set directory=~/.vimbackup/
+set backupdir=~/.vimbackup//
+set directory=~/.vimbackup//
 set writebackup         " writes a temporary backup if overwriting file
 
 " Recognize certain file types
 au BufRead,BufNewFile *.md set filetype=markdown
 
 " Tags
+set tags+=.tags
 set tags+=~/.vim/tags/sdl.tags
 
 " Visual
@@ -68,7 +68,7 @@ set splitbelow    " more sane splits
 set splitright    " more sane splits
 
 " Tabs
-set showtabline=1       " always show tab line
+"set showtabline=1       " always show tab line
 
 " Highlight, indent, format and tabbing
 "set t_Co=256
@@ -96,7 +96,7 @@ set shiftround          " round indent to nearest shiftwidth
 
 " Searches
 set incsearch           " show search as we type
-set hlsearch            " highlight search words, turn off with :nohlsearch
+"set hlsearch            " highlight search words, turn off with :nohlsearch
 set ignorecase          " case insensitive
 set smartcase           " unless it's a capital char used
 set gdefault            " use global search per line as default
@@ -123,16 +123,22 @@ inoremap <expr> <C-k> pumvisible() ? "\<C-n>" : "\<C-x><C-o>"
 " Remap keys for less ctrl-bashing while popped up
 inoremap <expr> <Esc> pumvisible() ? "\<C-e>" : "\<Esc>"   "exit
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"     "choose
-inoremap <expr> <Down> pumvisible() ? "\<C-n>" : "\<Down>" "down
-inoremap <expr> <Up> pumvisible() ? "\<C-p>" : "\<Up>"     "up
 
 
 """
 """ SHORTCUTS
 """
 
+" edit .vimrc and reload
+nnoremap <silent> <F11> :ed $MYVIMRC<CR>
+nnoremap <silent> <F12> :source $MYVIMRC<CR>
+
 " remap tag jumping to ctrl+k (easier on swedish mac kbd)
 nnoremap <C-k> <C-]>
+vnoremap <C-k> <C-]>
+
+" search for tags
+nnoremap <leader>z :tag /<TAB>
 
 " make j and k act on display lines instead of file lines
 nnoremap j gj
@@ -165,7 +171,7 @@ nmap <silent> <leader><space> :nohlsearch<CR>
 nnoremap <leader>v V`]
 
 " show whitespace characters
-nnoremap <silent> <leader>m :set list!<CR>
+nnoremap <silent> <leader>l :set list!<CR>
 set listchars=tab:▸\ ,eol:¬,trail:·
 
 " Open calendar (plugin)
@@ -180,11 +186,17 @@ map <silent> <F4> :Make<CR>
 " Run "make run" in a separate tmux (vim-dispatch)
 map <silent> <F5> :Start make run<CR>
 
-" Manually recreate a tags file in working dir (vim-dispatch)
-map <silent> <F6> :Start! make tags<CR>
+" Manually recreate a tags file in working dir
+map <silent> <F6> :Silent !ctags<CR>:echo "ctags generated"<CR>
 
+" Move (visually selected) lines up and down
+nnoremap <leader>j :m .+1<CR>==
+nnoremap <leader>k :m .-2<CR>==
+vnoremap <leader>j :m '>+1<CR>gv=gv
+vnoremap <leader>k :m '<-2<CR>gv=gv
 
 """
+
 """ PLUGINS AND SNIPPETS
 """
 
