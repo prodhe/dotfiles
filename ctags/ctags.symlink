@@ -1,0 +1,11 @@
+--exclude=.git
+--recurse=yes
+--sort=yes
+--fields=+iaS
+--extra=+q
+
+--langdef=markdown
+--langmap=markdown:.md
+--regex-markdown=/^#[ \t](.*$)/\1/h,heading,headings/
+
+--c++-kinds=+p
