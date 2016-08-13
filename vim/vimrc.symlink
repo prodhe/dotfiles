@@ -210,23 +210,43 @@ if !exists(":DiffOrig")
                 \ | wincmd p | diffthis | normal H
 endif
 
+" create :Silent for external quick commands
+if !exists(":Silent")
+    command! -nargs=+ Silent execute 'silent <args>' | redraw!
+endif
+
 " vimwiki.vim
-let g:vimwiki_list = [{'path':'~/Cloud/vimwiki','path_html':'~/Sites/vimwiki/',
-            \ 'syntax':'markdown', 'ext':'.md',
-            \ 'custom_wiki2html':'~/Cloud/scripts/vimwiki-md2html.sh',
-            \ 'css_name':'markdown.css'}]
-let g:vimwiki_dir_link = "index"
-let g:vimwiki_use_calendar = 1
+"let g:vimwiki_list = [{'path':'~/Cloud/vimwiki','path_html':'~/Sites/vimwiki/',
+"            \ 'syntax':'markdown', 'ext':'.md',
+"            \ 'custom_wiki2html':'~/Cloud/scripts/vimwiki-md2html.sh',
+"            \ 'css_name':'markdown.css'}]
+"let g:vimwiki_dir_link = "index"
+"let g:vimwiki_use_calendar = 1
 
 " calendar.vim start on monday
 let g:calendar_first_day = "monday"
-
-" add git branch to statusline (vim-fugitive)
-set statusline += "%{fugitive#statusline()}"
 
 " Sort-of a scratchpad
 "nnoremap <silent> <leader>§ :new<CR>:setlocal buftype=nofile<CR>
 "            \:setlocal bufhidden=hide<CR>
 "            \:setlocal noswapfile<CR>:file scratchpad<CR>
+
+" grep searches using Ack
+set grepprg=ack
+nnoremap <leader>a :Silent grep! -i<SPACE>
+
+
+" NOTETAKING (making use of tags for internal navigation and search)
+nnoremap <silent> <F10> :edit ~/Cloud/notes/index.md<CR>G
+augroup notebook
+    au!
+    autocmd BufRead,BufNewFile ~/Cloud/notes/**
+        \ lcd ~/Cloud/notes | setlocal tags=tags
+    autocmd BufRead ~/Cloud/notes/index.md
+        \ Silent !ctags
+    autocmd BufEnter ~/Cloud/notes/**
+        \ lcd ~/Cloud/notes
+augroup END
+
 
 " EOF
