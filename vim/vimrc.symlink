@@ -195,8 +195,8 @@ nnoremap <leader>k :m .-2<CR>==
 vnoremap <leader>j :m '>+1<CR>gv=gv
 vnoremap <leader>k :m '<-2<CR>gv=gv
 
-"""
 
+"""
 """ PLUGINS AND SNIPPETS
 """
 
@@ -226,15 +226,9 @@ endif
 " calendar.vim start on monday
 let g:calendar_first_day = "monday"
 
-" Sort-of a scratchpad
-"nnoremap <silent> <leader>§ :new<CR>:setlocal buftype=nofile<CR>
-"            \:setlocal bufhidden=hide<CR>
-"            \:setlocal noswapfile<CR>:file scratchpad<CR>
-
 " grep searches using Ack
 set grepprg=ack
 nnoremap <leader>a :Silent grep! -i<SPACE>
-
 
 " NOTETAKING (making use of tags for internal navigation and search)
 nnoremap <silent> <F10> :edit ~/Cloud/notes/index.md<CR>G
