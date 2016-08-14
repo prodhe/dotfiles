@@ -194,7 +194,7 @@ settings = {
   };
   "irc/core" = { skip_motd = "yes"; alternate_nick = "prodhe~"; };
   "fe-text" = { actlist_sort = "refnum"; };
-  "fe-common/core" = { theme = "rettoscopia"; term_charset = "utf-8"; };
+  "fe-common/core" = { theme = "solarized-universal"; term_charset = "utf-8"; };
 };
 hilights = ( { text = "prodhe"; nick = "yes"; word = "yes"; } );
 ignores = ( { level = "JOINS PARTS QUITS"; } );
