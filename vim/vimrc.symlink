@@ -3,49 +3,75 @@
 "   prodhe
 "
 
-" activate pathogen
+" Vim mode, instead of vi
+set nocompatible
+
+" Activate pathogen (autoload plugins in "~/.vim/bundle")
 execute pathogen#infect()
 
+" Activate file type settings
+filetype on
+filetype plugin on
+filetype indent on
+
+"
 " Global stuff
-set nocompatible        " vim - and not vi - settings
-filetype plugin on      " read plugins based on filetype
+"
+
 set noesckeys           " de-activate esc keys in insert mode
                         " gets rid of the o/O delay
 "set timeout timeoutlen=1000 ttimeoutlen=100
-let mapleader = ","     " <leader> binds to ,
 set history=1000        " cmdline history
 set autoread            " automatically load changes outside vim
 set hidden              " allow buffers to hide without saved changes
 set encoding=utf-8      " encoding displayed
 set fileencodings=utf-8,ucs-bom,default,latin1
 set modelines=0         " never use it anyway...
+set nomodeline
 set ttyfast             " faster redraw
 set clipboard=unnamed   " set clipboard to OS X global
 set shortmess+=I        " skip intro text when starting
+set grepprg=ack         " grep searches using Ack
+set formatprg=par       " use par for formatting (eg. "gq")
+set wildchar=<Tab> wildmenu wildmode=list:longest,full " Tabbing cmd alternatives
+set tags+=.tags                     " list of tags files
+set tags+=~/.vim/tags/sdl.tags      " ...
 
 " sudo save a file with :w!! after it's already opened
 cmap w!! w !sudo tee % >/dev/null
 
-" Swap, backup and undo
+
+"
+" Automatic commands
+"
+if has("autocmd")
+    " automatically apply .vimrc upon save
+    au! BufWritePost .vimrc source $MYVIMRC
+
+    " Recognize markdown as *.md
+    au! BufRead,BufNewFile,BufFilePre *.md set filetype=markdown
+endif
+
+
+"
+" Swap and backup
+"
+
 set backup
 set backupdir=~/.vimbackup//
 set directory=~/.vimbackup//
 set writebackup         " writes a temporary backup if overwriting file
 
-" Recognize certain file types
-au BufRead,BufNewFile *.md set filetype=markdown
 
-" Tags
-set tags+=.tags
-set tags+=~/.vim/tags/sdl.tags
+"
+" Display settings
+"
 
-" Visual
 set background=dark
 colorscheme solarized
 "colorscheme sahara      " as in ~/.vimrc/colors
 set number              " line numbers to the left
 set relativenumber      " show relative line number
-set ruler               " line and column at the bottom right
 set laststatus=2        " always show a status line
 set showcmd             " show writing the cmd at bottom
 set showmode            " show mode at bottom
@@ -57,62 +83,66 @@ set statusline+=\ [%n]\ %t\ %m%r%h%w
 set statusline+=%=
 set statusline+=%c%V,
 set statusline+=%l/%L
+set statusline+=\ (%p%%)
 set statusline+=\ %y
 set statusline+=\ %{fugitive#statusline()}
 
-" GUI vim (gvim, macvim)
-set guifont=Inconsolata:h18
+" Default split behaviour for windows
+set splitbelow
+set splitright
 
-" Windows
-set splitbelow    " more sane splits
-set splitright    " more sane splits
-
-" Tabs
-"set showtabline=1       " always show tab line
-
-" Highlight, indent, format and tabbing
-"set t_Co=256
+" Highlight, indent formatting of text
 syntax enable               " syntax and override current colors
 
-" discreteley highlight 81 column overlength
-highlight OverLength term=NONE cterm=NONE ctermfg=NONE  
-    \ ctermbg=52 gui=NONE guifg=NONE guibg=#5f0000      
-match OverLength /\%81v./
-
+" autocmd! BufEnter * match WarningMsg /\%81v./     " discreteley highlight 81
+"                                                   " column overlength (and use
+"                                                   " default colorscheme colors,
+"                                                   " see :hi for list of vim
+"                                                   " available colors)
+set colorcolumn=+1      " show column (at +1 from textwidth)
 set cursorline          " highlight current working line
-filetype indent on
 set autoindent
-set cindent
-"set smartindent
 set nowrap              " don't wrap
 set textwidth=80
 set formatoptions=tcrqn1  " see :help fo-table
 set formatoptions-=o
+
+" Scrolling of screen
+"set scrolloff=8         " scroll horizontally when there is X lines left
+"set sidescrolloff=15    " vertically
+set sidescroll=1
+
+" GUI vim (gvim, macvim)
+if has("gui_running")
+    set guifont=Inconsolata:h18
+    set columns=85 lines=40     " GUI window geometry
+    set background=light
+endif
+
+
+"
+" What to do with <TAB>s
+"
 set tabstop=4           " columns to print if reading a tab
 set softtabstop=4       " columns to insert if <TAB>
 set shiftwidth=4        " column to shift when >> or <<
 set expandtab           " explicitly tab expand
 set shiftround          " round indent to nearest shiftwidth
 
+
+"
 " Searches
+"
 set incsearch           " show search as we type
-"set hlsearch            " highlight search words, turn off with :nohlsearch
+set hlsearch            " highlight search words, turn off with :nohlsearch
 set ignorecase          " case insensitive
 set smartcase           " unless it's a capital char used
 set gdefault            " use global search per line as default
 
-" Tabbing cmd alternatives
-set wildchar=<Tab> wildmenu wildmode=list:longest,full
 
-" Scrolling
-"set scrolloff=8         " scroll horizontally when there is X lines left
-"set sidescrolloff=15    " vertically
-set sidescroll=1
-
-
-"""
-""" Omni completion
-"""
+"
+" Omni completion
+"
 
 set omnifunc=syntaxcomplete#Complete  " omnicompletion based on syntax files
 set completeopt=menuone,menu,longest
@@ -125,47 +155,49 @@ inoremap <expr> <Esc> pumvisible() ? "\<C-e>" : "\<Esc>"   "exit
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"     "choose
 
 
-"""
-""" SHORTCUTS
-"""
+"
+" Key mappings
+"
 
-" edit .vimrc and reload
-nnoremap <silent> <F11> :ed $MYVIMRC<CR>
-nnoremap <silent> <F12> :source $MYVIMRC<CR>
+" <leader> key
+let mapleader = ","
 
 " remap tag jumping to ctrl+k (easier on swedish mac kbd)
 nnoremap <C-k> <C-]>
 vnoremap <C-k> <C-]>
 
 " search for tags
-nnoremap <leader>z :tag /<TAB>
+nnoremap <leader>z :tag /
 
 " make j and k act on display lines instead of file lines
 nnoremap j gj
 nnoremap k gk
 
-" Remap the recording (q) to Q
-nnoremap Q q
-nnoremap q <Nop>
+" Move (visually selected) lines up and down
+nnoremap <leader>j :m .+1<CR>==
+nnoremap <leader>k :m .-2<CR>==
+vnoremap <leader>j :m '>+1<CR>gv=gv
+vnoremap <leader>k :m '<-2<CR>gv=gv
 
-" Buffers
-nnoremap <silent> <leader>b :ls<CR>:b<SPACE>
+" Run current line as a shell expression and insert the result (q: "query")
+nnoremap Q :.!$SHELL<CR>
+
+" List buffers and prompt for selection
+nnoremap <leader>b :ls<CR>:b<SPACE>
 
 " Window and tab management
-nnoremap <silent> <leader>t :tabnew<CR>
-nnoremap <silent> <leader>s <C-w>v
-nmap <silent> <leader>c <C-w>c
-nmap <silent> <leader>w <C-w>w
+nnoremap <leader>t :tabnew<CR>
+nnoremap <leader>s <C-w>v
+nmap <leader>c <C-w>c
+nmap <leader>w <C-w>w
 
 " File explorer (Netrw)
 nnoremap <silent> <leader>e :Explore<CR>
 
-" Switch back and forth from HEX mode
-nnoremap <F8> :%!xxd<CR>
-nnoremap <F7> :%!xxd -r<CR>
-
-" Remove search highlights
+" Remove search highlights and auto-center on search results
 nmap <silent> <leader><space> :nohlsearch<CR>
+nnoremap n nzz
+nnoremap N Nzz
 
 " Select the recently pasted text
 nnoremap <leader>v V`]
@@ -174,11 +206,11 @@ nnoremap <leader>v V`]
 nnoremap <silent> <leader>l :set list!<CR>
 set listchars=tab:▸\ ,eol:¬,trail:·
 
-" Open calendar (plugin)
-nnoremap <silent> <leader>C :tabnew<CR>:Calendar<CR>
-
-" Use DiffOrig (see below)
+" Use DiffOrig (see below under plugins and snippets)
 nnoremap <silent> <leader>d :DiffOrig<CR>
+
+" Case-ignore external grep search with results in quickfix
+nnoremap <leader>a :Silent grep -i<SPACE>
 
 " Run :Make and catch errors in quickfix (using vim-dispatch plugin)
 map <silent> <F4> :Make<CR>
@@ -186,25 +218,31 @@ map <silent> <F4> :Make<CR>
 " Run "make run" in a separate tmux (vim-dispatch)
 map <silent> <F5> :Start make run<CR>
 
-" Manually recreate a tags file in working dir
+" Manually recreate a tags file in working dir (for :Silent, see under snippets)
 map <silent> <F6> :Silent !ctags<CR>:echo "ctags generated"<CR>
 
-" Move (visually selected) lines up and down
-nnoremap <leader>j :m .+1<CR>==
-nnoremap <leader>k :m .-2<CR>==
-vnoremap <leader>j :m '>+1<CR>gv=gv
-vnoremap <leader>k :m '<-2<CR>gv=gv
+" Switch back and forth from HEX mode
+nnoremap <F7> :%!xxd<CR>
+nnoremap <F8> :%!xxd -r<CR>
+
+" Edit "main" file of my notebook, which triggers notebook snippet below
+nnoremap <silent> <F10> :edit ~/Cloud/notes/index.md<CR>G
+
+" Toggle Gundo
+nnoremap <silent> <F11> :GundoToggle<CR>
+
+" edit .vimrc
+nnoremap <silent> <F12> :ed $MYVIMRC<CR>
 
 
-"""
-""" PLUGINS AND SNIPPETS
-"""
+"
+" PLUGINS AND SNIPPETS
+"
 
 " Use ASCII-armored files instead of binary (plugin/gnupg)
 let g:GPGPreferArmor=1
 
-" :DiffOrig - see changes made to the buffer since last open/save (and close
-" with same command if it's already open
+" :DiffOrig - see changes made to the buffer since last open/save
 if !exists(":DiffOrig")
     command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
                 \ | wincmd p | diffthis | normal H
@@ -215,32 +253,28 @@ if !exists(":Silent")
     command! -nargs=+ Silent execute 'silent <args>' | redraw!
 endif
 
-" vimwiki.vim
-"let g:vimwiki_list = [{'path':'~/Cloud/vimwiki','path_html':'~/Sites/vimwiki/',
-"            \ 'syntax':'markdown', 'ext':'.md',
-"            \ 'custom_wiki2html':'~/Cloud/scripts/vimwiki-md2html.sh',
-"            \ 'css_name':'markdown.css'}]
-"let g:vimwiki_dir_link = "index"
-"let g:vimwiki_use_calendar = 1
-
-" calendar.vim start on monday
-let g:calendar_first_day = "monday"
-
-" grep searches using Ack
-set grepprg=ack
-nnoremap <leader>a :Silent grep! -i<SPACE>
-
 " NOTETAKING (making use of tags for internal navigation and search)
-nnoremap <silent> <F10> :edit ~/Cloud/notes/index.md<CR>G
 augroup notebook
     au!
     autocmd BufRead,BufNewFile ~/Cloud/notes/**
-        \ lcd ~/Cloud/notes | setlocal tags=tags
+        \ lcd ~/Cloud/notes
     autocmd BufRead ~/Cloud/notes/index.md
         \ Silent !ctags
     autocmd BufEnter ~/Cloud/notes/**
-        \ lcd ~/Cloud/notes
+        \ lcd ~/Cloud/notes | setlocal tags=tags
 augroup END
+function! NewNote(...)
+    let str = join(a:000, ' ')
+    let fn =
+        \ substitute(str, ' ', '-', 'g') . '.md'
+
+    execute 'edit ~/Cloud/notes/' . fn
+    execute 'normal a# ' . str
+    execute 'normal o'
+endfunction
+if !exists(":Note")
+    command! -nargs=+ Note call NewNote(<q-args>)
+endif
 
 
 " EOF
