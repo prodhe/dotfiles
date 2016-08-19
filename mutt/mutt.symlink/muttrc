@@ -74,6 +74,7 @@ bind index <space>  collapse-thread
 
 # pager viewing
 alternative_order text/plain text/html
+set wrap = 110              # 80 wrap + 30 sidebar
 set markers = no            # don't put + on wrapped lines
 set pager_index_lines = 10  # show 10 above selected email
 set pager_context = 3
