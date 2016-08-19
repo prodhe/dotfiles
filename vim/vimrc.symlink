@@ -45,11 +45,18 @@ cmap w!! w !sudo tee % >/dev/null
 " Automatic commands
 "
 if has("autocmd")
-    " automatically apply .vimrc upon save
-    au! BufWritePost .vimrc source $MYVIMRC
+    augroup global_stuff
+        autocmd!
 
-    " Recognize markdown as *.md
-    au! BufRead,BufNewFile,BufFilePre *.md set filetype=markdown
+        " Automatically apply .vimrc upon save
+        autocmd BufWritePost .vimrc source $MYVIMRC
+
+        " Recognize markdown as *.md
+        autocmd BufRead,BufNewFile,BufFilePre *.md set filetype=markdown
+
+        " Don't replace <Tab>s with spaces when editing makefiles
+        autocmd Filetype makefile setlocal noexpandtab
+    augroup END
 endif
 
 
@@ -254,15 +261,17 @@ if !exists(":Silent")
 endif
 
 " NOTETAKING (making use of tags for internal navigation and search)
-augroup notebook
-    au!
-    autocmd BufRead,BufNewFile ~/Cloud/notes/**
-        \ lcd ~/Cloud/notes
-    autocmd BufRead ~/Cloud/notes/index.md
-        \ Silent !ctags
-    autocmd BufEnter ~/Cloud/notes/**
-        \ lcd ~/Cloud/notes | setlocal tags=tags
-augroup END
+if has("autocmd")
+    augroup notebook
+        autocmd!
+        autocmd BufRead,BufNewFile ~/Cloud/notes/**
+            \ lcd ~/Cloud/notes
+        autocmd BufRead ~/Cloud/notes/index.md
+            \ Silent !ctags
+        autocmd BufEnter ~/Cloud/notes/**
+            \ lcd ~/Cloud/notes | setlocal tags=tags
+    augroup END
+endif
 function! NewNote(...)
     let str = join(a:000, ' ')
     let fn =
