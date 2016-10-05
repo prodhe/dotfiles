@@ -29,7 +29,7 @@ set fileencodings=utf-8,ucs-bom,default,latin1
 set modelines=0         " never use it anyway...
 set nomodeline
 set ttyfast             " faster redraw
-set clipboard=unnamed   " set clipboard to OS X global
+"set clipboard=unnamed   " set clipboard to OS X global
 set shortmess+=I        " skip intro text when starting
 set grepprg=ack         " grep searches using Ack
 set formatprg=par       " use par for formatting (eg. "gq")
@@ -132,7 +132,7 @@ endif
 "
 set tabstop=4           " columns to print if reading a tab
 set softtabstop=4       " columns to insert if <TAB>
-set shiftwidth=4        " column to shift when >> or <<
+set shiftwidth=0        " column to shift when >> or << (use same as tabstop)
 set expandtab           " explicitly tab expand
 set shiftround          " round indent to nearest shiftwidth
 
@@ -155,7 +155,7 @@ set omnifunc=syntaxcomplete#Complete  " omnicompletion based on syntax files
 set completeopt=menuone,menu,longest
 
 " Use Ctrl+k for completion in insert mode and scrolling through list
-inoremap <expr> <C-k> pumvisible() ? "\<C-n>" : "\<C-x><C-o>"
+" inoremap <expr> <C-k> pumvisible() ? "\<C-n>" : "\<C-x><C-o>"
 
 " Remap keys for less ctrl-bashing while popped up
 inoremap <expr> <Esc> pumvisible() ? "\<C-e>" : "\<Esc>"   "exit
@@ -285,5 +285,25 @@ if !exists(":Note")
     command! -nargs=+ Note call NewNote(<q-args>)
 endif
 
+" TABULAR AUTO ALIGN TABLES IN MARKDOWN
+" (Taken from vimcast.org and Tim Pope)
+if has("autocmd")
+    augroup tabularinmd
+        autocmd!
+        autocmd BufRead *.md inoremap <silent> <Bar>
+            \ <Bar><Esc>:call <SID>align()<CR>a
+    augroup end
+endif
+
+function! s:align()
+  let p = '^\s*|\s.*\s|\s*$'
+  if exists(':Tabularize') && getline('.') =~# '^\s*|' && (getline(line('.')-1) =~# p || getline(line('.')+1) =~# p)
+    let column = strlen(substitute(getline('.')[0:col('.')],'[^|]','','g'))
+    let position = strlen(matchstr(getline('.')[0:col('.')],'.*|\s*\zs.*'))
+    Tabularize/|/l1
+    normal! 0
+    call search(repeat('[^|]*|',column).'\s\{-\}'.repeat('.',position),'ce',line('.'))
+  endif
+endfunction
 
 " EOF
