@@ -34,6 +34,7 @@ set shortmess+=I        " skip intro text when starting
 set grepprg=ack         " grep searches using Ack
 set formatprg=par       " use par for formatting (eg. "gq")
 set wildchar=<Tab> wildmenu wildmode=list:longest,full " Tabbing cmd alternatives
+set path+=**            " fuzzy search sort-of
 set tags+=.tags                     " list of tags files
 set tags+=~/.vim/tags/sdl.tags      " ...
 
