@@ -6,9 +6,6 @@
 " Vim mode, instead of vi
 set nocompatible
 
-" Activate pathogen (autoload plugins in "~/.vim/bundle")
-execute pathogen#infect()
-
 " Activate file type settings
 filetype on
 filetype plugin on
