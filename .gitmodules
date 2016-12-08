@@ -1,0 +1,30 @@
+[submodule "vim/vim.symlink/pack/main/start/asyncrun.vim"]
+	path = vim/vim.symlink/pack/main/start/asyncrun.vim
+	url = https://github.com/skywind3000/asyncrun.vim
+[submodule "vim/vim.symlink/pack/main/start/gnupg.vim"]
+	path = vim/vim.symlink/pack/main/start/gnupg.vim
+	url = https://github.com/vim-scripts/gnupg.vim
+[submodule "vim/vim.symlink/pack/main/start/undotree"]
+	path = vim/vim.symlink/pack/main/start/undotree
+	url = https://github.com/mbbill/undotree
+[submodule "vim/vim.symlink/pack/main/start/tabular"]
+	path = vim/vim.symlink/pack/main/start/tabular
+	url = https://github.com/godlygeek/tabular.git
+[submodule "vim/vim.symlink/pack/main/start/vim-colors-solarized"]
+	path = vim/vim.symlink/pack/main/start/vim-colors-solarized
+	url = git://github.com/altercation/vim-colors-solarized.git
+[submodule "vim/vim.symlink/pack/main/start/vim-commentary"]
+	path = vim/vim.symlink/pack/main/start/vim-commentary
+	url = https://github.com/tpope/vim-commentary.git
+[submodule "vim/vim.symlink/pack/main/start/vim-fugitive"]
+	path = vim/vim.symlink/pack/main/start/vim-fugitive
+	url = git://github.com/tpope/vim-fugitive.git
+[submodule "vim/vim.symlink/pack/main/start/vim-repeat"]
+	path = vim/vim.symlink/pack/main/start/vim-repeat
+	url = https://github.com/tpope/vim-repeat.git
+[submodule "vim/vim.symlink/pack/main/start/vim-surround"]
+	path = vim/vim.symlink/pack/main/start/vim-surround
+	url = https://github.com/tpope/vim-surround.git
+[submodule "vim/vim.symlink/pack/main/start/vimoutliner"]
+	path = vim/vim.symlink/pack/main/start/vimoutliner
+	url = https://github.com/vimoutliner/vimoutliner.git
