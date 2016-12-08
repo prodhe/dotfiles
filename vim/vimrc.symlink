@@ -217,14 +217,15 @@ nnoremap <silent> <leader>d :DiffOrig<CR>
 " Case-ignore external grep search with results in quickfix
 nnoremap <leader>a :Silent grep -i<SPACE>
 
-" Run :Make and catch errors in quickfix (using vim-dispatch plugin)
-map <silent> <F4> :Make<CR>
+" Run make and catch errors in quickfix (asyncrun)
+map <silent> <F4> :AsyncRun make<CR>
 
-" Run "make run" in a separate tmux (vim-dispatch)
-map <silent> <F5> :Start make run<CR>
+" Run "make run" (asyncrun)
+map <silent> <F5> :AsyncRun make run<CR>
 
 " Manually recreate a tags file in working dir (for :Silent, see under snippets)
-map <silent> <F6> :Silent !ctags<CR>:echo "ctags generated"<CR>
+"map <silent> <F6> :Silent !ctags<CR>:echo "ctags generated"<CR>
+map <silent> <F6> :AsyncRun! ctags<CR>
 
 " Switch back and forth from HEX mode
 nnoremap <F7> :%!xxd<CR>
@@ -233,8 +234,8 @@ nnoremap <F8> :%!xxd -r<CR>
 " Edit "main" file of my notebook, which triggers notebook snippet below
 nnoremap <silent> <F10> :edit ~/Cloud/notes/index.md<CR>G
 
-" Toggle Gundo
-nnoremap <silent> <F11> :GundoToggle<CR>
+" Toggle UndoTree
+nnoremap <silent> <F11> :UndotreeToggle<CR>
 
 " edit .vimrc
 nnoremap <silent> <F12> :ed $MYVIMRC<CR>
