@@ -3,6 +3,13 @@
 "   prodhe
 "
 
+" Set VIMHOME
+if has("win32") || has("win64")
+    let $VIMHOME = $HOME . "/vimfiles"
+else
+    let $VIMHOME = $HOME . "/.vim"
+endif
+
 " Vim mode, instead of vi
 set nocompatible
 
@@ -63,8 +70,10 @@ endif
 "
 
 set backup
-set backupdir=~/.vimbackup//
-set directory=~/.vimbackup//
+set backupdir=$VIMHOME/tmp//
+set directory=$VIMHOME/tmp//
+" set backupdir=~/.vimbackup//
+" set directory=~/.vimbackup//
 set writebackup         " writes a temporary backup if overwriting file
 
 
@@ -119,9 +128,18 @@ set sidescroll=1
 
 " GUI vim (gvim, macvim)
 if has("gui_running")
-    set guifont=Inconsolata:h18
-    set columns=85 lines=40     " GUI window geometry
-    set background=light
+    set guioptions-=m
+    set guioptions-=T
+    set guioptions-=r
+    set guioptions-=l
+    set guioptions-=L
+    set guioptions-=e
+    "set background=light
+    if has("win32")
+        set guifont=Consolas:h13
+    else
+        set guifont=Inconsolata:h18
+    endif
 endif
 
 
