@@ -1,0 +1,954 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+BUFSIZ	/usr/include/stdio.h	/^#define	BUFSIZ	/;"	d
+CLOCKS_PER_SEC	/usr/include/time.h	/^#define CLOCKS_PER_SEC /;"	d
+CLOCK_MONOTONIC	/usr/include/time.h	/^#define CLOCK_MONOTONIC /;"	d
+CLOCK_MONOTONIC_RAW	/usr/include/time.h	/^#define CLOCK_MONOTONIC_RAW /;"	d
+CLOCK_MONOTONIC_RAW_APPROX	/usr/include/time.h	/^#define CLOCK_MONOTONIC_RAW_APPROX /;"	d
+CLOCK_PROCESS_CPUTIME_ID	/usr/include/time.h	/^#define CLOCK_PROCESS_CPUTIME_ID /;"	d
+CLOCK_REALTIME	/usr/include/time.h	/^#define CLOCK_REALTIME /;"	d
+CLOCK_THREAD_CPUTIME_ID	/usr/include/time.h	/^#define CLOCK_THREAD_CPUTIME_ID /;"	d
+CLOCK_UPTIME_RAW	/usr/include/time.h	/^#define CLOCK_UPTIME_RAW /;"	d
+CLOCK_UPTIME_RAW_APPROX	/usr/include/time.h	/^#define CLOCK_UPTIME_RAW_APPROX /;"	d
+DOMAIN	/usr/include/math.h	/^#define	DOMAIN	/;"	d
+EOF	/usr/include/stdio.h	/^#define	EOF	/;"	d
+EXIT_FAILURE	/usr/include/stdlib.h	/^#define	EXIT_FAILURE	/;"	d
+EXIT_SUCCESS	/usr/include/stdlib.h	/^#define	EXIT_SUCCESS	/;"	d
+FILE	/usr/include/stdio.h	/^} FILE;$/;"	t	typeref:struct:__sFILE
+FILENAME_MAX	/usr/include/stdio.h	/^#define	FILENAME_MAX	/;"	d
+FOPEN_MAX	/usr/include/stdio.h	/^#define	FOPEN_MAX	/;"	d
+FP_FAST_FMA	/usr/include/math.h	/^#   define FP_FAST_FMA /;"	d
+FP_FAST_FMA	/usr/include/math.h	/^#   undef  FP_FAST_FMA$/;"	d
+FP_FAST_FMAF	/usr/include/math.h	/^#   define FP_FAST_FMAF /;"	d
+FP_FAST_FMAF	/usr/include/math.h	/^#   undef  FP_FAST_FMAF$/;"	d
+FP_FAST_FMAL	/usr/include/math.h	/^#   define FP_FAST_FMAL /;"	d
+FP_FAST_FMAL	/usr/include/math.h	/^#   undef  FP_FAST_FMAL$/;"	d
+FP_ILOGB0	/usr/include/math.h	/^#define FP_ILOGB0 /;"	d
+FP_ILOGBNAN	/usr/include/math.h	/^#define FP_ILOGBNAN /;"	d
+FP_INFINITE	/usr/include/math.h	/^#define FP_INFINITE /;"	d
+FP_NAN	/usr/include/math.h	/^#define FP_NAN /;"	d
+FP_NORMAL	/usr/include/math.h	/^#define FP_NORMAL /;"	d
+FP_QNAN	/usr/include/math.h	/^#define FP_QNAN	/;"	d
+FP_SNAN	/usr/include/math.h	/^#define FP_SNAN	/;"	d
+FP_SUBNORMAL	/usr/include/math.h	/^#define FP_SUBNORMAL /;"	d
+FP_SUPERNORMAL	/usr/include/math.h	/^#define FP_SUPERNORMAL /;"	d
+FP_ZERO	/usr/include/math.h	/^#define FP_ZERO /;"	d
+HUGE	/usr/include/math.h	/^#define	HUGE	/;"	d
+HUGE_VAL	/usr/include/math.h	/^#   define    HUGE_VAL /;"	d
+HUGE_VALF	/usr/include/math.h	/^#   define    HUGE_VALF /;"	d
+HUGE_VALL	/usr/include/math.h	/^#   define    HUGE_VALL /;"	d
+INFINITY	/usr/include/math.h	/^#define INFINITY /;"	d
+IOV_MAX	/usr/include/limits.h	/^#define IOV_MAX	/;"	d
+LC_ALL	/usr/include/locale.h	/^#define	LC_ALL	/;"	d
+LC_COLLATE	/usr/include/locale.h	/^#define	LC_COLLATE	/;"	d
+LC_CTYPE	/usr/include/locale.h	/^#define	LC_CTYPE	/;"	d
+LC_MESSAGES	/usr/include/locale.h	/^#define	LC_MESSAGES	/;"	d
+LC_MONETARY	/usr/include/locale.h	/^#define	LC_MONETARY	/;"	d
+LC_NUMERIC	/usr/include/locale.h	/^#define	LC_NUMERIC	/;"	d
+LC_TIME	/usr/include/locale.h	/^#define	LC_TIME	/;"	d
+L_ctermid	/usr/include/stdio.h	/^#define	L_ctermid	/;"	d
+L_tmpnam	/usr/include/stdio.h	/^#define	L_tmpnam	/;"	d
+MATH_ERREXCEPT	/usr/include/math.h	/^#define MATH_ERREXCEPT /;"	d
+MATH_ERRNO	/usr/include/math.h	/^#define MATH_ERRNO /;"	d
+MAXFLOAT	/usr/include/math.h	/^#define MAXFLOAT /;"	d
+MB_CUR_MAX	/usr/include/stdlib.h	/^#define	MB_CUR_MAX	/;"	d
+MB_CUR_MAX_L	/usr/include/stdlib.h	/^#define	MB_CUR_MAX_L(/;"	d
+M_1_PI	/usr/include/math.h	/^#define M_1_PI /;"	d
+M_1_PIl	/usr/include/math.h	/^#define M_1_PIl /;"	d
+M_2_PI	/usr/include/math.h	/^#define M_2_PI /;"	d
+M_2_PIl	/usr/include/math.h	/^#define M_2_PIl /;"	d
+M_2_SQRTPI	/usr/include/math.h	/^#define M_2_SQRTPI /;"	d
+M_2_SQRTPIl	/usr/include/math.h	/^#define M_2_SQRTPIl /;"	d
+M_E	/usr/include/math.h	/^#define M_E /;"	d
+M_El	/usr/include/math.h	/^#define M_El /;"	d
+M_LN10	/usr/include/math.h	/^#define M_LN10 /;"	d
+M_LN10l	/usr/include/math.h	/^#define M_LN10l /;"	d
+M_LN2	/usr/include/math.h	/^#define M_LN2 /;"	d
+M_LN2l	/usr/include/math.h	/^#define M_LN2l /;"	d
+M_LOG10E	/usr/include/math.h	/^#define M_LOG10E /;"	d
+M_LOG10El	/usr/include/math.h	/^#define M_LOG10El /;"	d
+M_LOG2E	/usr/include/math.h	/^#define M_LOG2E /;"	d
+M_LOG2El	/usr/include/math.h	/^#define M_LOG2El /;"	d
+M_PI	/usr/include/math.h	/^#define M_PI /;"	d
+M_PI_2	/usr/include/math.h	/^#define M_PI_2 /;"	d
+M_PI_2l	/usr/include/math.h	/^#define M_PI_2l /;"	d
+M_PI_4	/usr/include/math.h	/^#define M_PI_4 /;"	d
+M_PI_4l	/usr/include/math.h	/^#define M_PI_4l /;"	d
+M_PIl	/usr/include/math.h	/^#define M_PIl /;"	d
+M_SQRT1_2	/usr/include/math.h	/^#define M_SQRT1_2 /;"	d
+M_SQRT1_2l	/usr/include/math.h	/^#define M_SQRT1_2l /;"	d
+M_SQRT2	/usr/include/math.h	/^#define M_SQRT2 /;"	d
+M_SQRT2l	/usr/include/math.h	/^#define M_SQRT2l /;"	d
+NAN	/usr/include/math.h	/^#   define    NAN /;"	d
+NL_ARGMAX	/usr/include/limits.h	/^#define NL_ARGMAX	/;"	d
+NL_LANGMAX	/usr/include/limits.h	/^#define NL_LANGMAX	/;"	d
+NL_MSGMAX	/usr/include/limits.h	/^#define NL_MSGMAX	/;"	d
+NL_NMAX	/usr/include/limits.h	/^#define NL_NMAX	/;"	d
+NL_SETMAX	/usr/include/limits.h	/^#define NL_SETMAX	/;"	d
+NL_TEXTMAX	/usr/include/limits.h	/^#define NL_TEXTMAX	/;"	d
+OFF_MAX	/usr/include/limits.h	/^#define OFF_MAX	/;"	d
+OFF_MIN	/usr/include/limits.h	/^#define OFF_MIN	/;"	d
+OVERFLOW	/usr/include/math.h	/^#define	OVERFLOW	/;"	d
+PASS_MAX	/usr/include/limits.h	/^#define PASS_MAX	/;"	d
+PLOSS	/usr/include/math.h	/^#define	PLOSS	/;"	d
+PTHREAD_DESTRUCTOR_ITERATIONS	/usr/include/limits.h	/^#define PTHREAD_DESTRUCTOR_ITERATIONS /;"	d
+PTHREAD_KEYS_MAX	/usr/include/limits.h	/^#define PTHREAD_KEYS_MAX /;"	d
+PTHREAD_STACK_MIN	/usr/include/limits.h	/^#define PTHREAD_STACK_MIN /;"	d
+P_tmpdir	/usr/include/stdio.h	/^#define	P_tmpdir	/;"	d
+RAND_MAX	/usr/include/stdlib.h	/^#define	RAND_MAX	/;"	d
+SEEK_CUR	/usr/include/stdio.h	/^#define	SEEK_CUR	/;"	d
+SEEK_END	/usr/include/stdio.h	/^#define	SEEK_END	/;"	d
+SEEK_SET	/usr/include/stdio.h	/^#define	SEEK_SET	/;"	d
+SING	/usr/include/math.h	/^#define	SING	/;"	d
+TLOSS	/usr/include/math.h	/^#define	TLOSS	/;"	d
+TMP_MAX	/usr/include/stdio.h	/^#define	TMP_MAX	/;"	d
+UNDERFLOW	/usr/include/math.h	/^#define	UNDERFLOW	/;"	d
+X_TLOSS	/usr/include/math.h	/^#define X_TLOSS	/;"	d
+_A	/usr/include/ctype.h	/^#define	_A	/;"	d
+_ASSERT_H_	/usr/include/assert.h	/^#define _ASSERT_H_$/;"	d
+_B	/usr/include/ctype.h	/^#define	_B	/;"	d
+_BSD_SETJMP_H	/usr/include/setjmp.h	/^#define _BSD_SETJMP_H$/;"	d
+_C	/usr/include/ctype.h	/^#define	_C	/;"	d
+_CLOCK_MONOTONIC	/usr/include/time.h	/^_CLOCK_MONOTONIC __CLOCK_AVAILABILITY = 6,$/;"	e	enum:__anon4
+_CLOCK_MONOTONIC_RAW	/usr/include/time.h	/^_CLOCK_MONOTONIC_RAW __CLOCK_AVAILABILITY = 4,$/;"	e	enum:__anon4
+_CLOCK_MONOTONIC_RAW_APPROX	/usr/include/time.h	/^_CLOCK_MONOTONIC_RAW_APPROX __CLOCK_AVAILABILITY = 5,$/;"	e	enum:__anon4
+_CLOCK_PROCESS_CPUTIME_ID	/usr/include/time.h	/^_CLOCK_PROCESS_CPUTIME_ID __CLOCK_AVAILABILITY = 12,$/;"	e	enum:__anon4
+_CLOCK_REALTIME	/usr/include/time.h	/^_CLOCK_REALTIME __CLOCK_AVAILABILITY = 0,$/;"	e	enum:__anon4
+_CLOCK_THREAD_CPUTIME_ID	/usr/include/time.h	/^_CLOCK_THREAD_CPUTIME_ID __CLOCK_AVAILABILITY = 16$/;"	e	enum:__anon4
+_CLOCK_UPTIME_RAW	/usr/include/time.h	/^_CLOCK_UPTIME_RAW __CLOCK_AVAILABILITY = 8,$/;"	e	enum:__anon4
+_CLOCK_UPTIME_RAW_APPROX	/usr/include/time.h	/^_CLOCK_UPTIME_RAW_APPROX __CLOCK_AVAILABILITY = 9,$/;"	e	enum:__anon4
+_CTYPE_A	/usr/include/ctype.h	/^#define	_CTYPE_A	/;"	d
+_CTYPE_B	/usr/include/ctype.h	/^#define	_CTYPE_B	/;"	d
+_CTYPE_C	/usr/include/ctype.h	/^#define	_CTYPE_C	/;"	d
+_CTYPE_D	/usr/include/ctype.h	/^#define	_CTYPE_D	/;"	d
+_CTYPE_G	/usr/include/ctype.h	/^#define	_CTYPE_G	/;"	d
+_CTYPE_H_	/usr/include/ctype.h	/^#define _CTYPE_H_$/;"	d
+_CTYPE_I	/usr/include/ctype.h	/^#define	_CTYPE_I	/;"	d
+_CTYPE_L	/usr/include/ctype.h	/^#define	_CTYPE_L	/;"	d
+_CTYPE_P	/usr/include/ctype.h	/^#define	_CTYPE_P	/;"	d
+_CTYPE_Q	/usr/include/ctype.h	/^#define	_CTYPE_Q	/;"	d
+_CTYPE_R	/usr/include/ctype.h	/^#define	_CTYPE_R	/;"	d
+_CTYPE_S	/usr/include/ctype.h	/^#define	_CTYPE_S	/;"	d
+_CTYPE_SW0	/usr/include/ctype.h	/^#define	_CTYPE_SW0	/;"	d
+_CTYPE_SW1	/usr/include/ctype.h	/^#define	_CTYPE_SW1	/;"	d
+_CTYPE_SW2	/usr/include/ctype.h	/^#define	_CTYPE_SW2	/;"	d
+_CTYPE_SW3	/usr/include/ctype.h	/^#define	_CTYPE_SW3	/;"	d
+_CTYPE_SWM	/usr/include/ctype.h	/^#define	_CTYPE_SWM	/;"	d
+_CTYPE_SWS	/usr/include/ctype.h	/^#define	_CTYPE_SWS	/;"	d
+_CTYPE_T	/usr/include/ctype.h	/^#define	_CTYPE_T	/;"	d
+_CTYPE_U	/usr/include/ctype.h	/^#define	_CTYPE_U	/;"	d
+_CTYPE_X	/usr/include/ctype.h	/^#define	_CTYPE_X	/;"	d
+_D	/usr/include/ctype.h	/^#define	_D	/;"	d
+_FSTDIO	/usr/include/stdio.h	/^#define	_FSTDIO	/;"	d
+_G	/usr/include/ctype.h	/^#define	_G	/;"	d
+_I	/usr/include/ctype.h	/^#define	_I	/;"	d
+_IOFBF	/usr/include/stdio.h	/^#define	_IOFBF	/;"	d
+_IOLBF	/usr/include/stdio.h	/^#define	_IOLBF	/;"	d
+_IONBF	/usr/include/stdio.h	/^#define	_IONBF	/;"	d
+_JBLEN	/usr/include/setjmp.h	/^#define _JBLEN	/;"	d
+_JBLEN	/usr/include/setjmp.h	/^#define _JBLEN /;"	d
+_JBLEN_MAX	/usr/include/setjmp.h	/^#define _JBLEN_MAX	/;"	d
+_L	/usr/include/ctype.h	/^#define	_L	/;"	d
+_LC_LAST	/usr/include/locale.h	/^#define	_LC_LAST	/;"	d
+_LIMITS_H_	/usr/include/limits.h	/^#define	_LIMITS_H_$/;"	d
+_LOCALE_H_	/usr/include/locale.h	/^#define _LOCALE_H_$/;"	d
+_P	/usr/include/ctype.h	/^#define	_P	/;"	d
+_POSIX2_BC_BASE_MAX	/usr/include/limits.h	/^#define	_POSIX2_BC_BASE_MAX	/;"	d
+_POSIX2_BC_DIM_MAX	/usr/include/limits.h	/^#define	_POSIX2_BC_DIM_MAX	/;"	d
+_POSIX2_BC_SCALE_MAX	/usr/include/limits.h	/^#define	_POSIX2_BC_SCALE_MAX	/;"	d
+_POSIX2_BC_STRING_MAX	/usr/include/limits.h	/^#define	_POSIX2_BC_STRING_MAX	/;"	d
+_POSIX2_CHARCLASS_NAME_MAX	/usr/include/limits.h	/^#define _POSIX2_CHARCLASS_NAME_MAX	/;"	d
+_POSIX2_COLL_WEIGHTS_MAX	/usr/include/limits.h	/^#define	_POSIX2_COLL_WEIGHTS_MAX	/;"	d
+_POSIX2_EQUIV_CLASS_MAX	/usr/include/limits.h	/^#define	_POSIX2_EQUIV_CLASS_MAX	/;"	d
+_POSIX2_EXPR_NEST_MAX	/usr/include/limits.h	/^#define	_POSIX2_EXPR_NEST_MAX	/;"	d
+_POSIX2_LINE_MAX	/usr/include/limits.h	/^#define	_POSIX2_LINE_MAX	/;"	d
+_POSIX2_RE_DUP_MAX	/usr/include/limits.h	/^#define	_POSIX2_RE_DUP_MAX	/;"	d
+_POSIX_AIO_LISTIO_MAX	/usr/include/limits.h	/^#define _POSIX_AIO_LISTIO_MAX /;"	d
+_POSIX_AIO_MAX	/usr/include/limits.h	/^#define _POSIX_AIO_MAX /;"	d
+_POSIX_ARG_MAX	/usr/include/limits.h	/^#define	_POSIX_ARG_MAX	/;"	d
+_POSIX_CHILD_MAX	/usr/include/limits.h	/^#define	_POSIX_CHILD_MAX	/;"	d
+_POSIX_DELAYTIMER_MAX	/usr/include/limits.h	/^#define _POSIX_DELAYTIMER_MAX /;"	d
+_POSIX_HOST_NAME_MAX	/usr/include/limits.h	/^#define _POSIX_HOST_NAME_MAX /;"	d
+_POSIX_LINK_MAX	/usr/include/limits.h	/^#define	_POSIX_LINK_MAX	/;"	d
+_POSIX_LOGIN_NAME_MAX	/usr/include/limits.h	/^#define _POSIX_LOGIN_NAME_MAX /;"	d
+_POSIX_MAX_CANON	/usr/include/limits.h	/^#define	_POSIX_MAX_CANON	/;"	d
+_POSIX_MAX_INPUT	/usr/include/limits.h	/^#define	_POSIX_MAX_INPUT	/;"	d
+_POSIX_MQ_OPEN_MAX	/usr/include/limits.h	/^#define _POSIX_MQ_OPEN_MAX /;"	d
+_POSIX_MQ_PRIO_MAX	/usr/include/limits.h	/^#define _POSIX_MQ_PRIO_MAX	/;"	d
+_POSIX_NAME_MAX	/usr/include/limits.h	/^#define	_POSIX_NAME_MAX	/;"	d
+_POSIX_NGROUPS_MAX	/usr/include/limits.h	/^#define	_POSIX_NGROUPS_MAX	/;"	d
+_POSIX_OPEN_MAX	/usr/include/limits.h	/^#define	_POSIX_OPEN_MAX	/;"	d
+_POSIX_PATH_MAX	/usr/include/limits.h	/^#define	_POSIX_PATH_MAX	/;"	d
+_POSIX_PIPE_BUF	/usr/include/limits.h	/^#define	_POSIX_PIPE_BUF	/;"	d
+_POSIX_RE_DUP_MAX	/usr/include/limits.h	/^#define _POSIX_RE_DUP_MAX /;"	d
+_POSIX_RTSIG_MAX	/usr/include/limits.h	/^#define _POSIX_RTSIG_MAX /;"	d
+_POSIX_SEM_NSEMS_MAX	/usr/include/limits.h	/^#define _POSIX_SEM_NSEMS_MAX /;"	d
+_POSIX_SEM_VALUE_MAX	/usr/include/limits.h	/^#define _POSIX_SEM_VALUE_MAX /;"	d
+_POSIX_SIGQUEUE_MAX	/usr/include/limits.h	/^#define _POSIX_SIGQUEUE_MAX /;"	d
+_POSIX_SSIZE_MAX	/usr/include/limits.h	/^#define	_POSIX_SSIZE_MAX	/;"	d
+_POSIX_SS_REPL_MAX	/usr/include/limits.h	/^#define _POSIX_SS_REPL_MAX /;"	d
+_POSIX_STREAM_MAX	/usr/include/limits.h	/^#define	_POSIX_STREAM_MAX	/;"	d
+_POSIX_SYMLINK_MAX	/usr/include/limits.h	/^#define _POSIX_SYMLINK_MAX /;"	d
+_POSIX_SYMLOOP_MAX	/usr/include/limits.h	/^#define _POSIX_SYMLOOP_MAX /;"	d
+_POSIX_THREAD_DESTRUCTOR_ITERATIONS	/usr/include/limits.h	/^#define _POSIX_THREAD_DESTRUCTOR_ITERATIONS /;"	d
+_POSIX_THREAD_KEYS_MAX	/usr/include/limits.h	/^#define _POSIX_THREAD_KEYS_MAX /;"	d
+_POSIX_THREAD_THREADS_MAX	/usr/include/limits.h	/^#define _POSIX_THREAD_THREADS_MAX /;"	d
+_POSIX_TIMER_MAX	/usr/include/limits.h	/^#define _POSIX_TIMER_MAX /;"	d
+_POSIX_TRACE_EVENT_NAME_MAX	/usr/include/limits.h	/^#define _POSIX_TRACE_EVENT_NAME_MAX /;"	d
+_POSIX_TRACE_NAME_MAX	/usr/include/limits.h	/^#define _POSIX_TRACE_NAME_MAX /;"	d
+_POSIX_TRACE_SYS_MAX	/usr/include/limits.h	/^#define _POSIX_TRACE_SYS_MAX /;"	d
+_POSIX_TRACE_USER_EVENT_MAX	/usr/include/limits.h	/^#define _POSIX_TRACE_USER_EVENT_MAX /;"	d
+_POSIX_TTY_NAME_MAX	/usr/include/limits.h	/^#define _POSIX_TTY_NAME_MAX /;"	d
+_POSIX_TZNAME_MAX	/usr/include/limits.h	/^#define	_POSIX_TZNAME_MAX	/;"	d
+_Q	/usr/include/ctype.h	/^#define	_Q	/;"	d
+_R	/usr/include/ctype.h	/^#define	_R	/;"	d
+_S	/usr/include/ctype.h	/^#define	_S	/;"	d
+_STDIO_H_	/usr/include/stdio.h	/^#define	_STDIO_H_$/;"	d
+_STDLIB_H_	/usr/include/stdlib.h	/^#define _STDLIB_H_$/;"	d
+_STRING_H_	/usr/include/string.h	/^#define	_STRING_H_$/;"	d
+_SW0	/usr/include/ctype.h	/^#define	_SW0	/;"	d
+_SW1	/usr/include/ctype.h	/^#define	_SW1	/;"	d
+_SW2	/usr/include/ctype.h	/^#define	_SW2	/;"	d
+_SW3	/usr/include/ctype.h	/^#define	_SW3	/;"	d
+_T	/usr/include/ctype.h	/^#define	_T	/;"	d
+_TIME_H_	/usr/include/time.h	/^#define	_TIME_H_$/;"	d
+_U	/usr/include/ctype.h	/^#define	_U	/;"	d
+_USER_SIGNAL_H	/usr/include/signal.h	/^#define _USER_SIGNAL_H$/;"	d
+_X	/usr/include/ctype.h	/^#define	_X	/;"	d
+_XOPEN_IOV_MAX	/usr/include/limits.h	/^#define _XOPEN_IOV_MAX	/;"	d
+_XOPEN_NAME_MAX	/usr/include/limits.h	/^#define _XOPEN_NAME_MAX /;"	d
+_XOPEN_PATH_MAX	/usr/include/limits.h	/^#define _XOPEN_PATH_MAX /;"	d
+__CLOCK_AVAILABILITY	/usr/include/time.h	/^#define __CLOCK_AVAILABILITY /;"	d
+__CLOCK_AVAILABILITY	/usr/include/time.h	/^#define __CLOCK_AVAILABILITY$/;"	d
+__CLOCK_AVAILABILITY	/usr/include/time.h	/^#undef __CLOCK_AVAILABILITY$/;"	d
+__CLOCK_AVAILABILITY	/usr/include/time.h	/^_CLOCK_MONOTONIC __CLOCK_AVAILABILITY = 6,$/;"	e	enum:__anon4
+__CLOCK_AVAILABILITY	/usr/include/time.h	/^_CLOCK_MONOTONIC_RAW __CLOCK_AVAILABILITY = 4,$/;"	e	enum:__anon4
+__CLOCK_AVAILABILITY	/usr/include/time.h	/^_CLOCK_MONOTONIC_RAW_APPROX __CLOCK_AVAILABILITY = 5,$/;"	e	enum:__anon4
+__CLOCK_AVAILABILITY	/usr/include/time.h	/^_CLOCK_PROCESS_CPUTIME_ID __CLOCK_AVAILABILITY = 12,$/;"	e	enum:__anon4
+__CLOCK_AVAILABILITY	/usr/include/time.h	/^_CLOCK_REALTIME __CLOCK_AVAILABILITY = 0,$/;"	e	enum:__anon4
+__CLOCK_AVAILABILITY	/usr/include/time.h	/^_CLOCK_THREAD_CPUTIME_ID __CLOCK_AVAILABILITY = 16$/;"	e	enum:__anon4
+__CLOCK_AVAILABILITY	/usr/include/time.h	/^_CLOCK_UPTIME_RAW __CLOCK_AVAILABILITY = 8,$/;"	e	enum:__anon4
+__CLOCK_AVAILABILITY	/usr/include/time.h	/^_CLOCK_UPTIME_RAW_APPROX __CLOCK_AVAILABILITY = 9,$/;"	e	enum:__anon4
+__CTERMID_DEFINED	/usr/include/stdio.h	/^#define __CTERMID_DEFINED /;"	d
+__DARWIN_ALIAS	/usr/include/time.h	/^extern long timezone __DARWIN_ALIAS(timezone);$/;"	p	signature:(timezone)
+__DARWIN_CTYPE_TOP_inline	/usr/include/ctype.h	/^#define __DARWIN_CTYPE_TOP_inline	/;"	d
+__DARWIN_CTYPE_inline	/usr/include/ctype.h	/^#define __DARWIN_CTYPE_inline	/;"	d
+__MATH_H__	/usr/include/math.h	/^#define __MATH_H__$/;"	d
+__MATH__	/usr/include/math.h	/^#define __MATH__$/;"	d
+__SALC	/usr/include/stdio.h	/^#define __SALC /;"	d
+__SAPP	/usr/include/stdio.h	/^#define	__SAPP	/;"	d
+__SEOF	/usr/include/stdio.h	/^#define	__SEOF	/;"	d
+__SERR	/usr/include/stdio.h	/^#define	__SERR	/;"	d
+__SIGN	/usr/include/stdio.h	/^#define __SIGN /;"	d
+__SLBF	/usr/include/stdio.h	/^#define	__SLBF	/;"	d
+__SMBF	/usr/include/stdio.h	/^#define	__SMBF	/;"	d
+__SMOD	/usr/include/stdio.h	/^#define	__SMOD	/;"	d
+__SNBF	/usr/include/stdio.h	/^#define	__SNBF	/;"	d
+__SNPT	/usr/include/stdio.h	/^#define	__SNPT	/;"	d
+__SOFF	/usr/include/stdio.h	/^#define	__SOFF	/;"	d
+__SOPT	/usr/include/stdio.h	/^#define	__SOPT	/;"	d
+__SRD	/usr/include/stdio.h	/^#define	__SRD	/;"	d
+__SRW	/usr/include/stdio.h	/^#define	__SRW	/;"	d
+__SSTR	/usr/include/stdio.h	/^#define	__SSTR	/;"	d
+__STDDEF_H__	/usr/include/stddef.h	/^#define __STDDEF_H__$/;"	d
+__SWR	/usr/include/stdio.h	/^#define	__SWR	/;"	d
+__TVOS_PROHIBITED	/usr/include/signal.h	/^int	sigaltstack(const stack_t * __restrict, stack_t * __restrict)  __DARWIN_ALIAS(sigaltstack) __WATCHOS_PROHIBITED __TVOS_PROHIBITED;$/;"	v
+__TVOS_PROHIBITED	/usr/include/stdlib.h	/^int	 daemon(int, int) __DARWIN_1050(daemon) __OSX_AVAILABLE_BUT_DEPRECATED_MSG(__MAC_10_0, __MAC_10_5, __IPHONE_2_0, __IPHONE_2_0, "Use posix_spawn APIs instead.") __WATCHOS_PROHIBITED __TVOS_PROHIBITED;$/;"	v
+___runetype	/usr/include/ctype.h	/^unsigned long		___runetype(__darwin_ct_rune_t);$/;"	p	signature:(__darwin_ct_rune_t)
+___tolower	/usr/include/ctype.h	/^__darwin_ct_rune_t	___tolower(__darwin_ct_rune_t);$/;"	p	signature:(__darwin_ct_rune_t)
+___toupper	/usr/include/ctype.h	/^__darwin_ct_rune_t	___toupper(__darwin_ct_rune_t);$/;"	p	signature:(__darwin_ct_rune_t)
+__anon1::quot	/usr/include/stdlib.h	/^	int quot;		\/* quotient *\/$/;"	m	struct:__anon1	access:public
+__anon1::rem	/usr/include/stdlib.h	/^	int rem;		\/* remainder *\/$/;"	m	struct:__anon1	access:public
+__anon2::quot	/usr/include/stdlib.h	/^	long quot;		\/* quotient *\/$/;"	m	struct:__anon2	access:public
+__anon2::rem	/usr/include/stdlib.h	/^	long rem;		\/* remainder *\/$/;"	m	struct:__anon2	access:public
+__anon3::quot	/usr/include/stdlib.h	/^	long long quot;$/;"	m	struct:__anon3	access:public
+__anon3::rem	/usr/include/stdlib.h	/^	long long rem;$/;"	m	struct:__anon3	access:public
+__assert	/usr/include/assert.h	/^#define __assert(/;"	d
+__assert	/usr/include/assert.h	/^#undef __assert$/;"	d
+__cosval	/usr/include/math.h	/^struct __double2 { double __sinval; double __cosval; };$/;"	m	struct:__double2	access:public
+__cosval	/usr/include/math.h	/^struct __float2 { float __sinval; float __cosval; };$/;"	m	struct:__float2	access:public
+__double2	/usr/include/math.h	/^struct __double2 { double __sinval; double __cosval; };$/;"	s
+__double2::__cosval	/usr/include/math.h	/^struct __double2 { double __sinval; double __cosval; };$/;"	m	struct:__double2	access:public
+__double2::__sinval	/usr/include/math.h	/^struct __double2 { double __sinval; double __cosval; };$/;"	m	struct:__double2	access:public
+__float2	/usr/include/math.h	/^struct __float2 { float __sinval; float __cosval; };$/;"	s
+__float2::__cosval	/usr/include/math.h	/^struct __float2 { float __sinval; float __cosval; };$/;"	m	struct:__float2	access:public
+__float2::__sinval	/usr/include/math.h	/^struct __float2 { float __sinval; float __cosval; };$/;"	m	struct:__float2	access:public
+__fpclassifyd	/usr/include/math.h	/^#       define __fpclassifyd /;"	d
+__fpclassifyd	/usr/include/math.h	/^extern int __fpclassifyd(double);$/;"	p	signature:(double)
+__fpclassifyf	/usr/include/math.h	/^extern int __fpclassifyf(float);$/;"	p	signature:(float)
+__fpclassifyl	/usr/include/math.h	/^#       define __fpclassifyl /;"	d
+__fpclassifyl	/usr/include/math.h	/^extern int __fpclassifyl(long double);$/;"	p	signature:(long double)
+__inline_isfinited	/usr/include/math.h	/^__header_always_inline int __inline_isfinited(double __x) {$/;"	f	signature:(double __x)
+__inline_isfinited	/usr/include/math.h	/^__header_always_inline int __inline_isfinited(double);$/;"	p	signature:(double)
+__inline_isfinitef	/usr/include/math.h	/^__header_always_inline int __inline_isfinitef(float __x) {$/;"	f	signature:(float __x)
+__inline_isfinitef	/usr/include/math.h	/^__header_always_inline int __inline_isfinitef(float);$/;"	p	signature:(float)
+__inline_isfinitel	/usr/include/math.h	/^__header_always_inline int __inline_isfinitel(long double __x) {$/;"	f	signature:(long double __x)
+__inline_isfinitel	/usr/include/math.h	/^__header_always_inline int __inline_isfinitel(long double);$/;"	p	signature:(long double)
+__inline_isinfd	/usr/include/math.h	/^__header_always_inline int __inline_isinfd(double __x) {$/;"	f	signature:(double __x)
+__inline_isinfd	/usr/include/math.h	/^__header_always_inline int __inline_isinfd(double);$/;"	p	signature:(double)
+__inline_isinff	/usr/include/math.h	/^__header_always_inline int __inline_isinff(float __x) {$/;"	f	signature:(float __x)
+__inline_isinff	/usr/include/math.h	/^__header_always_inline int __inline_isinff(float);$/;"	p	signature:(float)
+__inline_isinfl	/usr/include/math.h	/^__header_always_inline int __inline_isinfl(long double __x) {$/;"	f	signature:(long double __x)
+__inline_isinfl	/usr/include/math.h	/^__header_always_inline int __inline_isinfl(long double);$/;"	p	signature:(long double)
+__inline_isnand	/usr/include/math.h	/^__header_always_inline int __inline_isnand(double __x) {$/;"	f	signature:(double __x)
+__inline_isnand	/usr/include/math.h	/^__header_always_inline int __inline_isnand(double);$/;"	p	signature:(double)
+__inline_isnanf	/usr/include/math.h	/^__header_always_inline int __inline_isnanf(float __x) {$/;"	f	signature:(float __x)
+__inline_isnanf	/usr/include/math.h	/^__header_always_inline int __inline_isnanf(float);$/;"	p	signature:(float)
+__inline_isnanl	/usr/include/math.h	/^__header_always_inline int __inline_isnanl(long double __x) {$/;"	f	signature:(long double __x)
+__inline_isnanl	/usr/include/math.h	/^__header_always_inline int __inline_isnanl(long double);$/;"	p	signature:(long double)
+__inline_isnormald	/usr/include/math.h	/^__header_always_inline int __inline_isnormald(double __x) {$/;"	f	signature:(double __x)
+__inline_isnormald	/usr/include/math.h	/^__header_always_inline int __inline_isnormald(double);$/;"	p	signature:(double)
+__inline_isnormalf	/usr/include/math.h	/^__header_always_inline int __inline_isnormalf(float __x) {$/;"	f	signature:(float __x)
+__inline_isnormalf	/usr/include/math.h	/^__header_always_inline int __inline_isnormalf(float);$/;"	p	signature:(float)
+__inline_isnormall	/usr/include/math.h	/^__header_always_inline int __inline_isnormall(long double __x) {$/;"	f	signature:(long double __x)
+__inline_isnormall	/usr/include/math.h	/^__header_always_inline int __inline_isnormall(long double);$/;"	p	signature:(long double)
+__inline_signbitd	/usr/include/math.h	/^__header_always_inline int __inline_signbitd(double __x) {$/;"	f	signature:(double __x)
+__inline_signbitd	/usr/include/math.h	/^__header_always_inline int __inline_signbitd(double);$/;"	p	signature:(double)
+__inline_signbitf	/usr/include/math.h	/^__header_always_inline int __inline_signbitf(float __x) {$/;"	f	signature:(float __x)
+__inline_signbitf	/usr/include/math.h	/^__header_always_inline int __inline_signbitf(float);$/;"	p	signature:(float)
+__inline_signbitl	/usr/include/math.h	/^__header_always_inline int __inline_signbitl(long double __x) {$/;"	f	signature:(long double __x)
+__inline_signbitl	/usr/include/math.h	/^__header_always_inline int __inline_signbitl(long double);$/;"	p	signature:(long double)
+__isctype	/usr/include/ctype.h	/^__isctype(__darwin_ct_rune_t _c, unsigned long _f)$/;"	f	signature:(__darwin_ct_rune_t _c, unsigned long _f)
+__isfinited	/usr/include/math.h	/^extern int __isfinited(double);$/;"	p	signature:(double)
+__isfinitef	/usr/include/math.h	/^extern int __isfinitef(float);$/;"	p	signature:(float)
+__isfinitel	/usr/include/math.h	/^#       define __isfinitel /;"	d
+__isfinitel	/usr/include/math.h	/^extern int __isfinitel(long double);$/;"	p	signature:(long double)
+__isinfd	/usr/include/math.h	/^extern int __isinfd(double);$/;"	p	signature:(double)
+__isinff	/usr/include/math.h	/^extern int __isinff(float);$/;"	p	signature:(float)
+__isinfl	/usr/include/math.h	/^#       define __isinfl /;"	d
+__isinfl	/usr/include/math.h	/^extern int __isinfl(long double);$/;"	p	signature:(long double)
+__isnand	/usr/include/math.h	/^extern int __isnand(double);$/;"	p	signature:(double)
+__isnanf	/usr/include/math.h	/^extern int __isnanf(float);$/;"	p	signature:(float)
+__isnanl	/usr/include/math.h	/^#       define __isnanl /;"	d
+__isnanl	/usr/include/math.h	/^extern int __isnanl(long double);$/;"	p	signature:(long double)
+__isnormald	/usr/include/math.h	/^extern int __isnormald(double);$/;"	p	signature:(double)
+__isnormalf	/usr/include/math.h	/^extern int __isnormalf(float);$/;"	p	signature:(float)
+__isnormall	/usr/include/math.h	/^#       define __isnormall /;"	d
+__isnormall	/usr/include/math.h	/^extern int __isnormall(long double);$/;"	p	signature:(long double)
+__istype	/usr/include/ctype.h	/^__istype(__darwin_ct_rune_t _c, unsigned long _f)$/;"	f	signature:(__darwin_ct_rune_t _c, unsigned long _f)
+__maskrune	/usr/include/ctype.h	/^__maskrune(__darwin_ct_rune_t _c, unsigned long _f)$/;"	f	signature:(__darwin_ct_rune_t _c, unsigned long _f)
+__maskrune	/usr/include/ctype.h	/^int             	__maskrune(__darwin_ct_rune_t, unsigned long);$/;"	p	signature:(__darwin_ct_rune_t, unsigned long)
+__math_errhandling	/usr/include/math.h	/^extern int __math_errhandling(void);$/;"	p	signature:(void)
+__sFILE	/usr/include/stdio.h	/^typedef	struct __sFILE {$/;"	s
+__sFILE::_bf	/usr/include/stdio.h	/^	struct	__sbuf _bf;	\/* the buffer (at least 1 byte, if !NULL) *\/$/;"	m	struct:__sFILE	typeref:struct:__sFILE::__sbuf	access:public
+__sFILE::_blksize	/usr/include/stdio.h	/^	int	_blksize;	\/* stat.st_blksize (may be != _bf._size) *\/$/;"	m	struct:__sFILE	access:public
+__sFILE::_close	/usr/include/stdio.h	/^	int	(* _Nullable _close)(void *);$/;"	m	struct:__sFILE	access:public
+__sFILE::_cookie	/usr/include/stdio.h	/^	void	*_cookie;	\/* cookie passed to io functions *\/$/;"	m	struct:__sFILE	access:public
+__sFILE::_extra	/usr/include/stdio.h	/^	struct __sFILEX *_extra; \/* additions to FILE to not break ABI *\/$/;"	m	struct:__sFILE	typeref:struct:__sFILE::__sFILEX	access:public
+__sFILE::_file	/usr/include/stdio.h	/^	short	_file;		\/* fileno, if Unix descriptor, else -1 *\/$/;"	m	struct:__sFILE	access:public
+__sFILE::_flags	/usr/include/stdio.h	/^	short	_flags;		\/* flags, below; this FILE is free if 0 *\/$/;"	m	struct:__sFILE	access:public
+__sFILE::_lb	/usr/include/stdio.h	/^	struct	__sbuf _lb;	\/* buffer for fgetln() *\/$/;"	m	struct:__sFILE	typeref:struct:__sFILE::__sbuf	access:public
+__sFILE::_lbfsize	/usr/include/stdio.h	/^	int	_lbfsize;	\/* 0 or -_bf._size, for inline putc *\/$/;"	m	struct:__sFILE	access:public
+__sFILE::_nbuf	/usr/include/stdio.h	/^	unsigned char _nbuf[1];	\/* guarantee a getc() buffer *\/$/;"	m	struct:__sFILE	access:public
+__sFILE::_offset	/usr/include/stdio.h	/^	fpos_t	_offset;	\/* current lseek offset (see WARNING) *\/$/;"	m	struct:__sFILE	access:public
+__sFILE::_p	/usr/include/stdio.h	/^	unsigned char *_p;	\/* current position in (some) buffer *\/$/;"	m	struct:__sFILE	access:public
+__sFILE::_r	/usr/include/stdio.h	/^	int	_r;		\/* read space left for getc() *\/$/;"	m	struct:__sFILE	access:public
+__sFILE::_read	/usr/include/stdio.h	/^	int	(* _Nullable _read) (void *, char *, int);$/;"	m	struct:__sFILE	access:public
+__sFILE::_seek	/usr/include/stdio.h	/^	fpos_t	(* _Nullable _seek) (void *, fpos_t, int);$/;"	m	struct:__sFILE	access:public
+__sFILE::_ub	/usr/include/stdio.h	/^	struct	__sbuf _ub;	\/* ungetc buffer *\/$/;"	m	struct:__sFILE	typeref:struct:__sFILE::__sbuf	access:public
+__sFILE::_ubuf	/usr/include/stdio.h	/^	unsigned char _ubuf[3];	\/* guarantee an ungetc() buffer *\/$/;"	m	struct:__sFILE	access:public
+__sFILE::_ur	/usr/include/stdio.h	/^	int	_ur;		\/* saved _r when _r is counting ungetc data *\/$/;"	m	struct:__sFILE	access:public
+__sFILE::_w	/usr/include/stdio.h	/^	int	_w;		\/* write space left for putc() *\/$/;"	m	struct:__sFILE	access:public
+__sFILE::_write	/usr/include/stdio.h	/^	int	(* _Nullable _write)(void *, const char *, int);$/;"	m	struct:__sFILE	access:public
+__sbuf	/usr/include/stdio.h	/^struct __sbuf {$/;"	s
+__sbuf::_base	/usr/include/stdio.h	/^	unsigned char	*_base;$/;"	m	struct:__sbuf	access:public
+__sbuf::_size	/usr/include/stdio.h	/^	int		_size;$/;"	m	struct:__sbuf	access:public
+__sclearerr	/usr/include/stdio.h	/^#define	__sclearerr(/;"	d
+__sfeof	/usr/include/stdio.h	/^#define	__sfeof(/;"	d
+__sferror	/usr/include/stdio.h	/^#define	__sferror(/;"	d
+__sfileno	/usr/include/stdio.h	/^#define	__sfileno(/;"	d
+__sgetc	/usr/include/stdio.h	/^#define	__sgetc(/;"	d
+__sigbits	/usr/include/signal.h	/^__sigbits(int __signo)$/;"	f	signature:(int __signo)
+__signbitd	/usr/include/math.h	/^extern int __signbitd(double);$/;"	p	signature:(double)
+__signbitf	/usr/include/math.h	/^extern int __signbitf(float);$/;"	p	signature:(float)
+__signbitl	/usr/include/math.h	/^extern int __signbitl(long double);$/;"	p	signature:(long double)
+__sincos	/usr/include/math.h	/^__header_always_inline void __sincos(double __x, double *__sinp, double *__cosp) {$/;"	f	signature:(double __x, double *__sinp, double *__cosp)
+__sincos	/usr/include/math.h	/^__header_always_inline void __sincos(double __x, double *__sinp, double *__cosp);$/;"	p	signature:(double __x, double *__sinp, double *__cosp)
+__sincos_stret	/usr/include/math.h	/^extern struct __double2 __sincos_stret(double);$/;"	p	signature:(double)
+__sincosf	/usr/include/math.h	/^__header_always_inline void __sincosf(float __x, float *__sinp, float *__cosp) {$/;"	f	signature:(float __x, float *__sinp, float *__cosp)
+__sincosf	/usr/include/math.h	/^__header_always_inline void __sincosf(float __x, float *__sinp, float *__cosp);$/;"	p	signature:(float __x, float *__sinp, float *__cosp)
+__sincosf_stret	/usr/include/math.h	/^extern struct __float2 __sincosf_stret(float);$/;"	p	signature:(float)
+__sincospi	/usr/include/math.h	/^__header_always_inline void __sincospi(double __x, double *__sinp, double *__cosp) {$/;"	f	signature:(double __x, double *__sinp, double *__cosp)
+__sincospi	/usr/include/math.h	/^__header_always_inline void __sincospi(double __x, double *__sinp, double *__cosp);$/;"	p	signature:(double __x, double *__sinp, double *__cosp)
+__sincospi_stret	/usr/include/math.h	/^extern struct __double2 __sincospi_stret(double);$/;"	p	signature:(double)
+__sincospif	/usr/include/math.h	/^__header_always_inline void __sincospif(float __x, float *__sinp, float *__cosp) {$/;"	f	signature:(float __x, float *__sinp, float *__cosp)
+__sincospif	/usr/include/math.h	/^__header_always_inline void __sincospif(float __x, float *__sinp, float *__cosp);$/;"	p	signature:(float __x, float *__sinp, float *__cosp)
+__sincospif_stret	/usr/include/math.h	/^extern struct __float2 __sincospif_stret(float);$/;"	p	signature:(float)
+__sinval	/usr/include/math.h	/^struct __double2 { double __sinval; double __cosval; };$/;"	m	struct:__double2	access:public
+__sinval	/usr/include/math.h	/^struct __float2 { float __sinval; float __cosval; };$/;"	m	struct:__float2	access:public
+__sputc	/usr/include/stdio.h	/^__header_always_inline int __sputc(int _c, FILE *_p) {$/;"	f	signature:(int _c, FILE *_p)
+__srget	/usr/include/stdio.h	/^int	__srget(FILE *);$/;"	p	signature:(FILE *)
+__swbuf	/usr/include/stdio.h	/^int	__swbuf(int, FILE *);$/;"	p	signature:(int, FILE *)
+__swift_unavailable_on	/usr/include/stdio.h	/^#define __swift_unavailable_on(/;"	d
+__swift_unavailable_on	/usr/include/stdio.h	/^#undef __swift_unavailable_on$/;"	d
+__swift_unavailable_on	/usr/include/stdlib.h	/^#define __swift_unavailable_on(/;"	d
+__swift_unavailable_on	/usr/include/stdlib.h	/^#undef __swift_unavailable_on$/;"	d
+__tolower	/usr/include/ctype.h	/^__darwin_ct_rune_t	__tolower(__darwin_ct_rune_t);$/;"	p	signature:(__darwin_ct_rune_t)
+__tolower	/usr/include/ctype.h	/^__tolower(__darwin_ct_rune_t _c)$/;"	f	signature:(__darwin_ct_rune_t _c)
+__toupper	/usr/include/ctype.h	/^__darwin_ct_rune_t	__toupper(__darwin_ct_rune_t);$/;"	p	signature:(__darwin_ct_rune_t)
+__toupper	/usr/include/ctype.h	/^__toupper(__darwin_ct_rune_t _c)$/;"	f	signature:(__darwin_ct_rune_t _c)
+__wcwidth	/usr/include/ctype.h	/^__wcwidth(__darwin_ct_rune_t _c)$/;"	f	signature:(__darwin_ct_rune_t _c)
+_base	/usr/include/stdio.h	/^	unsigned char	*_base;$/;"	m	struct:__sbuf	access:public
+_bf	/usr/include/stdio.h	/^	struct	__sbuf _bf;	\/* the buffer (at least 1 byte, if !NULL) *\/$/;"	m	struct:__sFILE	typeref:struct:__sFILE::__sbuf	access:public
+_blksize	/usr/include/stdio.h	/^	int	_blksize;	\/* stat.st_blksize (may be != _bf._size) *\/$/;"	m	struct:__sFILE	access:public
+_close	/usr/include/stdio.h	/^	int	(* _Nullable _close)(void *);$/;"	m	struct:__sFILE	access:public
+_cookie	/usr/include/stdio.h	/^	void	*_cookie;	\/* cookie passed to io functions *\/$/;"	m	struct:__sFILE	access:public
+_extra	/usr/include/stdio.h	/^	struct __sFILEX *_extra; \/* additions to FILE to not break ABI *\/$/;"	m	struct:__sFILE	typeref:struct:__sFILE::__sFILEX	access:public
+_file	/usr/include/stdio.h	/^	short	_file;		\/* fileno, if Unix descriptor, else -1 *\/$/;"	m	struct:__sFILE	access:public
+_flags	/usr/include/stdio.h	/^	short	_flags;		\/* flags, below; this FILE is free if 0 *\/$/;"	m	struct:__sFILE	access:public
+_lb	/usr/include/stdio.h	/^	struct	__sbuf _lb;	\/* buffer for fgetln() *\/$/;"	m	struct:__sFILE	typeref:struct:__sFILE::__sbuf	access:public
+_lbfsize	/usr/include/stdio.h	/^	int	_lbfsize;	\/* 0 or -_bf._size, for inline putc *\/$/;"	m	struct:__sFILE	access:public
+_nbuf	/usr/include/stdio.h	/^	unsigned char _nbuf[1];	\/* guarantee a getc() buffer *\/$/;"	m	struct:__sFILE	access:public
+_offset	/usr/include/stdio.h	/^	fpos_t	_offset;	\/* current lseek offset (see WARNING) *\/$/;"	m	struct:__sFILE	access:public
+_p	/usr/include/stdio.h	/^	unsigned char *_p;	\/* current position in (some) buffer *\/$/;"	m	struct:__sFILE	access:public
+_r	/usr/include/stdio.h	/^	int	_r;		\/* read space left for getc() *\/$/;"	m	struct:__sFILE	access:public
+_read	/usr/include/stdio.h	/^	int	(* _Nullable _read) (void *, char *, int);$/;"	m	struct:__sFILE	access:public
+_seek	/usr/include/stdio.h	/^	fpos_t	(* _Nullable _seek) (void *, fpos_t, int);$/;"	m	struct:__sFILE	access:public
+_setjmp	/usr/include/setjmp.h	/^int	_setjmp(jmp_buf);$/;"	p	signature:(jmp_buf)
+_size	/usr/include/stdio.h	/^	int		_size;$/;"	m	struct:__sbuf	access:public
+_tolower	/usr/include/ctype.h	/^#define	_tolower(/;"	d
+_tolower	/usr/include/ctype.h	/^int     _tolower(int);$/;"	p	signature:(int)
+_toupper	/usr/include/ctype.h	/^#define	_toupper(/;"	d
+_toupper	/usr/include/ctype.h	/^int     _toupper(int);$/;"	p	signature:(int)
+_ub	/usr/include/stdio.h	/^	struct	__sbuf _ub;	\/* ungetc buffer *\/$/;"	m	struct:__sFILE	typeref:struct:__sFILE::__sbuf	access:public
+_ubuf	/usr/include/stdio.h	/^	unsigned char _ubuf[3];	\/* guarantee an ungetc() buffer *\/$/;"	m	struct:__sFILE	access:public
+_ur	/usr/include/stdio.h	/^	int	_ur;		\/* saved _r when _r is counting ungetc data *\/$/;"	m	struct:__sFILE	access:public
+_w	/usr/include/stdio.h	/^	int	_w;		\/* write space left for putc() *\/$/;"	m	struct:__sFILE	access:public
+_write	/usr/include/stdio.h	/^	int	(* _Nullable _write)(void *, const char *, int);$/;"	m	struct:__sFILE	access:public
+a64l	/usr/include/stdlib.h	/^long	 a64l(const char *);$/;"	p	signature:(const char *)
+acos	/usr/include/math.h	/^extern double acos(double);$/;"	p	signature:(double)
+acosf	/usr/include/math.h	/^extern float acosf(float);$/;"	p	signature:(float)
+acosh	/usr/include/math.h	/^extern double acosh(double);$/;"	p	signature:(double)
+acoshf	/usr/include/math.h	/^extern float acoshf(float);$/;"	p	signature:(float)
+acoshl	/usr/include/math.h	/^extern long double acoshl(long double);$/;"	p	signature:(long double)
+acosl	/usr/include/math.h	/^extern long double acosl(long double);$/;"	p	signature:(long double)
+arc4random	/usr/include/stdlib.h	/^uint32_t arc4random(void);$/;"	p	signature:(void)
+arc4random_stir	/usr/include/stdlib.h	/^void	 arc4random_stir(void);$/;"	p	signature:(void)
+arg1	/usr/include/math.h	/^    double arg1;$/;"	m	struct:exception	access:public
+arg2	/usr/include/math.h	/^    double arg2;$/;"	m	struct:exception	access:public
+asctime	/usr/include/time.h	/^char *asctime(const struct tm *);$/;"	p	signature:(const struct tm *)
+asctime_r	/usr/include/time.h	/^char *asctime_r(const struct tm * __restrict, char * __restrict);$/;"	p	signature:(const struct tm * __restrict, char * __restrict)
+asin	/usr/include/math.h	/^extern double asin(double);$/;"	p	signature:(double)
+asinf	/usr/include/math.h	/^extern float asinf(float);$/;"	p	signature:(float)
+asinh	/usr/include/math.h	/^extern double asinh(double);$/;"	p	signature:(double)
+asinhf	/usr/include/math.h	/^extern float asinhf(float);$/;"	p	signature:(float)
+asinhl	/usr/include/math.h	/^extern long double asinhl(long double);$/;"	p	signature:(long double)
+asinl	/usr/include/math.h	/^extern long double asinl(long double);$/;"	p	signature:(long double)
+assert	/usr/include/assert.h	/^#define	assert(/;"	d
+assert	/usr/include/assert.h	/^#define assert(/;"	d
+assert	/usr/include/assert.h	/^#undef assert$/;"	d
+atan	/usr/include/math.h	/^extern double atan(double);$/;"	p	signature:(double)
+atan2	/usr/include/math.h	/^extern double atan2(double, double);$/;"	p	signature:(double, double)
+atan2f	/usr/include/math.h	/^extern float atan2f(float, float);$/;"	p	signature:(float, float)
+atan2l	/usr/include/math.h	/^extern long double atan2l(long double, long double);$/;"	p	signature:(long double, long double)
+atanf	/usr/include/math.h	/^extern float atanf(float);$/;"	p	signature:(float)
+atanh	/usr/include/math.h	/^extern double atanh(double);$/;"	p	signature:(double)
+atanhf	/usr/include/math.h	/^extern float atanhf(float);$/;"	p	signature:(float)
+atanhl	/usr/include/math.h	/^extern long double atanhl(long double);$/;"	p	signature:(long double)
+atanl	/usr/include/math.h	/^extern long double atanl(long double);$/;"	p	signature:(long double)
+atexit	/usr/include/stdlib.h	/^int	 atexit(void (* _Nonnull)(void));$/;"	p	signature:(void (* _Nonnull)(void))
+atof	/usr/include/stdlib.h	/^double	 atof(const char *);$/;"	p	signature:(const char *)
+atoi	/usr/include/stdlib.h	/^int	 atoi(const char *);$/;"	p	signature:(const char *)
+atol	/usr/include/stdlib.h	/^long	 atol(const char *);$/;"	p	signature:(const char *)
+atoll	/usr/include/stdlib.h	/^	 atoll(const char *);$/;"	p	signature:(const char *)
+bsd_signal	/usr/include/signal.h	/^void	(* _Nullable bsd_signal(int, void (* _Nullable)(int)))(int);$/;"	p	signature:(int, void (* _Nullable)(int))
+bsearch	/usr/include/stdlib.h	/^void	*bsearch(const void *__key, const void *__base, size_t __nel,$/;"	p	signature:(const void *__key, const void *__base, size_t __nel, size_t __width, int (* _Nonnull __compar)(const void *, const void *))
+cbrt	/usr/include/math.h	/^extern double cbrt(double);$/;"	p	signature:(double)
+cbrtf	/usr/include/math.h	/^extern float cbrtf(float);$/;"	p	signature:(float)
+cbrtl	/usr/include/math.h	/^extern long double cbrtl(long double);$/;"	p	signature:(long double)
+ceil	/usr/include/math.h	/^extern double ceil(double);$/;"	p	signature:(double)
+ceilf	/usr/include/math.h	/^extern float ceilf(float);$/;"	p	signature:(float)
+ceill	/usr/include/math.h	/^extern long double ceill(long double);$/;"	p	signature:(long double)
+cgetcap	/usr/include/stdlib.h	/^char	*cgetcap(char *, const char *, int);$/;"	p	signature:(char *, const char *, int)
+cgetclose	/usr/include/stdlib.h	/^int	 cgetclose(void);$/;"	p	signature:(void)
+cgetent	/usr/include/stdlib.h	/^int	 cgetent(char **, char **, const char *);$/;"	p	signature:(char **, char **, const char *)
+cgetfirst	/usr/include/stdlib.h	/^int	 cgetfirst(char **, char **);$/;"	p	signature:(char **, char **)
+cgetmatch	/usr/include/stdlib.h	/^int	 cgetmatch(const char *, const char *);$/;"	p	signature:(const char *, const char *)
+cgetnext	/usr/include/stdlib.h	/^int	 cgetnext(char **, char **);$/;"	p	signature:(char **, char **)
+cgetnum	/usr/include/stdlib.h	/^int	 cgetnum(char *, const char *, long *);$/;"	p	signature:(char *, const char *, long *)
+cgetset	/usr/include/stdlib.h	/^int	 cgetset(const char *);$/;"	p	signature:(const char *)
+cgetstr	/usr/include/stdlib.h	/^int	 cgetstr(char *, const char *, char **);$/;"	p	signature:(char *, const char *, char **)
+cgetustr	/usr/include/stdlib.h	/^int	 cgetustr(char *, const char *, char **);$/;"	p	signature:(char *, const char *, char **)
+clearerr	/usr/include/stdio.h	/^void	 clearerr(FILE *);$/;"	p	signature:(FILE *)
+clearerr_unlocked	/usr/include/stdio.h	/^#define	clearerr_unlocked(/;"	d
+clock	/usr/include/time.h	/^clock_t clock(void) __DARWIN_ALIAS(clock);$/;"	v
+clock_getres	/usr/include/time.h	/^int clock_getres(clockid_t __clock_id, struct timespec *__res);$/;"	p	signature:(clockid_t __clock_id, struct timespec *__res)
+clock_gettime	/usr/include/time.h	/^int clock_gettime(clockid_t __clock_id, struct timespec *__tp);$/;"	p	signature:(clockid_t __clock_id, struct timespec *__tp)
+clock_gettime_nsec_np	/usr/include/time.h	/^__uint64_t clock_gettime_nsec_np(clockid_t __clock_id);$/;"	p	signature:(clockid_t __clock_id)
+clock_settime	/usr/include/time.h	/^int clock_settime(clockid_t __clock_id, const struct timespec *__tp);$/;"	p	signature:(clockid_t __clock_id, const struct timespec *__tp)
+clockid_t	/usr/include/time.h	/^} clockid_t;$/;"	t	typeref:enum:__anon4
+copysign	/usr/include/math.h	/^extern double copysign(double, double);$/;"	p	signature:(double, double)
+copysignf	/usr/include/math.h	/^extern float copysignf(float, float);$/;"	p	signature:(float, float)
+copysignl	/usr/include/math.h	/^extern long double copysignl(long double, long double);$/;"	p	signature:(long double, long double)
+cos	/usr/include/math.h	/^extern double cos(double);$/;"	p	signature:(double)
+cosf	/usr/include/math.h	/^extern float cosf(float);$/;"	p	signature:(float)
+cosh	/usr/include/math.h	/^extern double cosh(double);$/;"	p	signature:(double)
+coshf	/usr/include/math.h	/^extern float coshf(float);$/;"	p	signature:(float)
+coshl	/usr/include/math.h	/^extern long double coshl(long double);$/;"	p	signature:(long double)
+cosl	/usr/include/math.h	/^extern long double cosl(long double);$/;"	p	signature:(long double)
+ctermid	/usr/include/stdio.h	/^char	*ctermid(char *);$/;"	p	signature:(char *)
+ctermid_r	/usr/include/stdio.h	/^char	*ctermid_r(char *);$/;"	p	signature:(char *)
+ctime	/usr/include/time.h	/^char *ctime(const time_t *);$/;"	p	signature:(const time_t *)
+ctime_r	/usr/include/time.h	/^char *ctime_r(const time_t *, char *);$/;"	p	signature:(const time_t *, char *)
+devname	/usr/include/stdlib.h	/^char	*devname(dev_t, mode_t);$/;"	p	signature:(dev_t, mode_t)
+devname_r	/usr/include/stdlib.h	/^char	*devname_r(dev_t, mode_t, char *buf, int len);$/;"	p	signature:(dev_t, mode_t, char *buf, int len)
+difftime	/usr/include/time.h	/^double difftime(time_t, time_t);$/;"	p	signature:(time_t, time_t)
+digittoint	/usr/include/ctype.h	/^digittoint(int _c)$/;"	f	signature:(int _c)
+digittoint	/usr/include/ctype.h	/^int     digittoint(int);$/;"	p	signature:(int)
+div_t	/usr/include/stdlib.h	/^} div_t;$/;"	t	typeref:struct:__anon1
+double_t	/usr/include/math.h	/^    typedef double double_t;$/;"	t
+drand48	/usr/include/stdlib.h	/^double	 drand48(void);$/;"	p	signature:(void)
+ecvt	/usr/include/stdlib.h	/^char	*ecvt(double, int, int *__restrict, int *__restrict); \/* LEGACY *\/$/;"	p	signature:(double, int, int *__restrict, int *__restrict)
+erand48	/usr/include/stdlib.h	/^double	 erand48(unsigned short[3]);$/;"	p	signature:(unsigned short[3])
+erf	/usr/include/math.h	/^extern double erf(double);$/;"	p	signature:(double)
+erfc	/usr/include/math.h	/^extern double erfc(double);$/;"	p	signature:(double)
+erfcf	/usr/include/math.h	/^extern float erfcf(float);$/;"	p	signature:(float)
+erfcl	/usr/include/math.h	/^extern long double erfcl(long double);$/;"	p	signature:(long double)
+erff	/usr/include/math.h	/^extern float erff(float);$/;"	p	signature:(float)
+erfl	/usr/include/math.h	/^extern long double erfl(long double);$/;"	p	signature:(long double)
+exception	/usr/include/math.h	/^struct exception {$/;"	s
+exception::arg1	/usr/include/math.h	/^    double arg1;$/;"	m	struct:exception	access:public
+exception::arg2	/usr/include/math.h	/^    double arg2;$/;"	m	struct:exception	access:public
+exception::name	/usr/include/math.h	/^    char *name;$/;"	m	struct:exception	access:public
+exception::retval	/usr/include/math.h	/^    double retval;$/;"	m	struct:exception	access:public
+exception::type	/usr/include/math.h	/^    int type;$/;"	m	struct:exception	access:public
+exp	/usr/include/math.h	/^extern double exp(double);$/;"	p	signature:(double)
+exp2	/usr/include/math.h	/^extern double exp2(double); $/;"	p	signature:(double)
+exp2f	/usr/include/math.h	/^extern float exp2f(float);$/;"	p	signature:(float)
+exp2l	/usr/include/math.h	/^extern long double exp2l(long double); $/;"	p	signature:(long double)
+expf	/usr/include/math.h	/^extern float expf(float);$/;"	p	signature:(float)
+expl	/usr/include/math.h	/^extern long double expl(long double);$/;"	p	signature:(long double)
+expm1	/usr/include/math.h	/^extern double expm1(double); $/;"	p	signature:(double)
+expm1f	/usr/include/math.h	/^extern float expm1f(float);$/;"	p	signature:(float)
+expm1l	/usr/include/math.h	/^extern long double expm1l(long double); $/;"	p	signature:(long double)
+fabs	/usr/include/math.h	/^extern double fabs(double);$/;"	p	signature:(double)
+fabsf	/usr/include/math.h	/^extern float fabsf(float);$/;"	p	signature:(float)
+fabsl	/usr/include/math.h	/^extern long double fabsl(long double);$/;"	p	signature:(long double)
+fclose	/usr/include/stdio.h	/^int	 fclose(FILE *);$/;"	p	signature:(FILE *)
+fcvt	/usr/include/stdlib.h	/^char	*fcvt(double, int, int *__restrict, int *__restrict); \/* LEGACY *\/$/;"	p	signature:(double, int, int *__restrict, int *__restrict)
+fdim	/usr/include/math.h	/^extern double fdim(double, double);$/;"	p	signature:(double, double)
+fdimf	/usr/include/math.h	/^extern float fdimf(float, float);$/;"	p	signature:(float, float)
+fdiml	/usr/include/math.h	/^extern long double fdiml(long double, long double);$/;"	p	signature:(long double, long double)
+feof	/usr/include/stdio.h	/^int	 feof(FILE *);$/;"	p	signature:(FILE *)
+feof_unlocked	/usr/include/stdio.h	/^#define	feof_unlocked(/;"	d
+ferror	/usr/include/stdio.h	/^int	 ferror(FILE *);$/;"	p	signature:(FILE *)
+ferror_unlocked	/usr/include/stdio.h	/^#define	ferror_unlocked(/;"	d
+fflush	/usr/include/stdio.h	/^int	 fflush(FILE *);$/;"	p	signature:(FILE *)
+fgetc	/usr/include/stdio.h	/^int	 fgetc(FILE *);$/;"	p	signature:(FILE *)
+fgetln	/usr/include/stdio.h	/^char	*fgetln(FILE *, size_t *);$/;"	p	signature:(FILE *, size_t *)
+fgetpos	/usr/include/stdio.h	/^int	 fgetpos(FILE * __restrict, fpos_t *);$/;"	p	signature:(FILE * __restrict, fpos_t *)
+fgets	/usr/include/stdio.h	/^char	*fgets(char * __restrict, int, FILE *);$/;"	p	signature:(char * __restrict, int, FILE *)
+fileno	/usr/include/stdio.h	/^int	 fileno(FILE *);$/;"	p	signature:(FILE *)
+fileno_unlocked	/usr/include/stdio.h	/^#define	fileno_unlocked(/;"	d
+float_t	/usr/include/math.h	/^    typedef float float_t;$/;"	t
+flockfile	/usr/include/stdio.h	/^void	 flockfile(FILE *);$/;"	p	signature:(FILE *)
+floor	/usr/include/math.h	/^extern double floor(double);$/;"	p	signature:(double)
+floorf	/usr/include/math.h	/^extern float floorf(float);$/;"	p	signature:(float)
+floorl	/usr/include/math.h	/^extern long double floorl(long double);$/;"	p	signature:(long double)
+fma	/usr/include/math.h	/^extern double fma(double, double, double);$/;"	p	signature:(double, double, double)
+fmaf	/usr/include/math.h	/^extern float fmaf(float, float, float);$/;"	p	signature:(float, float, float)
+fmal	/usr/include/math.h	/^extern long double fmal(long double, long double, long double);$/;"	p	signature:(long double, long double, long double)
+fmax	/usr/include/math.h	/^extern double fmax(double, double);$/;"	p	signature:(double, double)
+fmaxf	/usr/include/math.h	/^extern float fmaxf(float, float);$/;"	p	signature:(float, float)
+fmaxl	/usr/include/math.h	/^extern long double fmaxl(long double, long double);$/;"	p	signature:(long double, long double)
+fmin	/usr/include/math.h	/^extern double fmin(double, double);$/;"	p	signature:(double, double)
+fminf	/usr/include/math.h	/^extern float fminf(float, float);$/;"	p	signature:(float, float)
+fminl	/usr/include/math.h	/^extern long double fminl(long double, long double);$/;"	p	signature:(long double, long double)
+fmod	/usr/include/math.h	/^extern double fmod(double, double);$/;"	p	signature:(double, double)
+fmodf	/usr/include/math.h	/^extern float fmodf(float, float);$/;"	p	signature:(float, float)
+fmodl	/usr/include/math.h	/^extern long double fmodl(long double, long double);$/;"	p	signature:(long double, long double)
+fmtcheck	/usr/include/stdio.h	/^__const char *fmtcheck(const char *, const char *);$/;"	p	signature:(const char *, const char *)
+fpclassify	/usr/include/math.h	/^#define fpclassify(/;"	d
+fpos_t	/usr/include/stdio.h	/^typedef __darwin_off_t		fpos_t;$/;"	t
+fpurge	/usr/include/stdio.h	/^int	 fpurge(FILE *);$/;"	p	signature:(FILE *)
+fputc	/usr/include/stdio.h	/^int	 fputc(int, FILE *);$/;"	p	signature:(int, FILE *)
+fputs	/usr/include/stdio.h	/^int	 fputs(const char * __restrict, FILE * __restrict) __DARWIN_ALIAS(fputs);$/;"	v
+fread	/usr/include/stdio.h	/^size_t	 fread(void * __restrict __ptr, size_t __size, size_t __nitems, FILE * __restrict __stream);$/;"	p	signature:(void * __restrict __ptr, size_t __size, size_t __nitems, FILE * __restrict __stream)
+free	/usr/include/stdlib.h	/^void	 free(void *);$/;"	p	signature:(void *)
+freopen	/usr/include/stdio.h	/^                 FILE * __restrict) __DARWIN_ALIAS(freopen);$/;"	v
+frexp	/usr/include/math.h	/^extern double frexp(double, int *);$/;"	p	signature:(double, int *)
+frexpf	/usr/include/math.h	/^extern float frexpf(float, int *);$/;"	p	signature:(float, int *)
+frexpl	/usr/include/math.h	/^extern long double frexpl(long double, int *);$/;"	p	signature:(long double, int *)
+fropen	/usr/include/stdio.h	/^#define	fropen(/;"	d
+fseek	/usr/include/stdio.h	/^int	 fseek(FILE *, long, int);$/;"	p	signature:(FILE *, long, int)
+fseeko	/usr/include/stdio.h	/^int	 fseeko(FILE * __stream, off_t __offset, int __whence);$/;"	p	signature:(FILE * __stream, off_t __offset, int __whence)
+fsetpos	/usr/include/stdio.h	/^int	 fsetpos(FILE *, const fpos_t *);$/;"	p	signature:(FILE *, const fpos_t *)
+ftell	/usr/include/stdio.h	/^long	 ftell(FILE *);$/;"	p	signature:(FILE *)
+ftello	/usr/include/stdio.h	/^off_t	 ftello(FILE * __stream);$/;"	p	signature:(FILE * __stream)
+ftrylockfile	/usr/include/stdio.h	/^int	 ftrylockfile(FILE *);$/;"	p	signature:(FILE *)
+funlockfile	/usr/include/stdio.h	/^void	 funlockfile(FILE *);$/;"	p	signature:(FILE *)
+funopen	/usr/include/stdio.h	/^FILE	*funopen(const void *,$/;"	p	signature:(const void *, int (* _Nullable)(void *, char *, int), int (* _Nullable)(void *, const char *, int), fpos_t (* _Nullable)(void *, fpos_t, int), int (* _Nullable)(void *))
+fwopen	/usr/include/stdio.h	/^#define	fwopen(/;"	d
+fwrite	/usr/include/stdio.h	/^size_t	 fwrite(const void * __restrict __ptr, size_t __size, size_t __nitems, FILE * __restrict __stream) __DARWIN_ALIAS(fwrite);$/;"	v
+gcvt	/usr/include/stdlib.h	/^char	*gcvt(double, int, char *); \/* LEGACY *\/$/;"	p	signature:(double, int, char *)
+getbsize	/usr/include/stdlib.h	/^char	*getbsize(int *, long *);$/;"	p	signature:(int *, long *)
+getc	/usr/include/stdio.h	/^int	 getc(FILE *);$/;"	p	signature:(FILE *)
+getc_unlocked	/usr/include/stdio.h	/^#define	getc_unlocked(/;"	d
+getc_unlocked	/usr/include/stdio.h	/^int	 getc_unlocked(FILE *);$/;"	p	signature:(FILE *)
+getchar	/usr/include/stdio.h	/^int	 getchar(void);$/;"	p	signature:(void)
+getchar_unlocked	/usr/include/stdio.h	/^#define	getchar_unlocked(/;"	d
+getchar_unlocked	/usr/include/stdio.h	/^int	 getchar_unlocked(void);$/;"	p	signature:(void)
+getdate	/usr/include/time.h	/^struct tm *getdate(const char *);$/;"	p	signature:(const char *)
+getenv	/usr/include/stdlib.h	/^char	*getenv(const char *);$/;"	p	signature:(const char *)
+getloadavg	/usr/include/stdlib.h	/^int	 getloadavg(double [], int);$/;"	p	signature:(double [], int)
+getprogname	/usr/include/stdlib.h	/^	*getprogname(void);$/;"	p	signature:(void)
+gets	/usr/include/stdio.h	/^char	*gets(char *);$/;"	p	signature:(char *)
+getsubopt	/usr/include/stdlib.h	/^int	 getsubopt(char **, char * const *, char **);$/;"	p	signature:(char **, char * const *, char **)
+getw	/usr/include/stdio.h	/^int	 getw(FILE *);$/;"	p	signature:(FILE *)
+gmtime	/usr/include/time.h	/^struct tm *gmtime(const time_t *);$/;"	p	signature:(const time_t *)
+gmtime_r	/usr/include/time.h	/^struct tm *gmtime_r(const time_t * __restrict, struct tm * __restrict);$/;"	p	signature:(const time_t * __restrict, struct tm * __restrict)
+grantpt	/usr/include/stdlib.h	/^int	 grantpt(int);$/;"	p	signature:(int)
+heapsort	/usr/include/stdlib.h	/^int	 heapsort(void *__base, size_t __nel, size_t __width,$/;"	p	signature:(void *__base, size_t __nel, size_t __width, int (* _Nonnull __compar)(const void *, const void *))
+hypot	/usr/include/math.h	/^extern double hypot(double, double);$/;"	p	signature:(double, double)
+hypotf	/usr/include/math.h	/^extern float hypotf(float, float);$/;"	p	signature:(float, float)
+hypotl	/usr/include/math.h	/^extern long double hypotl(long double, long double);$/;"	p	signature:(long double, long double)
+ilogb	/usr/include/math.h	/^extern int ilogb(double);$/;"	p	signature:(double)
+ilogbf	/usr/include/math.h	/^extern int ilogbf(float);$/;"	p	signature:(float)
+ilogbl	/usr/include/math.h	/^extern int ilogbl(long double);$/;"	p	signature:(long double)
+initstate	/usr/include/stdlib.h	/^char	*initstate(unsigned long, char *, long);$/;"	p	signature:(unsigned long, char *, long)
+initstate	/usr/include/stdlib.h	/^char	*initstate(unsigned, char *, size_t); \/* no  __DARWIN_ALIAS needed *\/$/;"	p	signature:(unsigned, char *, size_t)
+isalnum	/usr/include/ctype.h	/^int     isalnum(int);$/;"	p	signature:(int)
+isalnum	/usr/include/ctype.h	/^isalnum(int _c)$/;"	f	signature:(int _c)
+isalpha	/usr/include/ctype.h	/^int     isalpha(int);$/;"	p	signature:(int)
+isalpha	/usr/include/ctype.h	/^isalpha(int _c)$/;"	f	signature:(int _c)
+isascii	/usr/include/ctype.h	/^int     isascii(int);$/;"	p	signature:(int)
+isascii	/usr/include/ctype.h	/^isascii(int _c)$/;"	f	signature:(int _c)
+isblank	/usr/include/ctype.h	/^int     isblank(int);$/;"	p	signature:(int)
+isblank	/usr/include/ctype.h	/^isblank(int _c)$/;"	f	signature:(int _c)
+iscntrl	/usr/include/ctype.h	/^int     iscntrl(int);$/;"	p	signature:(int)
+iscntrl	/usr/include/ctype.h	/^iscntrl(int _c)$/;"	f	signature:(int _c)
+isdigit	/usr/include/ctype.h	/^int     isdigit(int);$/;"	p	signature:(int)
+isdigit	/usr/include/ctype.h	/^isdigit(int _c)$/;"	f	signature:(int _c)
+isfinite	/usr/include/math.h	/^#define isfinite(/;"	d
+isgraph	/usr/include/ctype.h	/^int     isgraph(int);$/;"	p	signature:(int)
+isgraph	/usr/include/ctype.h	/^isgraph(int _c)$/;"	f	signature:(int _c)
+isgreater	/usr/include/math.h	/^#define isgreater(/;"	d
+isgreaterequal	/usr/include/math.h	/^#define isgreaterequal(/;"	d
+ishexnumber	/usr/include/ctype.h	/^int     ishexnumber(int);$/;"	p	signature:(int)
+ishexnumber	/usr/include/ctype.h	/^ishexnumber(int _c)$/;"	f	signature:(int _c)
+isideogram	/usr/include/ctype.h	/^int     isideogram(int);$/;"	p	signature:(int)
+isideogram	/usr/include/ctype.h	/^isideogram(int _c)$/;"	f	signature:(int _c)
+isinf	/usr/include/math.h	/^#define isinf(/;"	d
+isless	/usr/include/math.h	/^#define isless(/;"	d
+islessequal	/usr/include/math.h	/^#define islessequal(/;"	d
+islessgreater	/usr/include/math.h	/^#define islessgreater(/;"	d
+islower	/usr/include/ctype.h	/^int     islower(int);$/;"	p	signature:(int)
+islower	/usr/include/ctype.h	/^islower(int _c)$/;"	f	signature:(int _c)
+isnan	/usr/include/math.h	/^#define isnan(/;"	d
+isnormal	/usr/include/math.h	/^#define isnormal(/;"	d
+isnumber	/usr/include/ctype.h	/^int     isnumber(int);$/;"	p	signature:(int)
+isnumber	/usr/include/ctype.h	/^isnumber(int _c)$/;"	f	signature:(int _c)
+isphonogram	/usr/include/ctype.h	/^int     isphonogram(int);$/;"	p	signature:(int)
+isphonogram	/usr/include/ctype.h	/^isphonogram(int _c)$/;"	f	signature:(int _c)
+isprint	/usr/include/ctype.h	/^int     isprint(int);$/;"	p	signature:(int)
+isprint	/usr/include/ctype.h	/^isprint(int _c)$/;"	f	signature:(int _c)
+ispunct	/usr/include/ctype.h	/^int     ispunct(int);$/;"	p	signature:(int)
+ispunct	/usr/include/ctype.h	/^ispunct(int _c)$/;"	f	signature:(int _c)
+isrune	/usr/include/ctype.h	/^int     isrune(int);$/;"	p	signature:(int)
+isrune	/usr/include/ctype.h	/^isrune(int _c)$/;"	f	signature:(int _c)
+isspace	/usr/include/ctype.h	/^int     isspace(int);$/;"	p	signature:(int)
+isspace	/usr/include/ctype.h	/^isspace(int _c)$/;"	f	signature:(int _c)
+isspecial	/usr/include/ctype.h	/^int     isspecial(int);$/;"	p	signature:(int)
+isspecial	/usr/include/ctype.h	/^isspecial(int _c)$/;"	f	signature:(int _c)
+isunordered	/usr/include/math.h	/^#define isunordered(/;"	d
+isupper	/usr/include/ctype.h	/^int     isupper(int);$/;"	p	signature:(int)
+isupper	/usr/include/ctype.h	/^isupper(int _c)$/;"	f	signature:(int _c)
+isxdigit	/usr/include/ctype.h	/^int     isxdigit(int);$/;"	p	signature:(int)
+isxdigit	/usr/include/ctype.h	/^isxdigit(int _c)$/;"	f	signature:(int _c)
+jmp_buf	/usr/include/setjmp.h	/^typedef int jmp_buf[_JBLEN];$/;"	t
+kill	/usr/include/signal.h	/^int	kill(pid_t, int) __DARWIN_ALIAS(kill);$/;"	v
+killpg	/usr/include/signal.h	/^int	killpg(pid_t, int) __DARWIN_ALIAS(killpg);$/;"	v
+l64a	/usr/include/stdlib.h	/^char	*l64a(long);$/;"	p	signature:(long)
+lcong48	/usr/include/stdlib.h	/^void	 lcong48(unsigned short[7]);$/;"	p	signature:(unsigned short[7])
+ldexp	/usr/include/math.h	/^extern double ldexp(double, int);$/;"	p	signature:(double, int)
+ldexpf	/usr/include/math.h	/^extern float ldexpf(float, int);$/;"	p	signature:(float, int)
+ldexpl	/usr/include/math.h	/^extern long double ldexpl(long double, int);$/;"	p	signature:(long double, int)
+ldiv_t	/usr/include/stdlib.h	/^} ldiv_t;$/;"	t	typeref:struct:__anon2
+lgamma	/usr/include/math.h	/^extern double lgamma(double);$/;"	p	signature:(double)
+lgammaf	/usr/include/math.h	/^extern float lgammaf(float);$/;"	p	signature:(float)
+lgammal	/usr/include/math.h	/^extern long double lgammal(long double);$/;"	p	signature:(long double)
+llabs	/usr/include/stdlib.h	/^	 llabs(long long);$/;"	p	signature:(long long)
+lldiv	/usr/include/stdlib.h	/^lldiv_t	 lldiv(long long, long long);$/;"	p	signature:(long long, long long)
+lldiv_t	/usr/include/stdlib.h	/^} lldiv_t;$/;"	t	typeref:struct:__anon3
+llrint	/usr/include/math.h	/^extern long long int llrint(double);$/;"	p	signature:(double)
+llrintf	/usr/include/math.h	/^extern long long int llrintf(float);$/;"	p	signature:(float)
+llrintl	/usr/include/math.h	/^extern long long int llrintl(long double);$/;"	p	signature:(long double)
+llround	/usr/include/math.h	/^extern long long int llround(double);$/;"	p	signature:(double)
+llroundf	/usr/include/math.h	/^extern long long int llroundf(float);$/;"	p	signature:(float)
+llroundl	/usr/include/math.h	/^extern long long int llroundl(long double);$/;"	p	signature:(long double)
+localtime	/usr/include/time.h	/^struct tm *localtime(const time_t *);$/;"	p	signature:(const time_t *)
+localtime_r	/usr/include/time.h	/^struct tm *localtime_r(const time_t * __restrict, struct tm * __restrict);$/;"	p	signature:(const time_t * __restrict, struct tm * __restrict)
+log	/usr/include/math.h	/^extern double log(double);$/;"	p	signature:(double)
+log10	/usr/include/math.h	/^extern double log10(double);$/;"	p	signature:(double)
+log10f	/usr/include/math.h	/^extern float log10f(float);$/;"	p	signature:(float)
+log10l	/usr/include/math.h	/^extern long double log10l(long double);$/;"	p	signature:(long double)
+log1p	/usr/include/math.h	/^extern double log1p(double);$/;"	p	signature:(double)
+log1pf	/usr/include/math.h	/^extern float log1pf(float);$/;"	p	signature:(float)
+log1pl	/usr/include/math.h	/^extern long double log1pl(long double);$/;"	p	signature:(long double)
+log2	/usr/include/math.h	/^extern double log2(double);$/;"	p	signature:(double)
+log2f	/usr/include/math.h	/^extern float log2f(float);$/;"	p	signature:(float)
+log2l	/usr/include/math.h	/^extern long double log2l(long double);$/;"	p	signature:(long double)
+logb	/usr/include/math.h	/^extern double logb(double);$/;"	p	signature:(double)
+logbf	/usr/include/math.h	/^extern float logbf(float);$/;"	p	signature:(float)
+logbl	/usr/include/math.h	/^extern long double logbl(long double);$/;"	p	signature:(long double)
+logf	/usr/include/math.h	/^extern float logf(float);$/;"	p	signature:(float)
+logl	/usr/include/math.h	/^extern long double logl(long double);$/;"	p	signature:(long double)
+longjmperror	/usr/include/setjmp.h	/^void	longjmperror(void);$/;"	p	signature:(void)
+lrint	/usr/include/math.h	/^extern long int lrint(double);$/;"	p	signature:(double)
+lrintf	/usr/include/math.h	/^extern long int lrintf(float);$/;"	p	signature:(float)
+lrintl	/usr/include/math.h	/^extern long int lrintl(long double);$/;"	p	signature:(long double)
+lround	/usr/include/math.h	/^extern long int lround(double);$/;"	p	signature:(double)
+lroundf	/usr/include/math.h	/^extern long int lroundf(float);$/;"	p	signature:(float)
+lroundl	/usr/include/math.h	/^extern long int lroundl(long double);$/;"	p	signature:(long double)
+math_errhandling	/usr/include/math.h	/^#define math_errhandling /;"	d
+max_align_t	/usr/include/stddef.h	/^typedef long double max_align_t;$/;"	t
+mblen	/usr/include/stdlib.h	/^int	 mblen(const char *__s, size_t __n);$/;"	p	signature:(const char *__s, size_t __n)
+mbstowcs	/usr/include/stdlib.h	/^size_t	 mbstowcs(wchar_t * __restrict , const char * __restrict, size_t);$/;"	p	signature:(wchar_t * __restrict , const char * __restrict, size_t)
+mbtowc	/usr/include/stdlib.h	/^int	 mbtowc(wchar_t * __restrict, const char * __restrict, size_t);$/;"	p	signature:(wchar_t * __restrict, const char * __restrict, size_t)
+memccpy	/usr/include/string.h	/^void	*memccpy(void *__dst, const void *__src, int __c, size_t __n);$/;"	p	signature:(void *__dst, const void *__src, int __c, size_t __n)
+memchr	/usr/include/string.h	/^void	*memchr(const void *__s, int __c, size_t __n);$/;"	p	signature:(const void *__s, int __c, size_t __n)
+memcmp	/usr/include/string.h	/^int	 memcmp(const void *__s1, const void *__s2, size_t __n);$/;"	p	signature:(const void *__s1, const void *__s2, size_t __n)
+memcpy	/usr/include/string.h	/^void	*memcpy(void *__dst, const void *__src, size_t __n);$/;"	p	signature:(void *__dst, const void *__src, size_t __n)
+memmove	/usr/include/string.h	/^void	*memmove(void *__dst, const void *__src, size_t __len);$/;"	p	signature:(void *__dst, const void *__src, size_t __len)
+memset	/usr/include/string.h	/^void	*memset(void *__b, int __c, size_t __len);$/;"	p	signature:(void *__b, int __c, size_t __len)
+mergesort	/usr/include/stdlib.h	/^int	 mergesort(void *__base, size_t __nel, size_t __width,$/;"	p	signature:(void *__base, size_t __nel, size_t __width, int (* _Nonnull __compar)(const void *, const void *))
+mkstemp	/usr/include/stdlib.h	/^int	 mkstemp(char *);$/;"	p	signature:(char *)
+mktemp	/usr/include/stdlib.h	/^char	*mktemp(char *);$/;"	p	signature:(char *)
+mktime	/usr/include/time.h	/^time_t mktime(struct tm *) __DARWIN_ALIAS(mktime);$/;"	v
+modf	/usr/include/math.h	/^extern double modf(double, double *);$/;"	p	signature:(double, double *)
+modff	/usr/include/math.h	/^extern float modff(float, float *);$/;"	p	signature:(float, float *)
+modfl	/usr/include/math.h	/^extern long double modfl(long double, long double *);$/;"	p	signature:(long double, long double *)
+name	/usr/include/math.h	/^    char *name;$/;"	m	struct:exception	access:public
+nan	/usr/include/math.h	/^extern double nan(const char *);$/;"	p	signature:(const char *)
+nanf	/usr/include/math.h	/^extern float nanf(const char *);$/;"	p	signature:(const char *)
+nanl	/usr/include/math.h	/^extern long double nanl(const char *);$/;"	p	signature:(const char *)
+nanosleep	/usr/include/time.h	/^int nanosleep(const struct timespec *__rqtp, struct timespec *__rmtp) __DARWIN_ALIAS_C(nanosleep);$/;"	v
+nearbyint	/usr/include/math.h	/^extern double nearbyint(double);$/;"	p	signature:(double)
+nearbyintf	/usr/include/math.h	/^extern float nearbyintf(float);$/;"	p	signature:(float)
+nearbyintl	/usr/include/math.h	/^extern long double nearbyintl(long double);$/;"	p	signature:(long double)
+nextafter	/usr/include/math.h	/^extern double nextafter(double, double);$/;"	p	signature:(double, double)
+nextafterf	/usr/include/math.h	/^extern float nextafterf(float, float);$/;"	p	signature:(float, float)
+nextafterl	/usr/include/math.h	/^extern long double nextafterl(long double, long double);$/;"	p	signature:(long double, long double)
+nexttoward	/usr/include/math.h	/^extern double nexttoward(double, long double);$/;"	p	signature:(double, long double)
+nexttowardf	/usr/include/math.h	/^extern float nexttowardf(float, long double);$/;"	p	signature:(float, long double)
+nexttowardl	/usr/include/math.h	/^extern long double nexttowardl(long double, long double);$/;"	p	signature:(long double, long double)
+perror	/usr/include/stdio.h	/^void	 perror(const char *);$/;"	p	signature:(const char *)
+posix2time	/usr/include/time.h	/^time_t posix2time(time_t);$/;"	p	signature:(time_t)
+posix_openpt	/usr/include/stdlib.h	/^int	 posix_openpt(int);$/;"	p	signature:(int)
+pow	/usr/include/math.h	/^extern double pow(double, double);$/;"	p	signature:(double, double)
+powf	/usr/include/math.h	/^extern float powf(float, float);$/;"	p	signature:(float, float)
+powl	/usr/include/math.h	/^extern long double powl(long double, long double);$/;"	p	signature:(long double, long double)
+printf	/usr/include/assert.h	/^int  printf(const char * __restrict, ...);$/;"	p	signature:(const char * __restrict, ...)
+psignal	/usr/include/signal.h	/^void	psignal(unsigned int, const char *);$/;"	p	signature:(unsigned int, const char *)
+pthread_kill	/usr/include/signal.h	/^int	pthread_kill(pthread_t, int);$/;"	p	signature:(pthread_t, int)
+pthread_sigmask	/usr/include/signal.h	/^int	pthread_sigmask(int, const sigset_t *, sigset_t *) __DARWIN_ALIAS(pthread_sigmask);$/;"	v
+ptsname	/usr/include/stdlib.h	/^char	*ptsname(int);$/;"	p	signature:(int)
+putc	/usr/include/stdio.h	/^int	 putc(int, FILE *);$/;"	p	signature:(int, FILE *)
+putc_unlocked	/usr/include/stdio.h	/^#define putc_unlocked(/;"	d
+putc_unlocked	/usr/include/stdio.h	/^int	 putc_unlocked(int, FILE *);$/;"	p	signature:(int, FILE *)
+putchar	/usr/include/stdio.h	/^int	 putchar(int);$/;"	p	signature:(int)
+putchar_unlocked	/usr/include/stdio.h	/^#define	putchar_unlocked(/;"	d
+putchar_unlocked	/usr/include/stdio.h	/^int	 putchar_unlocked(int);$/;"	p	signature:(int)
+putenv	/usr/include/stdlib.h	/^int	 putenv(char *) __DARWIN_ALIAS(putenv);$/;"	v
+puts	/usr/include/stdio.h	/^int	 puts(const char *);$/;"	p	signature:(const char *)
+putw	/usr/include/stdio.h	/^int	 putw(int, FILE *);$/;"	p	signature:(int, FILE *)
+qsort	/usr/include/stdlib.h	/^void	 qsort(void *__base, size_t __nel, size_t __width,$/;"	p	signature:(void *__base, size_t __nel, size_t __width, int (* _Nonnull __compar)(const void *, const void *))
+qsort_r	/usr/include/stdlib.h	/^void	 qsort_r(void *__base, size_t __nel, size_t __width, void *,$/;"	p	signature:(void *__base, size_t __nel, size_t __width, void *, int (* _Nonnull __compar)(void *, const void *, const void *))
+quot	/usr/include/stdlib.h	/^	int quot;		\/* quotient *\/$/;"	m	struct:__anon1	access:public
+quot	/usr/include/stdlib.h	/^	long long quot;$/;"	m	struct:__anon3	access:public
+quot	/usr/include/stdlib.h	/^	long quot;		\/* quotient *\/$/;"	m	struct:__anon2	access:public
+radixsort	/usr/include/stdlib.h	/^int	 radixsort(const unsigned char **__base, int __nel, const unsigned char *__table,$/;"	p	signature:(const unsigned char **__base, int __nel, const unsigned char *__table, unsigned __endbyte)
+raise	/usr/include/signal.h	/^int	raise(int);$/;"	p	signature:(int)
+reallocf	/usr/include/stdlib.h	/^void	*reallocf(void *__ptr, size_t __size);$/;"	p	signature:(void *__ptr, size_t __size)
+realpath	/usr/include/stdlib.h	/^char	*realpath(const char * __restrict, char * __restrict) __DARWIN_ALIAS(realpath);$/;"	v
+realpath	/usr/include/stdlib.h	/^char	*realpath(const char * __restrict, char * __restrict) __DARWIN_EXTSN(realpath);$/;"	v
+rem	/usr/include/stdlib.h	/^	int rem;		\/* remainder *\/$/;"	m	struct:__anon1	access:public
+rem	/usr/include/stdlib.h	/^	long long rem;$/;"	m	struct:__anon3	access:public
+rem	/usr/include/stdlib.h	/^	long rem;		\/* remainder *\/$/;"	m	struct:__anon2	access:public
+remainder	/usr/include/math.h	/^extern double remainder(double, double);$/;"	p	signature:(double, double)
+remainderf	/usr/include/math.h	/^extern float remainderf(float, float);$/;"	p	signature:(float, float)
+remainderl	/usr/include/math.h	/^extern long double remainderl(long double, long double);$/;"	p	signature:(long double, long double)
+remove	/usr/include/stdio.h	/^int	 remove(const char *);$/;"	p	signature:(const char *)
+remquo	/usr/include/math.h	/^extern double remquo(double, double, int *);$/;"	p	signature:(double, double, int *)
+remquof	/usr/include/math.h	/^extern float remquof(float, float, int *);$/;"	p	signature:(float, float, int *)
+remquol	/usr/include/math.h	/^extern long double remquol(long double, long double, int *);$/;"	p	signature:(long double, long double, int *)
+rename	/usr/include/stdio.h	/^int	 rename (const char *__old, const char *__new);$/;"	p	signature:(const char *__old, const char *__new)
+retval	/usr/include/math.h	/^    double retval;$/;"	m	struct:exception	access:public
+rewind	/usr/include/stdio.h	/^void	 rewind(FILE *);$/;"	p	signature:(FILE *)
+rint	/usr/include/math.h	/^extern double rint(double);$/;"	p	signature:(double)
+rintf	/usr/include/math.h	/^extern float rintf(float);$/;"	p	signature:(float)
+rintl	/usr/include/math.h	/^extern long double rintl(long double);$/;"	p	signature:(long double)
+round	/usr/include/math.h	/^extern double round(double);$/;"	p	signature:(double)
+roundf	/usr/include/math.h	/^extern float roundf(float);$/;"	p	signature:(float)
+roundl	/usr/include/math.h	/^extern long double roundl(long double);$/;"	p	signature:(long double)
+scalb	/usr/include/math.h	/^extern double scalb(double, double); $/;"	p	signature:(double, double)
+scalbln	/usr/include/math.h	/^extern double scalbln(double, long int);$/;"	p	signature:(double, long int)
+scalblnf	/usr/include/math.h	/^extern float scalblnf(float, long int);$/;"	p	signature:(float, long int)
+scalblnl	/usr/include/math.h	/^extern long double scalblnl(long double, long int);$/;"	p	signature:(long double, long int)
+scalbn	/usr/include/math.h	/^extern double scalbn(double, int);$/;"	p	signature:(double, int)
+scalbnf	/usr/include/math.h	/^extern float scalbnf(float, int);$/;"	p	signature:(float, int)
+scalbnl	/usr/include/math.h	/^extern long double scalbnl(long double, int);$/;"	p	signature:(long double, int)
+seed48	/usr/include/stdlib.h	/^	*seed48(unsigned short[3]);$/;"	p	signature:(unsigned short[3])
+setbuf	/usr/include/stdio.h	/^void	 setbuf(FILE * __restrict, char * __restrict);$/;"	p	signature:(FILE * __restrict, char * __restrict)
+setbuffer	/usr/include/stdio.h	/^void	 setbuffer(FILE *, char *, int);$/;"	p	signature:(FILE *, char *, int)
+setenv	/usr/include/stdlib.h	/^int	 setenv(const char * __name, const char * __value, int __overwrite) __DARWIN_ALIAS(setenv);$/;"	v
+setjmp	/usr/include/setjmp.h	/^extern int	setjmp(jmp_buf);$/;"	p	signature:(jmp_buf)
+setkey	/usr/include/stdlib.h	/^int	 setkey(const char *);$/;"	p	signature:(const char *)
+setkey	/usr/include/stdlib.h	/^void	 setkey(const char *) __DARWIN_ALIAS(setkey);$/;"	v
+setlinebuf	/usr/include/stdio.h	/^int	 setlinebuf(FILE *);$/;"	p	signature:(FILE *)
+setlocale	/usr/include/locale.h	/^char		*setlocale(int, const char *);$/;"	p	signature:(int, const char *)
+setprogname	/usr/include/stdlib.h	/^void	 setprogname(const char *);$/;"	p	signature:(const char *)
+setstate	/usr/include/stdlib.h	/^char	*setstate(const char *);$/;"	p	signature:(const char *)
+setvbuf	/usr/include/stdio.h	/^int	 setvbuf(FILE * __restrict, char * __restrict, int, size_t);$/;"	p	signature:(FILE * __restrict, char * __restrict, int, size_t)
+sigaction	/usr/include/signal.h	/^int	sigaction(int, const struct sigaction * __restrict,$/;"	p	signature:(int, const struct sigaction * __restrict, struct sigaction * __restrict)
+sigaddset	/usr/include/signal.h	/^#define	sigaddset(/;"	d
+sigaddset	/usr/include/signal.h	/^int	sigaddset(sigset_t *, int);$/;"	p	signature:(sigset_t *, int)
+sigblock	/usr/include/signal.h	/^int	sigblock(int);$/;"	p	signature:(int)
+sigdelset	/usr/include/signal.h	/^#define	sigdelset(/;"	d
+sigdelset	/usr/include/signal.h	/^int	sigdelset(sigset_t *, int);$/;"	p	signature:(sigset_t *, int)
+sigemptyset	/usr/include/signal.h	/^#define	sigemptyset(/;"	d
+sigemptyset	/usr/include/signal.h	/^int	sigemptyset(sigset_t *);$/;"	p	signature:(sigset_t *)
+sigfillset	/usr/include/signal.h	/^#define	sigfillset(/;"	d
+sigfillset	/usr/include/signal.h	/^int	sigfillset(sigset_t *);$/;"	p	signature:(sigset_t *)
+sighold	/usr/include/signal.h	/^int	sighold(int);$/;"	p	signature:(int)
+sigignore	/usr/include/signal.h	/^int	sigignore(int);$/;"	p	signature:(int)
+siginterrupt	/usr/include/signal.h	/^int	siginterrupt(int, int);$/;"	p	signature:(int, int)
+sigismember	/usr/include/signal.h	/^#define	sigismember(/;"	d
+sigismember	/usr/include/signal.h	/^int	sigismember(const sigset_t *, int);$/;"	p	signature:(const sigset_t *, int)
+sigjmp_buf	/usr/include/setjmp.h	/^typedef int sigjmp_buf[_JBLEN + 1];$/;"	t
+signbit	/usr/include/math.h	/^#define signbit(/;"	d
+sigpause	/usr/include/signal.h	/^int	sigpause(int) __DARWIN_ALIAS_C(sigpause);$/;"	v
+sigpending	/usr/include/signal.h	/^int	sigpending(sigset_t *);$/;"	p	signature:(sigset_t *)
+sigprocmask	/usr/include/signal.h	/^int	sigprocmask(int, const sigset_t * __restrict, sigset_t * __restrict);$/;"	p	signature:(int, const sigset_t * __restrict, sigset_t * __restrict)
+sigrelse	/usr/include/signal.h	/^int	sigrelse(int);$/;"	p	signature:(int)
+sigset	/usr/include/signal.h	/^void    (* _Nullable sigset(int, void (* _Nullable)(int)))(int);$/;"	p	signature:(int, void (* _Nullable)(int))
+sigsetjmp	/usr/include/setjmp.h	/^int	sigsetjmp(sigjmp_buf, int);$/;"	p	signature:(sigjmp_buf, int)
+sigsetmask	/usr/include/signal.h	/^int	sigsetmask(int);$/;"	p	signature:(int)
+sigsuspend	/usr/include/signal.h	/^int	sigsuspend(const sigset_t *) __DARWIN_ALIAS_C(sigsuspend);$/;"	v
+sigvec	/usr/include/signal.h	/^int	sigvec(int, struct sigvec *, struct sigvec *);$/;"	p	signature:(int, struct sigvec *, struct sigvec *)
+sigwait	/usr/include/signal.h	/^int	sigwait(const sigset_t * __restrict, int * __restrict) __DARWIN_ALIAS_C(sigwait);$/;"	v
+sin	/usr/include/math.h	/^extern double sin(double);$/;"	p	signature:(double)
+sinf	/usr/include/math.h	/^extern float sinf(float);$/;"	p	signature:(float)
+sinh	/usr/include/math.h	/^extern double sinh(double);$/;"	p	signature:(double)
+sinhf	/usr/include/math.h	/^extern float sinhf(float);$/;"	p	signature:(float)
+sinhl	/usr/include/math.h	/^extern long double sinhl(long double);$/;"	p	signature:(long double)
+sinl	/usr/include/math.h	/^extern long double sinl(long double);$/;"	p	signature:(long double)
+sqrt	/usr/include/math.h	/^extern double sqrt(double);$/;"	p	signature:(double)
+sqrtf	/usr/include/math.h	/^extern float sqrtf(float);$/;"	p	signature:(float)
+sqrtl	/usr/include/math.h	/^extern long double sqrtl(long double);$/;"	p	signature:(long double)
+sradixsort	/usr/include/stdlib.h	/^int	 sradixsort(const unsigned char **__base, int __nel, const unsigned char *__table,$/;"	p	signature:(const unsigned char **__base, int __nel, const unsigned char *__table, unsigned __endbyte)
+srand48	/usr/include/stdlib.h	/^void	 srand48(long);$/;"	p	signature:(long)
+sranddev	/usr/include/stdlib.h	/^void	 sranddev(void);$/;"	p	signature:(void)
+srandom	/usr/include/stdlib.h	/^void	 srandom(unsigned long);$/;"	p	signature:(unsigned long)
+srandom	/usr/include/stdlib.h	/^void	 srandom(unsigned);$/;"	p	signature:(unsigned)
+srandomdev	/usr/include/stdlib.h	/^void	 srandomdev(void);$/;"	p	signature:(void)
+static_assert	/usr/include/assert.h	/^#define static_assert /;"	d
+stderr	/usr/include/stdio.h	/^#define	stderr	/;"	d
+stdin	/usr/include/stdio.h	/^#define	stdin	/;"	d
+stdout	/usr/include/stdio.h	/^#define	stdout	/;"	d
+stpcpy	/usr/include/string.h	/^char	*stpcpy(char *__dst, const char *__src);$/;"	p	signature:(char *__dst, const char *__src)
+strcasestr	/usr/include/string.h	/^char	*strcasestr(const char *__big, const char *__little);$/;"	p	signature:(const char *__big, const char *__little)
+strcat	/usr/include/string.h	/^char	*strcat(char *__s1, const char *__s2);$/;"	p	signature:(char *__s1, const char *__s2)
+strchr	/usr/include/string.h	/^char	*strchr(const char *__s, int __c);$/;"	p	signature:(const char *__s, int __c)
+strcmp	/usr/include/string.h	/^int	 strcmp(const char *__s1, const char *__s2);$/;"	p	signature:(const char *__s1, const char *__s2)
+strcoll	/usr/include/string.h	/^int	 strcoll(const char *__s1, const char *__s2);$/;"	p	signature:(const char *__s1, const char *__s2)
+strcpy	/usr/include/string.h	/^char	*strcpy(char *__dst, const char *__src);$/;"	p	signature:(char *__dst, const char *__src)
+strcspn	/usr/include/string.h	/^size_t	 strcspn(const char *__s, const char *__charset);$/;"	p	signature:(const char *__s, const char *__charset)
+strdup	/usr/include/string.h	/^char	*strdup(const char *__s1);$/;"	p	signature:(const char *__s1)
+strerror	/usr/include/string.h	/^char	*strerror(int __errnum) __DARWIN_ALIAS(strerror);$/;"	v
+strerror_r	/usr/include/string.h	/^int	 strerror_r(int __errnum, char *__strerrbuf, size_t __buflen);$/;"	p	signature:(int __errnum, char *__strerrbuf, size_t __buflen)
+strftime	/usr/include/time.h	/^size_t strftime(char * __restrict, size_t, const char * __restrict, const struct tm * __restrict) __DARWIN_ALIAS(strftime);$/;"	v
+strlcat	/usr/include/string.h	/^size_t	 strlcat(char *__dst, const char *__source, size_t __size);$/;"	p	signature:(char *__dst, const char *__source, size_t __size)
+strlcpy	/usr/include/string.h	/^size_t	 strlcpy(char *__dst, const char *__source, size_t __size);$/;"	p	signature:(char *__dst, const char *__source, size_t __size)
+strlen	/usr/include/string.h	/^size_t	 strlen(const char *__s);$/;"	p	signature:(const char *__s)
+strmode	/usr/include/string.h	/^void	 strmode(int __mode, char *__bp);$/;"	p	signature:(int __mode, char *__bp)
+strncat	/usr/include/string.h	/^char	*strncat(char *__s1, const char *__s2, size_t __n);$/;"	p	signature:(char *__s1, const char *__s2, size_t __n)
+strncmp	/usr/include/string.h	/^int	 strncmp(const char *__s1, const char *__s2, size_t __n);$/;"	p	signature:(const char *__s1, const char *__s2, size_t __n)
+strncpy	/usr/include/string.h	/^char	*strncpy(char *__dst, const char *__src, size_t __n);$/;"	p	signature:(char *__dst, const char *__src, size_t __n)
+strnstr	/usr/include/string.h	/^char	*strnstr(const char *__big, const char *__little, size_t __len);$/;"	p	signature:(const char *__big, const char *__little, size_t __len)
+strpbrk	/usr/include/string.h	/^char	*strpbrk(const char *__s, const char *__charset);$/;"	p	signature:(const char *__s, const char *__charset)
+strptime	/usr/include/time.h	/^char *strptime(const char * __restrict, const char * __restrict, struct tm * __restrict) __DARWIN_ALIAS(strptime);$/;"	v
+strrchr	/usr/include/string.h	/^char	*strrchr(const char *__s, int __c);$/;"	p	signature:(const char *__s, int __c)
+strsep	/usr/include/string.h	/^char	*strsep(char **__stringp, const char *__delim);$/;"	p	signature:(char **__stringp, const char *__delim)
+strsignal	/usr/include/string.h	/^char	*strsignal(int __sig);$/;"	p	signature:(int __sig)
+strspn	/usr/include/string.h	/^size_t	 strspn(const char *__s, const char *__charset);$/;"	p	signature:(const char *__s, const char *__charset)
+strstr	/usr/include/string.h	/^char	*strstr(const char *__big, const char *__little);$/;"	p	signature:(const char *__big, const char *__little)
+strtod	/usr/include/stdlib.h	/^double	 strtod(const char *, char **) __DARWIN_ALIAS(strtod);$/;"	v
+strtof	/usr/include/stdlib.h	/^float	 strtof(const char *, char **) __DARWIN_ALIAS(strtof);$/;"	v
+strtok	/usr/include/string.h	/^char	*strtok(char *__str, const char *__sep);$/;"	p	signature:(char *__str, const char *__sep)
+strtok_r	/usr/include/string.h	/^char	*strtok_r(char *__str, const char *__sep, char **__lasts);$/;"	p	signature:(char *__str, const char *__sep, char **__lasts)
+strtol	/usr/include/stdlib.h	/^long	 strtol(const char *__str, char **__endptr, int __base);$/;"	p	signature:(const char *__str, char **__endptr, int __base)
+strtold	/usr/include/stdlib.h	/^	 strtold(const char *, char **);$/;"	p	signature:(const char *, char **)
+strtoll	/usr/include/stdlib.h	/^	 strtoll(const char *__str, char **__endptr, int __base);$/;"	p	signature:(const char *__str, char **__endptr, int __base)
+strtoq	/usr/include/stdlib.h	/^	 strtoq(const char *__str, char **__endptr, int __base);$/;"	p	signature:(const char *__str, char **__endptr, int __base)
+strtoul	/usr/include/stdlib.h	/^	 strtoul(const char *__str, char **__endptr, int __base);$/;"	p	signature:(const char *__str, char **__endptr, int __base)
+strtoull	/usr/include/stdlib.h	/^	 strtoull(const char *__str, char **__endptr, int __base);$/;"	p	signature:(const char *__str, char **__endptr, int __base)
+strtouq	/usr/include/stdlib.h	/^	 strtouq(const char *__str, char **__endptr, int __base);$/;"	p	signature:(const char *__str, char **__endptr, int __base)
+strxfrm	/usr/include/string.h	/^size_t	 strxfrm(char *__s1, const char *__s2, size_t __n);$/;"	p	signature:(char *__s1, const char *__s2, size_t __n)
+swab	/usr/include/string.h	/^void	 swab(const void * __restrict, void * __restrict, ssize_t);$/;"	p	signature:(const void * __restrict, void * __restrict, ssize_t)
+system	/usr/include/stdlib.h	/^int	 system(const char *) __DARWIN_ALIAS_C(system);$/;"	v
+tan	/usr/include/math.h	/^extern double tan(double);$/;"	p	signature:(double)
+tanf	/usr/include/math.h	/^extern float tanf(float);$/;"	p	signature:(float)
+tanh	/usr/include/math.h	/^extern double tanh(double);$/;"	p	signature:(double)
+tanhf	/usr/include/math.h	/^extern float tanhf(float);$/;"	p	signature:(float)
+tanhl	/usr/include/math.h	/^extern long double tanhl(long double);$/;"	p	signature:(long double)
+tanl	/usr/include/math.h	/^extern long double tanl(long double);$/;"	p	signature:(long double)
+tempnam	/usr/include/stdio.h	/^char	*tempnam(const char *__dir, const char *__prefix) __DARWIN_ALIAS(tempnam);$/;"	v
+tgamma	/usr/include/math.h	/^extern double tgamma(double);$/;"	p	signature:(double)
+tgammaf	/usr/include/math.h	/^extern float tgammaf(float);$/;"	p	signature:(float)
+tgammal	/usr/include/math.h	/^extern long double tgammal(long double);$/;"	p	signature:(long double)
+time	/usr/include/time.h	/^time_t time(time_t *);$/;"	p	signature:(time_t *)
+time2posix	/usr/include/time.h	/^time_t time2posix(time_t);$/;"	p	signature:(time_t)
+timegm	/usr/include/time.h	/^time_t timegm(struct tm * const);$/;"	p	signature:(struct tm * const)
+timelocal	/usr/include/time.h	/^time_t timelocal(struct tm * const);$/;"	p	signature:(struct tm * const)
+timezone	/usr/include/time.h	/^char *timezone(int, int);$/;"	p	signature:(int, int)
+timingsafe_bcmp	/usr/include/string.h	/^int	timingsafe_bcmp(const void *__b1, const void *__b2, size_t __len);$/;"	p	signature:(const void *__b1, const void *__b2, size_t __len)
+tm	/usr/include/time.h	/^struct tm {$/;"	s
+tm::tm_gmtoff	/usr/include/time.h	/^	long	tm_gmtoff;	\/* offset from CUT in seconds *\/$/;"	m	struct:tm	access:public
+tm::tm_hour	/usr/include/time.h	/^	int	tm_hour;	\/* hours since midnight [0-23] *\/$/;"	m	struct:tm	access:public
+tm::tm_isdst	/usr/include/time.h	/^	int	tm_isdst;	\/* Daylight Savings Time flag *\/$/;"	m	struct:tm	access:public
+tm::tm_mday	/usr/include/time.h	/^	int	tm_mday;	\/* day of the month [1-31] *\/$/;"	m	struct:tm	access:public
+tm::tm_min	/usr/include/time.h	/^	int	tm_min;		\/* minutes after the hour [0-59] *\/$/;"	m	struct:tm	access:public
+tm::tm_mon	/usr/include/time.h	/^	int	tm_mon;		\/* months since January [0-11] *\/$/;"	m	struct:tm	access:public
+tm::tm_sec	/usr/include/time.h	/^	int	tm_sec;		\/* seconds after the minute [0-60] *\/$/;"	m	struct:tm	access:public
+tm::tm_wday	/usr/include/time.h	/^	int	tm_wday;	\/* days since Sunday [0-6] *\/$/;"	m	struct:tm	access:public
+tm::tm_yday	/usr/include/time.h	/^	int	tm_yday;	\/* days since January 1 [0-365] *\/$/;"	m	struct:tm	access:public
+tm::tm_year	/usr/include/time.h	/^	int	tm_year;	\/* years since 1900 *\/$/;"	m	struct:tm	access:public
+tm::tm_zone	/usr/include/time.h	/^	char	*tm_zone;	\/* timezone abbreviation *\/$/;"	m	struct:tm	access:public
+tm_gmtoff	/usr/include/time.h	/^	long	tm_gmtoff;	\/* offset from CUT in seconds *\/$/;"	m	struct:tm	access:public
+tm_hour	/usr/include/time.h	/^	int	tm_hour;	\/* hours since midnight [0-23] *\/$/;"	m	struct:tm	access:public
+tm_isdst	/usr/include/time.h	/^	int	tm_isdst;	\/* Daylight Savings Time flag *\/$/;"	m	struct:tm	access:public
+tm_mday	/usr/include/time.h	/^	int	tm_mday;	\/* day of the month [1-31] *\/$/;"	m	struct:tm	access:public
+tm_min	/usr/include/time.h	/^	int	tm_min;		\/* minutes after the hour [0-59] *\/$/;"	m	struct:tm	access:public
+tm_mon	/usr/include/time.h	/^	int	tm_mon;		\/* months since January [0-11] *\/$/;"	m	struct:tm	access:public
+tm_sec	/usr/include/time.h	/^	int	tm_sec;		\/* seconds after the minute [0-60] *\/$/;"	m	struct:tm	access:public
+tm_wday	/usr/include/time.h	/^	int	tm_wday;	\/* days since Sunday [0-6] *\/$/;"	m	struct:tm	access:public
+tm_yday	/usr/include/time.h	/^	int	tm_yday;	\/* days since January 1 [0-365] *\/$/;"	m	struct:tm	access:public
+tm_year	/usr/include/time.h	/^	int	tm_year;	\/* years since 1900 *\/$/;"	m	struct:tm	access:public
+tm_zone	/usr/include/time.h	/^	char	*tm_zone;	\/* timezone abbreviation *\/$/;"	m	struct:tm	access:public
+tmpfile	/usr/include/stdio.h	/^FILE	*tmpfile(void);$/;"	p	signature:(void)
+tmpnam	/usr/include/stdio.h	/^char	*tmpnam(char *);$/;"	p	signature:(char *)
+toascii	/usr/include/ctype.h	/^int     toascii(int);$/;"	p	signature:(int)
+toascii	/usr/include/ctype.h	/^toascii(int _c)$/;"	f	signature:(int _c)
+tolower	/usr/include/ctype.h	/^int     tolower(int);$/;"	p	signature:(int)
+tolower	/usr/include/ctype.h	/^tolower(int _c)$/;"	f	signature:(int _c)
+toupper	/usr/include/ctype.h	/^int     toupper(int);$/;"	p	signature:(int)
+toupper	/usr/include/ctype.h	/^toupper(int _c)$/;"	f	signature:(int _c)
+trunc	/usr/include/math.h	/^extern double trunc(double);$/;"	p	signature:(double)
+truncf	/usr/include/math.h	/^extern float truncf(float);$/;"	p	signature:(float)
+truncl	/usr/include/math.h	/^extern long double truncl(long double);$/;"	p	signature:(long double)
+type	/usr/include/math.h	/^    int type;$/;"	m	struct:exception	access:public
+tzset	/usr/include/time.h	/^void tzset(void);$/;"	p	signature:(void)
+tzsetwall	/usr/include/time.h	/^void tzsetwall(void);$/;"	p	signature:(void)
+ungetc	/usr/include/stdio.h	/^int	 ungetc(int, FILE *);$/;"	p	signature:(int, FILE *)
+unlockpt	/usr/include/stdlib.h	/^int	 unlockpt(int);$/;"	p	signature:(int)
+unsetenv	/usr/include/stdlib.h	/^int	 unsetenv(const char *) __DARWIN_ALIAS(unsetenv);$/;"	v
+unsetenv	/usr/include/stdlib.h	/^void	 unsetenv(const char *);$/;"	p	signature:(const char *)
+valloc	/usr/include/stdlib.h	/^void	*valloc(size_t);$/;"	p	signature:(size_t)
+wcstombs	/usr/include/stdlib.h	/^size_t	 wcstombs(char * __restrict, const wchar_t * __restrict, size_t);$/;"	p	signature:(char * __restrict, const wchar_t * __restrict, size_t)
+wctomb	/usr/include/stdlib.h	/^int	 wctomb(char *, wchar_t);$/;"	p	signature:(char *, wchar_t)
+zopen	/usr/include/stdio.h	/^FILE	*zopen(const char *, const char *, int);$/;"	p	signature:(const char *, const char *, int)
