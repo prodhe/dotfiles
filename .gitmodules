@@ -28,3 +28,6 @@
 [submodule "vim/vim.symlink/pack/main/start/vimoutliner"]
 	path = vim/vim.symlink/pack/main/start/vimoutliner
 	url = https://github.com/vimoutliner/vimoutliner.git
+[submodule "vim/vim.symlink/pack/main/start/vimroom"]
+	path = vim/vim.symlink/pack/main/start/vimroom
+	url = https://github.com/mikewest/vimroom
