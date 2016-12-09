@@ -3,6 +3,13 @@
 "   prodhe
 "
 
+" Set VIMHOME
+if has("win32") || has("win64")
+    let $VIMHOME = $HOME . "/vimfiles"
+else
+    let $VIMHOME = $HOME . "/.vim"
+endif
+
 " Vim mode, instead of vi
 set nocompatible
 
@@ -63,8 +70,10 @@ endif
 "
 
 set backup
-set backupdir=~/.vimbackup//
-set directory=~/.vimbackup//
+set backupdir=$VIMHOME/tmp//
+set directory=$VIMHOME/tmp//
+" set backupdir=~/.vimbackup//
+" set directory=~/.vimbackup//
 set writebackup         " writes a temporary backup if overwriting file
 
 
