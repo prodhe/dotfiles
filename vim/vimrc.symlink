@@ -119,9 +119,18 @@ set sidescroll=1
 
 " GUI vim (gvim, macvim)
 if has("gui_running")
-    set guifont=Inconsolata:h18
-    set columns=85 lines=40     " GUI window geometry
-    set background=light
+    set guioptions-=m
+    set guioptions-=T
+    set guioptions-=r
+    set guioptions-=l
+    set guioptions-=L
+    set guioptions-=e
+    "set background=light
+    if has("win32")
+        set guifont=Consolas:h13
+    else
+        set guifont=Inconsolata:h18
+    endif
 endif
 
 
