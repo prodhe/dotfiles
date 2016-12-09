@@ -31,3 +31,6 @@
 [submodule "vim/vim.symlink/pack/main/start/vimroom"]
 	path = vim/vim.symlink/pack/main/start/vimroom
 	url = https://github.com/mikewest/vimroom
+[submodule "vim/vim.symlink/pack/main/start/taglist.vim"]
+	path = vim/vim.symlink/pack/main/start/taglist.vim
+	url = https://github.com/vim-scripts/taglist.vim

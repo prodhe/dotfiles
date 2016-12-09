@@ -40,7 +40,8 @@ set grepprg=ack         " grep searches using Ack
 set wildchar=<Tab> wildmenu wildmode=list:longest,full " Tabbing cmd alternatives
 set path+=**            " fuzzy search sort-of
 set tags+=.tags                     " list of tags files
-set tags+=~/.vim/tags/sdl.tags      " ...
+
+
 
 " sudo save a file with :w!! after it's already opened
 cmap w!! w !sudo tee % >/dev/null
@@ -61,6 +62,10 @@ if has("autocmd")
 
         " Don't replace <Tab>s with spaces when editing makefiles
         autocmd Filetype makefile setlocal noexpandtab
+
+        " Add C-specific tags when working with C-files
+        autocmd Filetype c set tags+=~/.vim/tags/sdl.tags
+        autocmd Filetype c set tags+=~/.vim/tags/libc.tags
     augroup END
 endif
 
@@ -185,9 +190,10 @@ inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"     "choose
 " <leader> key
 let mapleader = ","
 
-" remap tag jumping to ctrl+k (easier on swedish mac kbd)
-nnoremap <C-k> <C-]>
-vnoremap <C-k> <C-]>
+" remap tag jumping to ctrl+^ (easier on swedish mac kbd)
+nnoremap  <C-]>
+vnoremap  <C-]>
+inoremap  <C-]>
 
 " search for tags
 nnoremap <leader>z :tag /
