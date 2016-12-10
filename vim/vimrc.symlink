@@ -260,6 +260,9 @@ nnoremap <silent> <leader>d :DiffOrig<CR>
 " Case-ignore external grep search with results in quickfix
 nnoremap <leader>a :Silent grep -i<SPACE>
 
+" Switch back and forth from HEX mode
+nnoremap <F2> :HexToggle<CR>
+
 " Run make and catch errors in quickfix (asyncrun)
 map <silent> <F4> :AsyncRun make<CR>
 
@@ -269,9 +272,6 @@ map <silent> <F5> :AsyncRun make run<CR>
 " Manually recreate a tags file in working dir (for :Silent, see under snippets)
 "map <silent> <F6> :Silent !ctags<CR>:echo "ctags generated"<CR>
 map <silent> <F6> :AsyncRun! ctags<CR>
-
-" Switch back and forth from HEX mode
-nnoremap <F8> :HexToggle<CR>
 
 " Toggle Taglist
 nnoremap <silent> <F9> :TlistToggle<CR>
