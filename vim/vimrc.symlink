@@ -1,6 +1,14 @@
-"   ~/.vimrc
+"                                _                    
+"                         __   _(_)_ __ ___  _ __ ___ 
+"                         \ \ / / | '_ ` _ \| '__/ __|
+"                          \ V /| | | | | | | | | (__ 
+"                         (_)_/ |_|_| |_| |_|_|  \___|
+"                            
+"                                  prodhe
 "
-"   prodhe
+
+"
+" Global stuff
 "
 
 " Set VIMHOME
@@ -17,10 +25,6 @@ set nocompatible
 filetype on
 filetype plugin on
 filetype indent on
-
-"
-" Global stuff
-"
 
 set noesckeys           " de-activate esc keys in insert mode
                         " gets rid of the o/O delay
@@ -86,7 +90,7 @@ set writebackup         " writes a temporary backup if overwriting file
 
 
 "
-" Display settings
+" Display settings and visual stuff
 "
 
 set background=dark
@@ -148,6 +152,15 @@ if has("gui_running")
     else
         set guifont=Inconsolata:h18
     endif
+endif
+
+" Fix the cursor for insert mode in vim+tmux
+if exists('$TMUX')
+  let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+  let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+else
+  let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+  let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 endif
 
 
