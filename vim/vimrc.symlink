@@ -214,6 +214,9 @@ vnoremap <leader>k :m '<-2<CR>gv=gv
 " Run current line as a shell expression and insert the result (q: "query")
 nnoremap Q :.!$SHELL<CR>
 
+" fetch and paste raw HTTP
+nnoremap <leader>r :read !curl -s --raw<SPACE>
+
 " List buffers and prompt for selection
 nnoremap <leader>b :ls<CR>:b<SPACE>
 
@@ -255,8 +258,7 @@ map <silent> <F5> :AsyncRun make run<CR>
 map <silent> <F6> :AsyncRun! ctags<CR>
 
 " Switch back and forth from HEX mode
-nnoremap <F7> :%!xxd<CR>
-nnoremap <F8> :%!xxd -r<CR>
+nnoremap <F8> :HexToggle<CR>
 
 " Toggle Taglist
 nnoremap <silent> <F9> :TlistToggle<CR>
@@ -323,7 +325,6 @@ if has("autocmd")
             \ <Bar><Esc>:call <SID>align()<CR>a
     augroup end
 endif
-
 function! s:align()
   let p = '^\s*|\s.*\s|\s*$'
   if exists(':Tabularize') && getline('.') =~# '^\s*|' && (getline(line('.')-1) =~# p || getline(line('.')+1) =~# p)
@@ -334,5 +335,22 @@ function! s:align()
     call search(repeat('[^|]*|',column).'\s\{-\}'.repeat('.',position),'ce',line('.'))
   endif
 endfunction
+
+" HEX TOGGLE (use external xxd back and forth for hex editing)
+let s:hextoggle_on = 0
+function! s:HexToggle()
+    if s:hextoggle_on
+        execute '%!xxd -r'
+        let s:hextoggle_on = 0
+        syntax on
+    else
+        execute '%!xxd'
+        let s:hextoggle_on = 1
+        syntax off
+    endif
+endfunction
+if !exists(":HexToggle")
+    command! HexToggle call s:HexToggle()
+endif
 
 " EOF
