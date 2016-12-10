@@ -7,8 +7,8 @@ unbind C-b
 bind C-j send-prefix
 
 # declare type of terminal
+set -g terminal-overrides ',xterm-256color:Tc'
 set -g default-terminal "screen-256color"
-
 # set history
 set -g history-limit 10000
 

@@ -37,7 +37,7 @@ set fileencodings=utf-8,ucs-bom,default,latin1
 set modelines=0         " never use it anyway...
 set nomodeline
 set ttyfast             " faster redraw
-set clipboard=unnamed   " set clipboard to OS X global
+"set clipboard=unnamed   " set clipboard to OS
 set shortmess+=I        " skip intro text when starting
 set grepprg=ack         " grep searches using Ack
 "set formatprg=par       " use par for formatting (eg. "gq")
@@ -86,8 +86,20 @@ set writebackup         " writes a temporary backup if overwriting file
 " Display settings and visual stuff
 "
 
+" terminal hell
+if !has("gui")
+    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+    set termguicolors
+endif
+
+" colorscheme and general layout (statusbar etc)
 set background=dark
-colorscheme solarized
+" colorscheme gruvbox
+" let g:gruvbox_italic=0
+" let g:gruvbox_contrast_dark = "hard"
+"colorscheme solarized
+colorscheme base16-default-dark
 "colorscheme sahara      " as in ~/.vimrc/colors
 set number              " line numbers to the left
 set relativenumber      " show relative line number
