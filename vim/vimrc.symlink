@@ -45,9 +45,6 @@ set wildchar=<Tab> wildmenu wildmode=list:longest,full " Tabbing cmd alternative
 set path+=**            " fuzzy search sort-of
 set tags+=.tags                     " list of tags files
 
-" sudo save a file with :w!! after it's already opened
-cmap w!! w !sudo tee % >/dev/null
-
 
 "
 " Automatic commands
@@ -222,6 +219,9 @@ vnoremap <leader>k :m '<-2<CR>gv=gv
 
 " Run current line as a shell expression and insert the result (q: "query")
 nnoremap Q :.!$SHELL<CR>
+
+" sudo save a file with :w!! after it's already opened
+cmap w!! w !sudo tee % >/dev/null
 
 " fetch and paste raw HTTP
 nnoremap <leader>r :read !curl -s --raw<SPACE>
