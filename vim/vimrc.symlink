@@ -26,7 +26,7 @@ filetype on
 filetype plugin on
 filetype indent on
 
-set noesckeys           " de-activate esc keys in insert mode
+"set noesckeys           " de-activate esc keys in insert mode
                         " gets rid of the o/O delay
 "set timeout timeoutlen=1000 ttimeoutlen=100
 set history=1000        " cmdline history
@@ -37,15 +37,13 @@ set fileencodings=utf-8,ucs-bom,default,latin1
 set modelines=0         " never use it anyway...
 set nomodeline
 set ttyfast             " faster redraw
-"set clipboard=unnamed   " set clipboard to OS X global
+set clipboard=unnamed   " set clipboard to OS X global
 set shortmess+=I        " skip intro text when starting
 set grepprg=ack         " grep searches using Ack
 "set formatprg=par       " use par for formatting (eg. "gq")
 set wildchar=<Tab> wildmenu wildmode=list:longest,full " Tabbing cmd alternatives
 set path+=**            " fuzzy search sort-of
 set tags+=.tags                     " list of tags files
-
-
 
 " sudo save a file with :w!! after it's already opened
 cmap w!! w !sudo tee % >/dev/null
@@ -84,8 +82,6 @@ endif
 set backup
 set backupdir=$VIMHOME/tmp//
 set directory=$VIMHOME/tmp//
-" set backupdir=~/.vimbackup//
-" set directory=~/.vimbackup//
 set writebackup         " writes a temporary backup if overwriting file
 
 
@@ -235,15 +231,16 @@ nnoremap <leader>b :ls<CR>:b<SPACE>
 
 " Window and tab management
 nnoremap <leader>t :tabnew<CR>
-nnoremap <leader>s <C-w>v
-nmap <leader>c <C-w>c
-nmap <leader>w <C-w>w
+nnoremap <leader>c <C-w>c
+nnoremap <leader>w <C-w>w
+nnoremap <C-w>O <C-w>o
+nnoremap <C-w>o <C-W>_ <C-W><bar>
 
 " File explorer (Netrw)
 nnoremap <silent> <leader>e :Explore<CR>
 
 " Remove search highlights and auto-center on search results
-nmap <silent> <leader><space> :nohlsearch<CR>
+nnoremap <C-l> :nohlsearch<CR>
 nnoremap n nzz
 nnoremap N Nzz
 
