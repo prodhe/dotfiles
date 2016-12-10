@@ -60,6 +60,9 @@ if has("autocmd")
         " Recognize markdown as *.md
         autocmd BufRead,BufNewFile,BufFilePre *.md set filetype=markdown
 
+        " Recognize vimoutliner as *.otl
+        autocmd BufRead,BufNewFile,BufFilePre *.otl set filetype=votl
+
         " Don't replace <Tab>s with spaces when editing makefiles
         autocmd Filetype makefile setlocal noexpandtab
 
@@ -175,8 +178,8 @@ set gdefault            " use global search per line as default
 set omnifunc=syntaxcomplete#Complete  " omnicompletion based on syntax files
 set completeopt=menuone,menu,longest
 
-" Use Ctrl+k for completion in insert mode and scrolling through list
-" inoremap <expr> <C-k> pumvisible() ? "\<C-n>" : "\<C-x><C-o>"
+" Use Ctrl+k for omni completion in insert mode and scrolling through list
+inoremap <expr> <C-k> pumvisible() ? "\<C-n>" : "\<C-x><C-o>"
 
 " Remap keys for less ctrl-bashing while popped up
 inoremap <expr> <Esc> pumvisible() ? "\<C-e>" : "\<Esc>"   "exit
@@ -255,11 +258,14 @@ map <silent> <F6> :AsyncRun! ctags<CR>
 nnoremap <F7> :%!xxd<CR>
 nnoremap <F8> :%!xxd -r<CR>
 
-" Edit "main" file of my notebook, which triggers notebook snippet below
-nnoremap <silent> <F10> :edit ~/Cloud/notes/index.md<CR>G
+" Toggle Taglist
+nnoremap <silent> <F9> :TlistToggle<CR>
 
 " Toggle UndoTree
-nnoremap <silent> <F11> :UndotreeToggle<CR>
+nnoremap <silent> <F10> :UndotreeToggle<CR>
+
+" Edit "main" file of my notebook, which triggers notebook snippet below
+nnoremap <silent> <F11> :edit ~/Cloud/notes/index.md<CR>G
 
 " edit .vimrc
 nnoremap <silent> <F12> :ed $MYVIMRC<CR>
@@ -295,7 +301,7 @@ if has("autocmd")
             \ lcd ~/Cloud/notes | setlocal tags=tags
     augroup END
 endif
-function! NewNote(...)
+function! s:NewNote(...)
     let str = join(a:000, ' ')
     let fn =
         \ substitute(str, ' ', '-', 'g') . '.md'
