@@ -28,6 +28,12 @@ export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 # ...and cabal as even more first.
 export PATH="$HOME/.cabal/bin:$PATH"
 
+# Go stuff
+export GOPATH=$HOME/Cloud/code/go
+export GOROOT=/usr/local/opt/go/libexec
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin
+
 # use mdfind instead of locate
 alias locate="mdfind -name"
 
