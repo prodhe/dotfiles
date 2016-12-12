@@ -13,6 +13,9 @@ PS1='\W $(__git_ps1 "[%s] ")\[\e[0;36m\]> \[\e[0;m\]'
 # vi mode in bash
 set -o vi
 
+# charset
+export LANG=sv_SE.UTF-8 LC_CTYPE=sv_SE.UTF-8
+
 # editor
 export EDITOR="/usr/local/bin/vim"
 
