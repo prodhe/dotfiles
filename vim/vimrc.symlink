@@ -70,6 +70,9 @@ if has("autocmd")
         " Add C-specific tags when working with C-files
         autocmd Filetype c set tags+=~/.vim/tags/sdl.tags
         autocmd Filetype c set tags+=~/.vim/tags/libc.tags
+
+        " Fix word wrap when writing e-mails
+        autocmd Filetype mail setlocal fo=aw wrap linebreak nolist tw=0 wrapmargin=0
     augroup END
 endif
 

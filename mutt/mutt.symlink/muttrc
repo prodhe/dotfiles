@@ -16,7 +16,7 @@ source ~/.mutt/colors/mutt-colors-base16-ish
 #color status green default
 
 # Default text editor
-set editor = "$EDITOR"
+set editor = "$EDITOR -c 'normal G'"
 
 # mailcap file
 set mailcap_path = ~/.mutt/mailcap
@@ -105,7 +105,7 @@ auto_view text/html
 set realname = "Petter Rodhelind"    # who am i?
 set envelope_from                    # which from?
 set sig_dashes                       # dashes before sig
-set edit_headers                     # show headers when composing
+#set edit_headers                     # show headers when composing
 set fast_reply                       # skip to compose when replying
 set askcc                            # ask for CC:
 set fcc_attach                       # save attachments with the body
@@ -117,6 +117,7 @@ set reply_to                         # reply to Reply to: field
 set reverse_name                     # reply as whomever it was to
 set include                          # include message in replies
 set forward_quote                    # include message in forwards
+set text_flowed=yes                  # add format=flowed to mail header
 
 # sidebar patch
 set sidebar_delim = '  | '
