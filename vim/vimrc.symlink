@@ -37,7 +37,9 @@ set fileencodings=utf-8,ucs-bom,default,latin1
 set modelines=0         " never use it anyway...
 set nomodeline
 set ttyfast             " faster redraw
-"set clipboard=unnamed   " set clipboard to OS
+"if $TMUX == ''
+    set clipboard+=unnamed   " set clipboard to OS
+"endif
 set shortmess+=I        " skip intro text when starting
 set grepprg=ack         " grep searches using Ack
 "set formatprg=par       " use par for formatting (eg. "gq")
@@ -130,7 +132,8 @@ syntax enable               " syntax and override current colors
 "                                                   " default colorscheme colors,
 "                                                   " see :hi for list of vim
 "                                                   " available colors)
-set colorcolumn=+1      " show column (at +1 from textwidth)
+"set colorcolumn=+1      " show column (at +1 from textwidth)
+set colorcolumn=0
 set cursorline          " highlight current working line
 set autoindent
 set nowrap              " don't wrap
