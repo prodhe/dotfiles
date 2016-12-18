@@ -11,7 +11,8 @@ macro index,pager A "<save-message>=petter.rodhelind-gmail.com/archive<enter>" "
 # get colors
 # source ~/.mutt/colors/gotbletu
 # source ~/.mutt/colors/one
-source ~/.mutt/colors/mutt-colors-solarized-dark-16
+# source ~/.mutt/colors/mutt-colors-solarized-dark-16
+source ~/.mutt/colors/mutt-colors-base16-ish
 #color status green default
 
 # Default text editor
