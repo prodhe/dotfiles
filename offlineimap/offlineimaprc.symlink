@@ -11,6 +11,7 @@ pythonfile = ~/.mutt/offlineimap.py
 localrepository = prodhe-Local
 remoterepository = prodhe-Remote
 status_backend = sqlite
+postsynchook = mu index --maildir ~/.mail
 
 [Repository prodhe-Local]
 type = Maildir

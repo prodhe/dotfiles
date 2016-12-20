@@ -32,6 +32,11 @@ set timeout = 3
 macro index O "<shell-escape>offlineimap<enter>"           "run offlineimap to sync all mail"
 macro index o "<shell-escape>offlineimap -qf INBOX<enter>" "run offlineimap to sync inbox"
 
+# search and contact completion via 'mu'
+set query_command = "mu cfind --format=mutt-ab  '%s'"
+macro index Z "<shell-escape>mu find --clearlinks --format=links --linksdir=~/.mu/results " "mu find"
+macro index S "<change-folder-readonly>~/.mu/results<enter>" "mu find results"
+
 # basic config
 set move = no           # don't move read messages
 set include             # include message in reply
