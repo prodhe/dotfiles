@@ -21,6 +21,10 @@ set editor = "$EDITOR -c 'normal G'"
 # mailcap file
 set mailcap_path = ~/.mutt/mailcap
 
+# aliases
+set alias_file = ~/.mutt/aliases
+source ~/.mutt/aliases
+
 # charset
 set charset = "utf-8"
 set assumed_charset = "utf-8"
