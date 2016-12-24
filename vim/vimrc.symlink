@@ -331,7 +331,7 @@ if has("autocmd")
             \ lcd ~/Cloud/notes | setlocal tags=tags
     augroup END
 endif
-function! s:NewNote(...)
+function! NewNote(...)
     let str = join(a:000, ' ')
     let fn =
         \ substitute(str, ' ', '-', 'g') . '.md'
