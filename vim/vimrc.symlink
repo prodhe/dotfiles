@@ -71,8 +71,9 @@ if has("autocmd")
         autocmd Filetype c set tags+=~/.vim/tags/sdl.tags
         autocmd Filetype c set tags+=~/.vim/tags/libc.tags
 
-        " Fix word wrap when writing e-mails
+        " Fix word wrap when writing e-mails and markdown
         autocmd Filetype mail setlocal fo=aw wrap linebreak nolist tw=0 wrapmargin=0
+        autocmd BufRead,BufNewFile,BufFilePre *.md setlocal fo=aw wrap linebreak nolist tw=0 wrapmargin=0
     augroup END
 endif
 
@@ -229,6 +230,9 @@ nnoremap <leader>z :tag /
 nnoremap j gj
 nnoremap k gk
 
+" make Y behave as C and D (copy 'til end of line)
+nnoremap Y y$
+
 " Move (visually selected) lines up and down
 nnoremap <leader>j :m .+1<CR>==
 nnoremap <leader>k :m .-2<CR>==
@@ -286,7 +290,7 @@ map <silent> <F5> :AsyncRun make run<CR>
 
 " Manually recreate a tags file in working dir (for :Silent, see under snippets)
 "map <silent> <F6> :Silent !ctags<CR>:echo "ctags generated"<CR>
-map <silent> <F6> :AsyncRun! ctags<CR>
+map <silent> <F6> :AsyncRun! ctags<CR>:echo "generating ctags"<CR>
 
 " Toggle Taglist
 nnoremap <silent> <F9> :TlistToggle<CR>
@@ -380,5 +384,30 @@ endfunction
 if !exists(":HexToggle")
     command! HexToggle call s:HexToggle()
 endif
+
+" Go stuff
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_types = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+let g:go_fmt_command = "goimports"
+
+let g:syntastic_go_checkers = ['golint', 'errcheck']
+let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
+
+" make taglist.vim work with ctags for go
+let g:tlist_go_settings = 'go;g:enum;s:struct;u:union;t:type;v:variable;f:function'
+
+" Syntastic ez-mode
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 " EOF
