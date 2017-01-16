@@ -52,8 +52,8 @@ set mark_old = no       # just use read/new and skip the "old new" mark
 set sleep_time = 0      # speed up folder switch
 
 # saner copy/move dialogs
-macro index C "<copy-message>?" "copy a message to a mailbox"
-macro index M "<save-message>?" "move a message to a mailbox"
+macro index C "<tag-prefix><copy-message>?" "copy a message to a mailbox"
+macro index M "<tag-prefix><save-message>?" "move a message to a mailbox"
 
 # header stuff
 ignore *
