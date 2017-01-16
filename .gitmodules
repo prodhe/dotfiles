@@ -1,0 +1,51 @@
+[submodule "vim/vim.symlink/pack/main/start/asyncrun.vim"]
+	path = vim/vim.symlink/pack/main/start/asyncrun.vim
+	url = git://github.com/skywind3000/asyncrun.vim
+[submodule "vim/vim.symlink/pack/main/start/gnupg.vim"]
+	path = vim/vim.symlink/pack/main/start/gnupg.vim
+	url = git://github.com/vim-scripts/gnupg.vim
+[submodule "vim/vim.symlink/pack/main/start/undotree"]
+	path = vim/vim.symlink/pack/main/start/undotree
+	url = git://github.com/mbbill/undotree
+[submodule "vim/vim.symlink/pack/main/start/tabular"]
+	path = vim/vim.symlink/pack/main/start/tabular
+	url = git://github.com/godlygeek/tabular.git
+[submodule "vim/vim.symlink/pack/main/start/vim-colors-solarized"]
+	path = vim/vim.symlink/pack/main/start/vim-colors-solarized
+	url = git://github.com/altercation/vim-colors-solarized.git
+[submodule "vim/vim.symlink/pack/main/start/vim-commentary"]
+	path = vim/vim.symlink/pack/main/start/vim-commentary
+	url = git://github.com/tpope/vim-commentary.git
+[submodule "vim/vim.symlink/pack/main/start/vim-fugitive"]
+	path = vim/vim.symlink/pack/main/start/vim-fugitive
+	url = git://github.com/tpope/vim-fugitive.git
+[submodule "vim/vim.symlink/pack/main/start/vim-repeat"]
+	path = vim/vim.symlink/pack/main/start/vim-repeat
+	url = git://github.com/tpope/vim-repeat.git
+[submodule "vim/vim.symlink/pack/main/start/vim-surround"]
+	path = vim/vim.symlink/pack/main/start/vim-surround
+	url = git://github.com/tpope/vim-surround.git
+[submodule "vim/vim.symlink/pack/main/start/vimoutliner"]
+	path = vim/vim.symlink/pack/main/start/vimoutliner
+	url = git://github.com/vimoutliner/vimoutliner.git
+[submodule "vim/vim.symlink/pack/main/start/vimroom"]
+	path = vim/vim.symlink/pack/main/start/vimroom
+	url = git://github.com/mikewest/vimroom
+[submodule "vim/vim.symlink/pack/main/start/taglist.vim"]
+	path = vim/vim.symlink/pack/main/start/taglist.vim
+	url = git://github.com/vim-scripts/taglist.vim
+[submodule "vim/vim.symlink/pack/main/start/gruvbox"]
+	path = vim/vim.symlink/pack/main/start/gruvbox
+	url = git://github.com/morhetz/gruvbox
+[submodule "vim/vim.symlink/pack/main/start/base16-vim"]
+	path = vim/vim.symlink/pack/main/start/base16-vim
+	url = git://github.com/chriskempson/base16-vim
+[submodule "vim/vim.symlink/pack/main/start/vim-polyglot"]
+	path = vim/vim.symlink/pack/main/start/vim-polyglot
+	url = git://github.com/sheerun/vim-polyglot
+[submodule "vim/vim.symlink/pack/main/start/vim-go"]
+	path = vim/vim.symlink/pack/main/start/vim-go
+	url = git://github.com/fatih/vim-go.git
+[submodule "vim/vim.symlink/pack/main/start/syntastic"]
+	path = vim/vim.symlink/pack/main/start/syntastic
+	url = git://github.com/vim-syntastic/syntastic.git
