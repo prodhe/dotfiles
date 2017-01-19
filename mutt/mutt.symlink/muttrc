@@ -16,7 +16,7 @@ source ~/.mutt/colors/mutt-colors-base16-ish
 #color status green default
 
 # Default text editor
-set editor = "$EDITOR -c 'normal G'"
+set editor = "$EDITOR -c 'normal gg'"
 
 # mailcap file
 set mailcap_path = ~/.mutt/mailcap
