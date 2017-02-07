@@ -101,12 +101,12 @@ endif
 
 " colorscheme and general layout (statusbar etc)
 set background=dark
-" colorscheme gruvbox
 " let g:gruvbox_italic=0
 " let g:gruvbox_contrast_dark = "hard"
-"colorscheme solarized
+" colorscheme gruvbox
+" colorscheme solarized
 colorscheme base16-default-dark
-"colorscheme sahara      " as in ~/.vimrc/colors
+" colorscheme wombat256i      " as in ~/.vim/colors
 set number              " line numbers to the left
 set relativenumber      " show relative line number
 set laststatus=2        " always show a status line
