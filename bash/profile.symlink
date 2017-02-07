@@ -40,6 +40,15 @@ alias locate="mdfind -name"
 # show command prompt in ed
 alias ed="ed -p:"
 
+# turn all *.md into *.pdf using pandoc
+md2pdf() {
+    for i in *.md
+    do
+        echo $i
+        pandoc -o $i.pdf $i
+    done
+}
+
 # alias
 alias ls="ls -GFh"
 alias ll="ls -l"
