@@ -19,8 +19,9 @@ set certificate_file = ~/.mutt/gmail.petter.rodhelind/certificates
 
 # sidebar mailboxes
 mailboxes +petter.rodhelind-gmail.com/INBOX \
-          +petter.rodhelind-gmail.com/Ordrar \
           +petter.rodhelind-gmail.com/YTN \
+          +petter.rodhelind-gmail.com/Arbete \
+          +petter.rodhelind-gmail.com/Ordrar \
           +petter.rodhelind-gmail.com/flagged \
           +petter.rodhelind-gmail.com/archive \
           +petter.rodhelind-gmail.com/sent \
