@@ -6,7 +6,7 @@ bind editor <space> noop
 macro index gi "<change-folder>=petter.rodhelind-gmail.com/INBOX<enter>" "Go to inbox"
 macro index ga "<change-folder>=petter.rodhelind-gmail.com/archive<enter>" "Go to all mail"
 macro index gs "<change-folder>=petter.rodhelind-gmail.com/sent<enter>" "Go to sent mail"
-macro index,pager A "<save-message>=petter.rodhelind-gmail.com/archive<enter>" "Move to all mail"
+macro index,pager A "<tag-prefix><save-message>=petter.rodhelind-gmail.com/archive<enter>" "Move to all mail"
 
 # get colors
 # source ~/.mutt/colors/gotbletu
