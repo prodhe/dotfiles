@@ -66,7 +66,7 @@ set -g status-left " "
 set -g status-right-length 100
 #set -g status-right "#(cmus-remote -Q | egrep 'tag artist|title' | cut -d ' ' -f3- | awk '{printf $0 \" - \"; getline; print $0}') | "
 #set -g status-right "#{pane_current_path}"
-set -g status-right "#(date -j +'%b %d, %H:%M')"
+set -g status-right "#(date -j +'%A, %b %d, %H:%M')"
 
 # update interval for status bar
 set -g status-interval 5
