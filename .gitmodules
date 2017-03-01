@@ -52,3 +52,6 @@
 [submodule "vim/vim.symlink/pack/main/start/tagbar"]
 	path = vim/vim.symlink/pack/main/start/tagbar
 	url = git://github.com/majutsushi/tagbar.git
+[submodule "vim/vim.symlink/pack/main/start/vim-stumble"]
+	path = vim/vim.symlink/pack/main/start/vim-stumble
+	url = git@github.com:prodhe/vim-stumble.git
