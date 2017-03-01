@@ -296,7 +296,7 @@ map <silent> <F6> :AsyncRun! ctags<CR>:echo "generating ctags"<CR>
 nnoremap <silent> <F8> :NERDTreeToggle<CR>
 
 " Toggle Taglist
-nnoremap <silent> <F9> :TlistToggle<CR>
+nnoremap <silent> <F9> :TagbarToggle<CR>
 
 " Toggle UndoTree
 nnoremap <silent> <F10> :UndotreeToggle<CR>
