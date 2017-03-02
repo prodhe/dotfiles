@@ -302,7 +302,7 @@ nnoremap <silent> <F9> :TagbarToggle<CR>
 nnoremap <silent> <F10> :UndotreeToggle<CR>
 
 " Edit "main" file of my notebook, which triggers notebook snippet below
-nnoremap <silent> <F11> :edit ~/Cloud/notes/index.md<CR>G
+nnoremap <silent> <F11> :edit ~/Dropbox/notes/index.md<CR>G
 
 " edit .vimrc
 nnoremap <silent> <F12> :ed $MYVIMRC<CR>
@@ -330,12 +330,12 @@ endif
 if has("autocmd")
     augroup notebook
         autocmd!
-        autocmd BufRead,BufNewFile ~/Cloud/notes/**
-            \ lcd ~/Cloud/notes
-        autocmd BufRead ~/Cloud/notes/index.md
+        autocmd BufRead,BufNewFile ~/Dropbox/notes/**
+            \ lcd ~/Dropbox/notes
+        autocmd BufRead ~/Dropbox/notes/index.md
             \ Silent !ctags
-        autocmd BufEnter ~/Cloud/notes/**
-            \ lcd ~/Cloud/notes | setlocal tags=tags
+        autocmd BufEnter ~/Dropbox/notes/**
+            \ lcd ~/Dropbox/notes | setlocal tags=tags
     augroup END
 endif
 function! NewNote(...)
@@ -343,7 +343,7 @@ function! NewNote(...)
     let fn =
         \ substitute(str, ' ', '-', 'g') . '.md'
 
-    execute 'edit ~/Cloud/notes/' . fn
+    execute 'edit ~/Dropbox/notes/' . fn
     execute 'normal a# ' . str
     execute 'normal o'
 endfunction
