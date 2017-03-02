@@ -55,3 +55,6 @@
 [submodule "vim/vim.symlink/pack/main/start/calendar.vim"]
 	path = vim/vim.symlink/pack/main/start/calendar.vim
 	url = git://github.com/itchyny/calendar.vim.git
+[submodule "vim/vim.symlink/pack/main/start/vim-stumble"]
+	path = vim/vim.symlink/pack/main/start/vim-stumble
+	url = https://github.com/prodhe/vim-stumble.git
