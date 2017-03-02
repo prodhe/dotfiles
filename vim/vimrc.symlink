@@ -413,9 +413,47 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-" taglist.vim general settings
-let g:Tlist_Use_Right_Window = 1
-let g:Tlist_WinWidth = 40
+" Tagbar settings
+let g:tagbar_type_css = {
+            \  'ctagstype' : 'css',
+            \  'kinds' : [
+            \    'v:variables',
+            \    'c:classes',
+            \    'i:identities',
+            \    't:tags',
+            \    'm:medias'
+            \  ]
+            \}
+
+let g:tagbar_type_less = {
+            \  'ctagstype' : 'css',
+            \  'kinds' : [
+            \    'v:variables',
+            \    'c:classes',
+            \    'i:identities',
+            \    't:tags',
+            \    'm:medias'
+            \  ]
+            \}
+
+let g:tagbar_type_scss = {
+            \  'ctagstype' : 'css',
+            \  'kinds' : [
+            \    'v:variables',
+            \    'c:classes',
+            \    'i:identities',
+            \    't:tags',
+            \    'm:medias'
+            \  ]
+            \}
+let g:tagbar_type_markdown = {
+    \ 'ctagstype' : 'markdown',
+    \ 'kinds' : [
+        \ 'h:Heading_L1',
+        \ 'i:Heading_L2',
+        \ 'k:Heading_L3'
+    \ ]
+    \ }
 
 " undotree settings
 let g:undotree_WindowLayout = 3
