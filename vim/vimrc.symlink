@@ -32,8 +32,8 @@ filetype indent on
 set history=1000        " cmdline history
 set autoread            " automatically load changes outside vim
 set hidden              " allow buffers to hide without saved changes
-set encoding=utf-8      " encoding displayed
-set fileencodings=utf-8,ucs-bom,default,latin1
+" set encoding=utf-8      " encoding displayed
+"set fileencodings=utf-8,ucs-bom,default,latin1
 set modelines=0         " never use it anyway...
 set nomodeline
 set ttyfast             " faster redraw
@@ -122,6 +122,8 @@ set statusline+=%c%V,
 set statusline+=%l/%L
 set statusline+=\ (%p%%)
 set statusline+=\ %y
+set statusline+=[%{&ff}]
+set statusline+=[%{(&fenc==\"\"?&enc:&fenc)}]
 set statusline+=\ %{fugitive#statusline()}
 
 " Default split behaviour for windows
