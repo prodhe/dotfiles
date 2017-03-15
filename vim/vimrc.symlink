@@ -232,6 +232,9 @@ nnoremap <leader>z :tag /
 nnoremap j gj
 nnoremap k gk
 
+" make space move half a page down
+nnoremap <SPACE> <C-d>
+
 " make Y behave as C and D (copy 'til end of line)
 nnoremap Y y$
 
@@ -279,7 +282,17 @@ set listchars=tab:▸\ ,eol:¬,trail:·
 nnoremap <silent> <leader>d :DiffOrig<CR>
 
 " Case-ignore external grep search with results in quickfix
-nnoremap <leader>a :Silent grep -i<SPACE>
+nnoremap <leader>A :Silent grep -i<SPACE>
+
+" Auto alignment
+if exists(":Tabularize")
+    nmap <Leader>a= :Tabularize /=<CR>
+    vmap <Leader>a= :Tabularize /=<CR>
+    nmap <Leader>a; :Tabularize /;<CR>
+    vmap <Leader>a; :Tabularize /;<CR>
+    nmap <Leader>a: :Tabularize /:\zs<CR>
+    vmap <Leader>a: :Tabularize /:\zs<CR>
+endif
 
 " Switch back and forth from HEX mode
 nnoremap <F2> :HexToggle<CR>
