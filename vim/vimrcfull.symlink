@@ -433,4 +433,25 @@ let g:Tlist_WinWidth = 40
 " undotree settings
 let g:undotree_WindowLayout = 3
 
+" external plugins as of 170512
+" asyncrun.vim/
+" base16-vim/
+" gnupg.vim/
+" gruvbox/
+" nerdtree/
+" syntastic/
+" tabular/
+" tagbar/
+" undotree/
+" vim-colors-solarized/
+" vim-commentary/
+" vim-fugitive/
+" vim-go/
+" vim-polyglot/
+" vim-repeat/
+" vim-stumble/
+" vim-surround/
+" vimoutliner/
+" vimroom/
+
 " EOF
