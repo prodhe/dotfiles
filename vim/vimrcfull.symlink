@@ -1,0 +1,436 @@
+"                                _                    
+"                         __   _(_)_ __ ___  _ __ ___ 
+"                         \ \ / / | '_ ` _ \| '__/ __|
+"                          \ V /| | | | | | | | | (__ 
+"                         (_)_/ |_|_| |_| |_|_|  \___|
+"                            
+"                                  prodhe
+"
+
+"
+" Global stuff
+"
+
+" Set VIMHOME
+if has("win32") || has("win64")
+    let $VIMHOME = $HOME . "/vimfiles"
+else
+    let $VIMHOME = $HOME . "/.vim"
+endif
+
+" Vim mode, instead of vi
+set nocompatible
+
+" Activate file type settings
+filetype on
+filetype plugin on
+filetype indent on
+
+"set noesckeys           " de-activate esc keys in insert mode
+                        " gets rid of the o/O delay
+"set timeout timeoutlen=1000 ttimeoutlen=100
+set history=1000        " cmdline history
+set autoread            " automatically load changes outside vim
+set hidden              " allow buffers to hide without saved changes
+set encoding=utf-8      " encoding displayed
+set fileencodings=utf-8,ucs-bom,default,latin1
+set modelines=0         " never use it anyway...
+set nomodeline
+set ttyfast             " faster redraw
+"if $TMUX == ''
+    set clipboard+=unnamed   " set clipboard to OS
+"endif
+set shortmess+=I        " skip intro text when starting
+set grepprg=ack         " grep searches using Ack
+"set formatprg=par       " use par for formatting (eg. "gq")
+set wildchar=<Tab> wildmenu wildmode=list:longest,full " Tabbing cmd alternatives
+set path+=**            " fuzzy search sort-of
+set tags+=.tags                     " list of tags files
+
+
+"
+" Automatic commands
+"
+if has("autocmd")
+    augroup global_stuff
+        autocmd!
+
+        " Automatically apply .vimrc upon save
+        autocmd BufWritePost .vimrc source $MYVIMRC
+
+        " Recognize markdown as *.md
+        autocmd BufRead,BufNewFile,BufFilePre *.md set filetype=markdown
+
+        " Recognize vimoutliner as *.otl
+        autocmd BufRead,BufNewFile,BufFilePre *.otl set filetype=votl
+
+        " Don't replace <Tab>s with spaces when editing makefiles
+        autocmd Filetype makefile setlocal noexpandtab
+
+        " Add C-specific tags when working with C-files
+        autocmd Filetype c set tags+=~/.vim/tags/sdl.tags
+        autocmd Filetype c set tags+=~/.vim/tags/libc.tags
+
+        " Fix word wrap when writing e-mails and markdown
+        autocmd Filetype mail setlocal fo=aw wrap linebreak nolist tw=0 wrapmargin=0
+        autocmd BufRead,BufNewFile,BufFilePre *.md setlocal fo=aw wrap linebreak nolist tw=0 wrapmargin=0
+    augroup END
+endif
+
+
+"
+" Swap and backup
+"
+
+set backup
+set backupdir=$VIMHOME/tmp//
+set directory=$VIMHOME/tmp//
+set writebackup         " writes a temporary backup if overwriting file
+
+
+"
+" Display settings and visual stuff
+"
+
+" terminal hell
+if !has("gui")
+    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+    set termguicolors
+endif
+
+" colorscheme and general layout (statusbar etc)
+set background=light
+" let g:gruvbox_italic=0
+" let g:gruvbox_contrast_dark = "hard"
+" colorscheme gruvbox
+" colorscheme solarized
+colorscheme acme
+" colorscheme base16-default-dark
+" colorscheme wombat256i      " as in ~/.vim/colors
+" set number              " line numbers to the left
+" set relativenumber      " show relative line number
+set laststatus=2        " always show a status line
+set showcmd             " show writing the cmd at bottom
+set showmode            " show mode at bottom
+set visualbell          " blink instead of beep
+
+" statusline
+set statusline=
+set statusline+=\ [%n]\ %t\ %m%r%h%w
+set statusline+=%=
+set statusline+=%c%V,
+set statusline+=%l/%L
+set statusline+=\ (%p%%)
+set statusline+=\ %y
+set statusline+=\ %{fugitive#statusline()}
+
+" Default split behaviour for windows
+set splitbelow
+set splitright
+
+" Highlight, indent formatting of text
+syntax enable               " syntax and override current colors
+
+" autocmd! BufEnter * match WarningMsg /\%81v./     " discreteley highlight 81
+"                                                   " column overlength (and use
+"                                                   " default colorscheme colors,
+"                                                   " see :hi for list of vim
+"                                                   " available colors)
+"set colorcolumn=+1      " show column (at +1 from textwidth)
+set colorcolumn=0
+"set cursorline          " highlight current working line
+set autoindent
+" set nowrap              " don't wrap
+set wrap
+set textwidth=80
+set formatoptions=tcrqn1  " see :help fo-table
+set formatoptions-=o
+
+" Scrolling of screen
+"set scrolloff=8         " scroll horizontally when there is X lines left
+"set sidescrolloff=15    " vertically
+set sidescroll=1
+
+" GUI vim (gvim, macvim)
+if has("gui_running")
+    set guioptions-=m
+    set guioptions-=T
+    set guioptions-=r
+    set guioptions-=l
+    set guioptions-=L
+    set guioptions-=e
+    set background=light
+    colorscheme acme
+    if has("win32")
+        set guifont=Consolas:h13
+    else
+        set guifont=Inconsolata:h16
+    endif
+endif
+
+" Fix the cursor for insert mode in vim+tmux
+if exists('$TMUX')
+  let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+  let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+else
+  let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+  let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+endif
+
+
+"
+" What to do with <TAB>s
+"
+set tabstop=4           " columns to print if reading a tab
+set softtabstop=4       " columns to insert if <TAB>
+set shiftwidth=0        " column to shift when >> or << (use same as tabstop)
+set expandtab           " explicitly tab expand
+set shiftround          " round indent to nearest shiftwidth
+
+
+"
+" Searches
+"
+set incsearch           " show search as we type
+set hlsearch            " highlight search words, turn off with :nohlsearch
+set ignorecase          " case insensitive
+set smartcase           " unless it's a capital char used
+set gdefault            " use global search per line as default
+
+
+"
+" Omni completion
+"
+
+set omnifunc=syntaxcomplete#Complete  " omnicompletion based on syntax files
+set completeopt=menuone,menu,longest
+
+" Use Ctrl+k for omni completion in insert mode and scrolling through list
+inoremap <expr> <C-k> pumvisible() ? "\<C-n>" : "\<C-x><C-o>"
+
+" Remap keys for less ctrl-bashing while popped up
+inoremap <expr> <Esc> pumvisible() ? "\<C-e>" : "\<Esc>"   "exit
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"     "choose
+
+
+"
+" Key mappings
+"
+
+" <leader> key
+let mapleader = ","
+
+" remap tag jumping to ctrl+^ (easier on swedish mac kbd)
+nnoremap  <C-]>
+vnoremap  <C-]>
+inoremap  <C-]>
+
+" search for tags
+nnoremap <leader>z :tag /
+
+" make j and k act on display lines instead of file lines
+nnoremap j gj
+nnoremap k gk
+
+" make Y behave as C and D (copy 'til end of line)
+nnoremap Y y$
+
+" Move (visually selected) lines up and down
+nnoremap <leader>j :m .+1<CR>==
+nnoremap <leader>k :m .-2<CR>==
+vnoremap <leader>j :m '>+1<CR>gv=gv
+vnoremap <leader>k :m '<-2<CR>gv=gv
+
+" Run current line as a shell expression and insert the result (q: "query")
+nnoremap Q :.!$SHELL<CR>
+
+" sudo save a file with :w!! after it's already opened
+cmap w!! w !sudo tee % >/dev/null
+
+" fetch and paste raw HTTP
+nnoremap <leader>r :read !curl -s --raw<SPACE>
+
+" List buffers and prompt for selection
+nnoremap <leader>b :ls<CR>:b<SPACE>
+
+" Window and tab management
+nnoremap <leader>t :tabnew<CR>
+nnoremap <leader>c <C-w>c
+nnoremap <leader>w <C-w>w
+nnoremap <C-w>O <C-w>o
+nnoremap <C-w>o <C-W>_ <C-W><bar>
+
+" File explorer (Netrw)
+nnoremap <silent> <leader>e :Explore<CR>
+
+" Remove search highlights and auto-center on search results
+nnoremap <C-l> :nohlsearch<CR>
+nnoremap n nzz
+nnoremap N Nzz
+
+" Select the recently pasted text
+nnoremap <leader>v V`]
+
+" show whitespace characters
+nnoremap <silent> <leader>l :set list!<CR>
+set listchars=tab:▸\ ,eol:¬,trail:·
+
+" Use DiffOrig (see below under plugins and snippets)
+nnoremap <silent> <leader>d :DiffOrig<CR>
+
+" Case-ignore external grep search with results in quickfix
+nnoremap <leader>a :Silent grep -i<SPACE>
+
+" auto align using tabularize
+if exists(":Tabularize")
+    nnoremap <leader>a: :Tabularize /:<CR>
+    vnoremap <leader>a: :Tabularize /:<CR>
+    nnoremap <leader>a= :Tabularize /=<CR>
+    vnoremap <leader>a= :Tabularize /=<CR>
+    nnoremap <leader>a; :Tabularize /;<CR>
+    vnoremap <leader>a; :Tabularize /;<CR>
+endif
+
+" Switch back and forth from HEX mode
+nnoremap <F2> :HexToggle<CR>
+
+" Run make and catch errors in quickfix (asyncrun)
+map <silent> <F4> :AsyncRun make<CR>
+
+" Run "make run" (asyncrun)
+map <silent> <F5> :AsyncRun make run<CR>
+
+" Manually recreate a tags file in working dir (for :Silent, see under snippets)
+"map <silent> <F6> :Silent !ctags<CR>:echo "ctags generated"<CR>
+map <silent> <F6> :AsyncRun! ctags<CR>:echo "generating ctags"<CR>
+
+" Toggle NERDTree
+nnoremap <silent> <F8> :NERDTreeToggle<CR>
+
+" Toggle Taglist
+nnoremap <silent> <F9> :TagbarToggle<CR>
+
+" Toggle UndoTree
+nnoremap <silent> <F10> :UndotreeToggle<CR>
+
+" Edit "main" file of my notebook, which triggers notebook snippet below
+nnoremap <silent> <F11> :edit ~/Dropbox/notes/index.md<CR>G
+
+" edit .vimrc
+nnoremap <silent> <F12> :ed $MYVIMRC<CR>
+
+
+"
+" PLUGINS AND SNIPPETS
+"
+
+" Use ASCII-armored files instead of binary (plugin/gnupg)
+let g:GPGPreferArmor=1
+
+" :DiffOrig - see changes made to the buffer since last open/save
+if !exists(":DiffOrig")
+    command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
+                \ | wincmd p | diffthis | normal H
+endif
+
+" create :Silent for external quick commands
+if !exists(":Silent")
+    command! -nargs=+ Silent execute 'silent <args>' | redraw!
+endif
+
+" NOTETAKING (making use of tags for internal navigation and search)
+if has("autocmd")
+    augroup notebook
+        autocmd!
+        autocmd BufRead,BufNewFile ~/Dropbox/notes/**
+            \ lcd ~/Dropbox/notes
+        autocmd BufRead ~/Dropbox/notes/index.md
+            \ Silent !ctags
+        autocmd BufEnter ~/Dropbox/notes/**
+            \ lcd ~/Dropbox/notes | setlocal tags=tags
+    augroup END
+endif
+function! NewNote(...)
+    let str = join(a:000, ' ')
+    let fn =
+        \ substitute(str, ' ', '-', 'g') . '.md'
+
+    execute 'edit ~/Dropbox/notes/' . fn
+    execute 'normal a# ' . str
+    execute 'normal o'
+endfunction
+if !exists(":Note")
+    command! -nargs=+ Note call NewNote(<q-args>)
+endif
+
+" TABULAR AUTO ALIGN TABLES IN MARKDOWN
+" (Taken from vimcast.org and Tim Pope)
+if has("autocmd")
+    augroup tabularinmd
+        autocmd!
+        autocmd BufRead *.md inoremap <silent> <Bar>
+            \ <Bar><Esc>:call <SID>align()<CR>a
+    augroup end
+endif
+function! s:align()
+  let p = '^\s*|\s.*\s|\s*$'
+  if exists(':Tabularize') && getline('.') =~# '^\s*|' && (getline(line('.')-1) =~# p || getline(line('.')+1) =~# p)
+    let column = strlen(substitute(getline('.')[0:col('.')],'[^|]','','g'))
+    let position = strlen(matchstr(getline('.')[0:col('.')],'.*|\s*\zs.*'))
+    Tabularize/|/l1
+    normal! 0
+    call search(repeat('[^|]*|',column).'\s\{-\}'.repeat('.',position),'ce',line('.'))
+  endif
+endfunction
+
+" HEX TOGGLE (use external xxd back and forth for hex editing)
+let s:hextoggle_on = 0
+function! s:HexToggle()
+    if s:hextoggle_on
+        execute '%!xxd -r'
+        let s:hextoggle_on = 0
+        syntax on
+    else
+        execute '%!xxd'
+        let s:hextoggle_on = 1
+        syntax off
+    endif
+endfunction
+if !exists(":HexToggle")
+    command! HexToggle call s:HexToggle()
+endif
+
+" Go stuff
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_types = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+let g:go_fmt_command = "goimports"
+
+let g:syntastic_go_checkers = ['golint', 'errcheck']
+let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
+
+" make taglist.vim work with ctags for go
+let g:tlist_go_settings = 'go;g:enum;s:struct;u:union;t:type;v:variable;f:function'
+
+" Syntastic ez-mode
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" taglist.vim general settings
+let g:Tlist_Use_Right_Window = 1
+let g:Tlist_WinWidth = 40
+
+" undotree settings
+let g:undotree_WindowLayout = 3
+
+" EOF
