@@ -100,15 +100,16 @@ if !has("gui")
 endif
 
 " colorscheme and general layout (statusbar etc)
-set background=dark
+set background=light
 " let g:gruvbox_italic=0
 " let g:gruvbox_contrast_dark = "hard"
 " colorscheme gruvbox
-colorscheme solarized
+" colorscheme solarized
+colorscheme acme
 " colorscheme base16-default-dark
 " colorscheme wombat256i      " as in ~/.vim/colors
-set number              " line numbers to the left
-set relativenumber      " show relative line number
+" set number              " line numbers to the left
+" set relativenumber      " show relative line number
 set laststatus=2        " always show a status line
 set showcmd             " show writing the cmd at bottom
 set showmode            " show mode at bottom
@@ -138,9 +139,10 @@ syntax enable               " syntax and override current colors
 "                                                   " available colors)
 "set colorcolumn=+1      " show column (at +1 from textwidth)
 set colorcolumn=0
-set cursorline          " highlight current working line
+"set cursorline          " highlight current working line
 set autoindent
-set nowrap              " don't wrap
+" set nowrap              " don't wrap
+set wrap
 set textwidth=80
 set formatoptions=tcrqn1  " see :help fo-table
 set formatoptions-=o
@@ -158,11 +160,12 @@ if has("gui_running")
     set guioptions-=l
     set guioptions-=L
     set guioptions-=e
-    "set background=light
+    set background=light
+    colorscheme acme
     if has("win32")
         set guifont=Consolas:h13
     else
-        set guifont=Inconsolata:h18
+        set guifont=Inconsolata:h16
     endif
 endif
 
@@ -278,6 +281,16 @@ nnoremap <silent> <leader>d :DiffOrig<CR>
 
 " Case-ignore external grep search with results in quickfix
 nnoremap <leader>a :Silent grep -i<SPACE>
+
+" auto align using tabularize
+if exists(":Tabularize")
+    nnoremap <leader>a: :Tabularize /:<CR>
+    vnoremap <leader>a: :Tabularize /:<CR>
+    nnoremap <leader>a= :Tabularize /=<CR>
+    vnoremap <leader>a= :Tabularize /=<CR>
+    nnoremap <leader>a; :Tabularize /;<CR>
+    vnoremap <leader>a; :Tabularize /;<CR>
+endif
 
 " Switch back and forth from HEX mode
 nnoremap <F2> :HexToggle<CR>

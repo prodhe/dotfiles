@@ -1,0 +1,24 @@
+set nocompatible
+filetype plugin indent on
+
+set hidden
+set modelines=0
+set nomodeline
+set clipboard+=unnamed
+set wildchar=<Tab> wildmenu wildmode=list:longest,full
+set path+=**
+set nowritebackup
+set laststatus=2
+set tabstop=4 softtabstop=4 shiftwidth=0 expandtab shiftround
+set smartcase
+
+let mapleader = ","
+nnoremap Q :.!$SHELL<CR>
+nnoremap <silent> <leader>l :set list!<CR>
+set listchars=tab:▸\ ,eol:¬,trail:·
+
+colorscheme acme
+if has("gui_running")
+    set guioptions-=mTrlLe guifont=Inconsolata:h16
+endif
+
