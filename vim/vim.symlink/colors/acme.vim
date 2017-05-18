@@ -6,7 +6,7 @@ highlight clear
 highlight! Normal guibg=#ffffea guifg=#000000 ctermbg=230 ctermfg=232 
 highlight! NonText guibg=bg guifg=#aa0000 ctermbg=bg ctermfg=230
 highlight! StatusLine guibg=#eaffff guifg=#000000 gui=NONE ctermbg=159 ctermfg=232 cterm=NONE
-highlight! StatusLineNC guibg=#eaffff guifg=#000000 gui=NONE ctermbg=194 ctermfg=232 cterm=NONE
+highlight! StatusLineNC guibg=#eeee9e guifg=#000000 gui=NONE ctermbg=194 ctermfg=232 cterm=NONE
 highlight! WildMenu guibg=#000000 guifg=#eaffff gui=NONE ctermbg=black ctermfg=159 cterm=NONE
 highlight! VertSplit guibg=#99994c guifg=#99994c gui=NONE ctermbg=159 ctermfg=232 cterm=NONE
 highlight! Folded guibg=#99994c guifg=fg gui=italic ctermbg=187 ctermfg=fg cterm=italic
@@ -18,6 +18,12 @@ highlight! CursorLine guibg=#eeee9e guifg=fg ctermbg=230 ctermfg=fg
 highlight! CursorLineNR guibg=bg guifg=#99994c ctermbg=230 ctermfg=fg
 highlight! Cursor guibg=#99994c guifg=fg ctermbg=230 ctermfg=fg
 highlight! MatchParen guibg=#006600 guifg=#ffffff ctermbg=230 ctermfg=fg
+highlight! Search guibg=#006600 guifg=#ffffff ctermbg=230 ctermfg=fg
+
+highlight! Pmenu guibg=#eeee9e guifg=#000000 ctermbg=230 ctermfg=fg
+highlight! PmenuSel guibg=#006600 guifg=#ffffff ctermbg=230 ctermfg=fg
+highlight! PmenuSbar guibg=#99994c guifg=#000000 ctermbg=230 ctermfg=fg
+highlight! PmenuThumb guibg=#eeee9e guifg=#000000 ctermbg=230 ctermfg=fg
 
 highlight! Statement guibg=bg guifg=fg gui=italic ctermbg=bg ctermfg=fg cterm=NONE
 highlight! Identifier guibg=bg guifg=#aa0000 gui=bold ctermbg=bg ctermfg=fg cterm=NONE
