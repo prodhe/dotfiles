@@ -25,6 +25,10 @@ highlight! PmenuSel guibg=#006600 guifg=#ffffff ctermbg=230 ctermfg=fg
 highlight! PmenuSbar guibg=#99994c guifg=#000000 ctermbg=230 ctermfg=fg
 highlight! PmenuThumb guibg=#eeee9e guifg=#000000 ctermbg=230 ctermfg=fg
 
+highlight! TabLineFill guibg=#eaffff guifg=#eaffff gui=NONE ctermbg=230 ctermfg=fg
+highlight! TabLine guibg=#eaffff guifg=#000000 gui=NONE ctermbg=230 ctermfg=fg
+highlight! TabLineSel guibg=#9eeeee guifg=#000000 gui=NONE ctermbg=230 ctermfg=fg
+
 highlight! Statement guibg=bg guifg=fg gui=italic ctermbg=bg ctermfg=fg cterm=NONE
 highlight! Identifier guibg=bg guifg=#aa0000 gui=bold ctermbg=bg ctermfg=fg cterm=NONE
 highlight! Type guibg=bg guifg=fg gui=bold ctermbg=bg ctermfg=fg cterm=NONE
@@ -34,7 +38,7 @@ highlight! Comment guibg=bg guifg=#99994c gui=italic ctermbg=bg ctermfg=236 cter
 highlight! Special guibg=bg guifg=fg gui=bold ctermbg=bg ctermfg=fg cterm=NONE
 highlight! SpecialKey guibg=bg guifg=#aa0000 gui=NONE ctermbg=bg ctermfg=fg cterm=NONE
 highlight! Directory guibg=bg guifg=fg gui=bold ctermbg=bg ctermfg=fg cterm=NONE
-highlight! link Title Directory
+highlight! link Title TabLine
 highlight! link MoreMsg Comment
 highlight! link Question Comment
 
