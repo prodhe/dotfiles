@@ -10,13 +10,18 @@ pythonfile = ~/.mutt/offlineimap.py
 [Account prodhe]
 localrepository = prodhe-Local
 remoterepository = prodhe-Remote
-status_backend = sqlite
-postsynchook = mu index --maildir ~/.mail
+#status_backend = sqlite
+
+presynchook = /Users/petter/bin/maildir-notmuch-sync pre /Users/petter/.mail/petter.rodhelind-gmail.com
+postsynchook = /Users/petter/bin/maildir-notmuch-sync post /Users/petter/.mail/petter.rodhelind-gmail.com
+# postsynchook = mu index --maildir ~/.mail
+# postsynchook = notmuch new
 
 [Repository prodhe-Local]
 type = Maildir
 localfolders = ~/.mail/petter.rodhelind-gmail.com
-nametrans = lambda folder: {'drafts': '[Gmail]/Drafts',
+nametrans = lambda folder: {'inbox': 'INBOX',
+                            'drafts': '[Gmail]/Drafts',
                             'sent': '[Gmail]/Sent Mail',
                             'trash': '[Gmail]/Bin',
                             'flagged': '[Gmail]/Starred',
@@ -31,7 +36,8 @@ sslcacertfile = ~/.mutt/Equifax_Secure_CA.cert
 remoteuser = petter.rodhelind@gmail.com
 remotepasseval = get_keychain_pass(account="petter.rodhelind", server="imap.gmail.com")
 realdelete = no
-nametrans = lambda folder: {'[Gmail]/Drafts': 'drafts',
+nametrans = lambda folder: {'INBOX': 'inbox',
+                            '[Gmail]/Drafts': 'drafts',
                             '[Gmail]/Sent Mail': 'sent',
                             '[Gmail]/Bin': 'trash',
                             '[Gmail]/Starred': 'flagged',
