@@ -19,6 +19,8 @@ set listchars=tab:▸\ ,eol:¬,trail:·
 colorscheme acme
 if has("gui_running")
     set guioptions=
-    set guifont=Inconsolata:h16
+    set macligatures
+    set guifont=Fira\ Code:h14
+    "set guifont=Inconsolata:h16
 endif
 
