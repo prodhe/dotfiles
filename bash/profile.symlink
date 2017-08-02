@@ -7,11 +7,7 @@ source /usr/local/etc/bash_completion.d/git-completion.bash
 source /usr/local/etc/bash_completion.d/git-prompt.sh
 
 # prompt
-PS1='\W $(__git_ps1 "[%s] ")\[\e[0;36m\]> \[\e[0;m\]'
-#PS1="\w \$ "
-
-# vi mode in bash
-#set -o vi
+PS1='\W $(__git_ps1 "[%s] ")> '
 
 # charset
 export LANG=sv_SE.UTF-8 LC_CTYPE=sv_SE.UTF-8
@@ -22,17 +18,20 @@ export EDITOR="/usr/local/bin/vim"
 # for gnupg.vim plugin
 export GPG_TTY=`tty`
 
-# add /usr/local/bin + sbin (Homebrew path) as first choice
+# Homebrew and cabal
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
-
-# ...and cabal as even more first.
 export PATH="$HOME/.cabal/bin:$PATH"
 
-# Go stuff
+# Home, go and Plan 9
+export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/src/prd/acme-setup/bin:$PATH"
+
 export GOPATH=$HOME/Cloud/code/go
 export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
+export PLAN9=$HOME/src/plan9port
+export PATH=$PATH:$PLAN9/bin
 
 # use mdfind instead of locate
 alias locate="mdfind -name"
@@ -55,11 +54,8 @@ md2pdf() {
 # alias
 alias ls="ls -GFh"
 alias ll="ls -l"
-#alias update="brew update && cabal update && brew upgrade --all"
 alias update="brew update && brew upgrade"
 alias checksum="~/Cloud/scripts/checksum.sh"
 alias mmv="~/Cloud/scripts/mmv.sh"
-alias newsbeuter="LANG=en_GB newsbeuter"
-
 
 # EOF
