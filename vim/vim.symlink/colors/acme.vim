@@ -1,4 +1,4 @@
-hi clear 
+hi clear
 
 let g:colors_name = "acme"
 
@@ -62,4 +62,3 @@ exe 'hi! link Question Comment'
 
 " vim
 hi link vimFunction Identifier
-
