@@ -8,25 +8,25 @@ source /usr/local/etc/bash_completion.d/git-prompt.sh
 
 # prompt
 PS1='\W $(__git_ps1 "[%s] ")> '
+#PS1='\W > '
 
 # charset
 export LANG=sv_SE.UTF-8 LC_CTYPE=sv_SE.UTF-8
 
 # editor
-export EDITOR="/usr/local/bin/vim"
+export EDITOR="/usr/bin/vim"
 
 # for gnupg.vim plugin
 export GPG_TTY=`tty`
 
-# Homebrew and cabal
+# Homebrew
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
-export PATH="$HOME/.cabal/bin:$PATH"
 
 # Home, go and Plan 9
 export PATH="$HOME/bin:$PATH"
-export PATH="$HOME/src/prd/acme-setup/bin:$PATH"
+export PATH="$HOME/src/acme-setup/bin:$PATH"
 
-export GOPATH=$HOME/Cloud/code/go
+export GOPATH=$HOME/src/go
 export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
@@ -46,7 +46,7 @@ alias bc="bc -q"
 alias ls="ls -GFh"
 alias ll="ls -l"
 alias update="brew update && brew upgrade"
-alias checksum="~/Cloud/scripts/checksum.sh"
-alias mmv="~/Cloud/scripts/mmv.sh"
+alias checksum="~/src/scripts/checksum.sh"
+alias mmv="~/src/scripts/mmv.sh"
 
 # EOF

@@ -1,1 +1,1 @@
-/Users/petter/src/prd/acme-setup/vim/colors/acme.vim
+/Users/prd/src/acme-setup/vim/colors/acme.vim
