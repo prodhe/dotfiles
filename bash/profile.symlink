@@ -36,9 +36,6 @@ export PATH=$PATH:$PLAN9/bin
 # use mdfind instead of locate
 alias locate="mdfind -name"
 
-# show command prompt in ed
-alias ed="ed -p:"
-
 # turn off welcome message in bc
 alias bc="bc -q"
 
