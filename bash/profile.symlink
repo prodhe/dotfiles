@@ -33,11 +33,6 @@ export PATH=$PATH:$GOROOT/bin
 export PLAN9=/usr/local/plan9
 export PATH=$PATH:$PLAN9/bin
 
-# default font for Plan9 cmds
-font=/lib/font/bit/lucsans/euro.8.font
-tabstop=4
-export font tabstop
-
 # use mdfind instead of locate
 alias locate="mdfind -name"
 
